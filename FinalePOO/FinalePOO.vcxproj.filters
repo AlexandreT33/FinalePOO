@@ -18,7 +18,7 @@
     <ClCompile Include="MainForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Article.cpp">
+    <ClCompile Include="ClasseStock.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,7 +26,7 @@
     <ClInclude Include="MainForm.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="Article.h">
+    <ClInclude Include="ClasseStock.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
