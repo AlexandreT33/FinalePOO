@@ -129,6 +129,7 @@ namespace FinalePOO {
 
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
+	private: System::Windows::Forms::Button^ client_afficher;
 
 
 	protected:
@@ -208,6 +209,7 @@ namespace FinalePOO {
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->client_afficher = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -511,6 +513,7 @@ namespace FinalePOO {
 			// 
 			// Panel_Client
 			// 
+			this->Panel_Client->Controls->Add(this->client_afficher);
 			this->Panel_Client->Controls->Add(this->button16);
 			this->Panel_Client->Controls->Add(this->adresse_numero_de_client);
 			this->Panel_Client->Controls->Add(this->label21);
@@ -885,14 +888,27 @@ namespace FinalePOO {
 			this->label15->TabIndex = 24;
 			this->label15->Text = L"Gestion du client";
 			// 
+			// client_afficher
+			// 
+			this->client_afficher->Location = System::Drawing::Point(526, 436);
+			this->client_afficher->Name = L"client_afficher";
+			this->client_afficher->Size = System::Drawing::Size(99, 121);
+			this->client_afficher->TabIndex = 60;
+			this->client_afficher->Text = L"Afficher";
+			this->client_afficher->UseVisualStyleBackColor = true;
+			this->client_afficher->Click += gcnew System::EventHandler(this, &MyForm::client_afficher_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
 			this->Controls->Add(this->Panel_Bienvenue);
-			this->Controls->Add(this->Panel_Client);
 			this->Controls->Add(this->Panel_Stock);
+			this->Controls->Add(this->Panel_Client);
+			//this->Controls->Add(this->Panel_Bienvenue);
+			//this->Controls->Add(this->Panel_Stock);
+			//this->Controls->Add(this->Panel_Client);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -914,7 +930,7 @@ namespace FinalePOO {
 		this->Panel_Client->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 	}
-	//##############PANEL BIENVENUE################
+		   //##############PANEL BIENVENUE################
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
@@ -942,7 +958,7 @@ namespace FinalePOO {
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 	}
-	//##############PANEL CLIENT################
+		   //##############PANEL CLIENT################
 	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) { // quitter client
 		this->Panel_Client->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
@@ -969,7 +985,14 @@ namespace FinalePOO {
 		client->supprimer(this->client_numero->Text);
 		this->client_numero->Clear();
 	}
-	//##############PANEL STOCK################
+	private: System::Void client_afficher_Click(System::Object^ sender, System::EventArgs^ e) {
+		DataSet^ objdata = gcnew DataSet();
+		Client^ client = gcnew Client();
+		client->afficherClient(this->client_numero->Text, objdata);
+		dataGridView2->DataSource = objdata;
+		dataGridView2->DataMember = "Client";
+	}
+		   //##############PANEL STOCK################
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) { //quitter stock
 		this->Panel_Stock->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
@@ -1005,11 +1028,12 @@ namespace FinalePOO {
 		dataGridView1->DataSource = objdata;
 		dataGridView1->DataMember = "Stock";
 	}
-	//##############PANEL COMMANDES################
+		   //##############PANEL COMMANDES################
 
-	//##############PANEL PERSONNEL################
+		   //##############PANEL PERSONNEL################
 
-	//##############PANEL STATISTIQUES################
+		   //##############PANEL STATISTIQUES################
 
-};
+
+	};
 }
