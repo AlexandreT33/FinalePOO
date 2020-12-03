@@ -16,7 +16,7 @@ public:
 	void setSeuil(int^);
 	int getTVA();
 	void setTVA(int^);
-	void ajouter();
+	void ajouter(System::String^, System::String^, System::String^, System::String^, System::String^);
 	void supprimer();
 
 private:
