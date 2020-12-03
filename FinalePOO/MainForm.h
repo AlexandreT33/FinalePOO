@@ -985,7 +985,7 @@ namespace FinalePOO {
 		client->supprimer(this->client_numero->Text);
 		this->client_numero->Clear();
 	}
-	private: System::Void client_afficher_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void client_afficher_Click(System::Object^ sender, System::EventArgs^ e) { //afficher client
 		DataSet^ objdata = gcnew DataSet();
 		Client^ client = gcnew Client();
 		client->afficherClient(this->client_numero->Text, objdata);
