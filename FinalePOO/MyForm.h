@@ -2,6 +2,7 @@
 #include "ClasseStock.h"
 #include "Client.h"
 #include "Personnel.h"
+#include "Affichage.h"
 
 namespace FinalePOO {
 
@@ -131,127 +132,127 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
 
-private: System::Windows::Forms::Panel^ Panel_Personnel;
-private: System::Windows::Forms::Button^ Personnel_Retour;
+	private: System::Windows::Forms::Panel^ Panel_Personnel;
+	private: System::Windows::Forms::Button^ Personnel_Retour;
 
 
 
 
-private: System::Windows::Forms::TextBox^ Personnel_Adresse_LVoie;
+	private: System::Windows::Forms::TextBox^ Personnel_Adresse_LVoie;
 
-private: System::Windows::Forms::Label^ label23;
+	private: System::Windows::Forms::Label^ label23;
 
 
 
 
-private: System::Windows::Forms::DataGridView^ Personnel_DataGridView;
-private: System::Windows::Forms::TextBox^ Personnel_Adresse_Numero;
-private: System::Windows::Forms::TextBox^ Personnel_Adresse_TVoie;
+	private: System::Windows::Forms::DataGridView^ Personnel_DataGridView;
+	private: System::Windows::Forms::TextBox^ Personnel_Adresse_Numero;
+	private: System::Windows::Forms::TextBox^ Personnel_Adresse_TVoie;
 
 
 
 
 
-private: System::Windows::Forms::TextBox^ Personnel_Adresse_CodeP;
+	private: System::Windows::Forms::TextBox^ Personnel_Adresse_CodeP;
 
-private: System::Windows::Forms::TextBox^ Personnel_Adresse_Ville;
+	private: System::Windows::Forms::TextBox^ Personnel_Adresse_Ville;
 
 
 
 
 
-private: System::Windows::Forms::Label^ label24;
-private: System::Windows::Forms::Label^ label25;
-private: System::Windows::Forms::Label^ label26;
-private: System::Windows::Forms::Label^ label27;
+	private: System::Windows::Forms::Label^ label24;
+	private: System::Windows::Forms::Label^ label25;
+	private: System::Windows::Forms::Label^ label26;
+	private: System::Windows::Forms::Label^ label27;
 
-private: System::Windows::Forms::Button^ Personnel_Retirer;
+	private: System::Windows::Forms::Button^ Personnel_Retirer;
 
-private: System::Windows::Forms::Button^ Personnel_Ajouter;
-private: System::Windows::Forms::Button^ Personnel_Modifier;
+	private: System::Windows::Forms::Button^ Personnel_Ajouter;
+	private: System::Windows::Forms::Button^ Personnel_Modifier;
 
-private: System::Windows::Forms::TextBox^ Personnel_IDSup;
+	private: System::Windows::Forms::TextBox^ Personnel_IDSup;
 
 
 
 
-private: System::Windows::Forms::TextBox^ Personnel_Prenom;
+	private: System::Windows::Forms::TextBox^ Personnel_Prenom;
 
-private: System::Windows::Forms::TextBox^ Personnel_Nom;
+	private: System::Windows::Forms::TextBox^ Personnel_Nom;
 
-private: System::Windows::Forms::TextBox^ Personnel_Numero;
+	private: System::Windows::Forms::TextBox^ Personnel_Numero;
 
-private: System::Windows::Forms::Label^ label29;
+	private: System::Windows::Forms::Label^ label29;
 
-private: System::Windows::Forms::Label^ label31;
-private: System::Windows::Forms::Label^ label32;
-private: System::Windows::Forms::Label^ label33;
+	private: System::Windows::Forms::Label^ label31;
+	private: System::Windows::Forms::Label^ label32;
+	private: System::Windows::Forms::Label^ label33;
 
-private: System::Windows::Forms::Label^ label35;
-private: System::Windows::Forms::TextBox^ Personnel_Date_Embauche;
-private: System::Windows::Forms::Label^ label28;
-private: System::Windows::Forms::Panel^ Panel_Commandes;
-private: System::Windows::Forms::Button^ Commandes_retour;
-private: System::Windows::Forms::DataGridView^ Commandes_DataGridView;
-private: System::Windows::Forms::Button^ Commandes_button_commandes;
-private: System::Windows::Forms::Button^ Commandes_button_client;
-private: System::Windows::Forms::Button^ Commandes_button_Retirer;
-private: System::Windows::Forms::Button^ Commandes_button_Modifier;
-private: System::Windows::Forms::Button^ Commandes_button_Ajouter;
-private: System::Windows::Forms::Label^ label36;
-private: System::Windows::Forms::Label^ label34;
-private: System::Windows::Forms::Label^ label30;
-private: System::Windows::Forms::Label^ label22;
-private: System::Windows::Forms::TextBox^ Commandes_DateLivraison;
-private: System::Windows::Forms::TextBox^ Commandes_DateEmmission;
-private: System::Windows::Forms::TextBox^ Commandes_NumClient;
-private: System::Windows::Forms::TextBox^ Commandes_IdCommande;
-private: System::Windows::Forms::Button^ Commandes_buttonLivraison;
-private: System::Windows::Forms::Button^ Commandes_buttonPaiment;
-private: System::Windows::Forms::Button^ Commandes_buttonPanier;
-private: System::Windows::Forms::Button^ Commandes_buttonActualiser;
-private: System::Windows::Forms::Panel^ Commandes_Panel_Panier;
-private: System::Windows::Forms::Button^ Commandes_Panier_buttonRetirer;
+	private: System::Windows::Forms::Label^ label35;
+	private: System::Windows::Forms::TextBox^ Personnel_Date_Embauche;
+	private: System::Windows::Forms::Label^ label28;
+	private: System::Windows::Forms::Panel^ Panel_Commandes;
+	private: System::Windows::Forms::Button^ Commandes_retour;
+	private: System::Windows::Forms::DataGridView^ Commandes_DataGridView;
+	private: System::Windows::Forms::Button^ Commandes_button_commandes;
+	private: System::Windows::Forms::Button^ Commandes_button_client;
+	private: System::Windows::Forms::Button^ Commandes_button_Retirer;
+	private: System::Windows::Forms::Button^ Commandes_button_Modifier;
+	private: System::Windows::Forms::Button^ Commandes_button_Ajouter;
+	private: System::Windows::Forms::Label^ label36;
+	private: System::Windows::Forms::Label^ label34;
+	private: System::Windows::Forms::Label^ label30;
+	private: System::Windows::Forms::Label^ label22;
+	private: System::Windows::Forms::TextBox^ Commandes_DateLivraison;
+	private: System::Windows::Forms::TextBox^ Commandes_DateEmmission;
+	private: System::Windows::Forms::TextBox^ Commandes_NumClient;
+	private: System::Windows::Forms::TextBox^ Commandes_IdCommande;
+	private: System::Windows::Forms::Button^ Commandes_buttonLivraison;
+	private: System::Windows::Forms::Button^ Commandes_buttonPaiment;
+	private: System::Windows::Forms::Button^ Commandes_buttonPanier;
+	private: System::Windows::Forms::Button^ Commandes_buttonActualiser;
+	private: System::Windows::Forms::Panel^ Commandes_Panel_Panier;
+	private: System::Windows::Forms::Button^ Commandes_Panier_buttonRetirer;
 
-private: System::Windows::Forms::Button^ Commandes_Panier_buttonAjouter;
+	private: System::Windows::Forms::Button^ Commandes_Panier_buttonAjouter;
 
 
 
 
-private: System::Windows::Forms::Label^ label39;
-private: System::Windows::Forms::Label^ label40;
-private: System::Windows::Forms::TextBox^ Commandes_Panier_Quantite;
+	private: System::Windows::Forms::Label^ label39;
+	private: System::Windows::Forms::Label^ label40;
+	private: System::Windows::Forms::TextBox^ Commandes_Panier_Quantite;
 
 
 
-private: System::Windows::Forms::TextBox^ Commandes_Panier_RefObj;
-private: System::Windows::Forms::DataGridView^ Commandes_Panier_DataGridView;
+	private: System::Windows::Forms::TextBox^ Commandes_Panier_RefObj;
+	private: System::Windows::Forms::DataGridView^ Commandes_Panier_DataGridView;
 
 
 
 
 
-private: System::Windows::Forms::Button^ Commandes_Panier_buttonActualiser;
-private: System::Windows::Forms::Button^ Commandes_Panier_buttonRetour;
+	private: System::Windows::Forms::Button^ Commandes_Panier_buttonActualiser;
+	private: System::Windows::Forms::Button^ Commandes_Panier_buttonRetour;
 
 
-private: System::Windows::Forms::Button^ Commandes_Panier_buttonPaniers;
+	private: System::Windows::Forms::Button^ Commandes_Panier_buttonPaniers;
 
-private: System::Windows::Forms::Button^ Commandes_Panier_buttonArticles;
-private: System::Windows::Forms::Panel^ Commandes_Panel_Livraison;
-private: System::Windows::Forms::Button^ Commandes_Livraison_buttonModifier;
+	private: System::Windows::Forms::Button^ Commandes_Panier_buttonArticles;
+	private: System::Windows::Forms::Panel^ Commandes_Panel_Livraison;
+	private: System::Windows::Forms::Button^ Commandes_Livraison_buttonModifier;
 
 
 
 
-private: System::Windows::Forms::Button^ Commandes_Livraison_buttonAjouter;
+	private: System::Windows::Forms::Button^ Commandes_Livraison_buttonAjouter;
 
 
 
 
-private: System::Windows::Forms::Label^ label42;
-private: System::Windows::Forms::TextBox^ Commandes_Livraison_IDAdresseClient;
-private: System::Windows::Forms::DataGridView^ Commandes_Livraison_DataGridView;
+	private: System::Windows::Forms::Label^ label42;
+	private: System::Windows::Forms::TextBox^ Commandes_Livraison_IDAdresseClient;
+	private: System::Windows::Forms::DataGridView^ Commandes_Livraison_DataGridView;
 
 
 
@@ -260,32 +261,37 @@ private: System::Windows::Forms::DataGridView^ Commandes_Livraison_DataGridView;
 
 
 
-private: System::Windows::Forms::Button^ Commandes_Livraison_buttonActualiser;
+	private: System::Windows::Forms::Button^ Commandes_Livraison_buttonActualiser;
 
-private: System::Windows::Forms::Button^ Commande_Livraison_buttonRetour;
-private: System::Windows::Forms::Button^ Commandes_Livraison_buttonClients;
-private: System::Windows::Forms::Panel^ Commandes_Panel_Paiments;
+	private: System::Windows::Forms::Button^ Commande_Livraison_buttonRetour;
+	private: System::Windows::Forms::Button^ Commandes_Livraison_buttonClients;
+	private: System::Windows::Forms::Panel^ Commandes_Panel_Paiments;
 
-private: System::Windows::Forms::Label^ label44;
-private: System::Windows::Forms::Label^ label45;
-private: System::Windows::Forms::TextBox^ Commandes_Paiments_AdresseFactu;
-private: System::Windows::Forms::TextBox^ Commandes_Paiments_Recu;
-private: System::Windows::Forms::Button^ Commandes_Paiments_buttonRetirer;
-private: System::Windows::Forms::Button^ Commandes_Paiments_buttonModifier;
-private: System::Windows::Forms::Button^ Commandes_Paiments_buttonAjouter;
-private: System::Windows::Forms::Label^ label37;
-private: System::Windows::Forms::Label^ label38;
-private: System::Windows::Forms::Label^ label41;
-private: System::Windows::Forms::Label^ label43;
-private: System::Windows::Forms::TextBox^ Commandes_Paiments_MoyenPaiment;
-private: System::Windows::Forms::TextBox^ Commandes_Paiments_DateRecu;
-private: System::Windows::Forms::TextBox^ Commandes_Paiments_DateEffectue;
-private: System::Windows::Forms::TextBox^ Commandes_Paiments_IDPaiment;
-private: System::Windows::Forms::DataGridView^ Commandes_Paiments_DataGridView;
-private: System::Windows::Forms::Button^ Commandes_Paiments_buttonActualiser;
-private: System::Windows::Forms::Button^ Commandes_Paiments_buttonRetour;
-private: System::Windows::Forms::Button^ Commandes_Paiments_buttonAdresseClient;
-private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
+	private: System::Windows::Forms::Label^ label44;
+	private: System::Windows::Forms::Label^ label45;
+	private: System::Windows::Forms::TextBox^ Commandes_Paiments_AdresseFactu;
+	private: System::Windows::Forms::TextBox^ Commandes_Paiments_Recu;
+	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonRetirer;
+	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonModifier;
+	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonAjouter;
+	private: System::Windows::Forms::Label^ label37;
+	private: System::Windows::Forms::Label^ label38;
+	private: System::Windows::Forms::Label^ label41;
+	private: System::Windows::Forms::Label^ label43;
+	private: System::Windows::Forms::TextBox^ Commandes_Paiments_MoyenPaiment;
+	private: System::Windows::Forms::TextBox^ Commandes_Paiments_DateRecu;
+	private: System::Windows::Forms::TextBox^ Commandes_Paiments_DateEffectue;
+	private: System::Windows::Forms::TextBox^ Commandes_Paiments_IDPaiment;
+	private: System::Windows::Forms::DataGridView^ Commandes_Paiments_DataGridView;
+	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonActualiser;
+	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonRetour;
+	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonAdresseClient;
+	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
+	private: System::Windows::Forms::Panel^ Panel_Statistique;
+	private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
+	private: System::Windows::Forms::Button^ button_ProduitSousReapro;
+	private: System::Windows::Forms::Button^ button_retour_statitique;
+
 
 
 
@@ -457,6 +463,10 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->Commandes_Paiments_buttonRetour = (gcnew System::Windows::Forms::Button());
 			this->Commandes_Paiments_buttonAdresseClient = (gcnew System::Windows::Forms::Button());
 			this->Commandes_Paiments_buttonPaiments = (gcnew System::Windows::Forms::Button());
+			this->Panel_Statistique = (gcnew System::Windows::Forms::Panel());
+			this->dataGridView_Statistique = (gcnew System::Windows::Forms::DataGridView());
+			this->button_ProduitSousReapro = (gcnew System::Windows::Forms::Button());
+			this->button_retour_statitique = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -472,6 +482,8 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Commandes_Livraison_DataGridView))->BeginInit();
 			this->Commandes_Panel_Paiments->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Commandes_Paiments_DataGridView))->BeginInit();
+			this->Panel_Statistique->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_Statistique))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -2062,19 +2074,60 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->Commandes_Paiments_buttonPaiments->UseVisualStyleBackColor = false;
 			this->Commandes_Paiments_buttonPaiments->Click += gcnew System::EventHandler(this, &MyForm::Commandes_Paiments_buttonPaiments_Click);
 			// 
+			// Panel_Statistique
+			// 
+			this->Panel_Statistique->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Statistique.BackgroundImage")));
+			this->Panel_Statistique->Controls->Add(this->button_retour_statitique);
+			this->Panel_Statistique->Controls->Add(this->dataGridView_Statistique);
+			this->Panel_Statistique->Controls->Add(this->button_ProduitSousReapro);
+			this->Panel_Statistique->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->Panel_Statistique->Location = System::Drawing::Point(0, 0);
+			this->Panel_Statistique->Name = L"Panel_Statistique";
+			this->Panel_Statistique->Size = System::Drawing::Size(1189, 686);
+			this->Panel_Statistique->TabIndex = 0;
+			// 
+			// dataGridView_Statistique
+			// 
+			this->dataGridView_Statistique->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_Statistique->Location = System::Drawing::Point(345, 153);
+			this->dataGridView_Statistique->Name = L"dataGridView_Statistique";
+			this->dataGridView_Statistique->Size = System::Drawing::Size(377, 276);
+			this->dataGridView_Statistique->TabIndex = 1;
+			// 
+			// button_ProduitSousReapro
+			// 
+			this->button_ProduitSousReapro->Location = System::Drawing::Point(457, 485);
+			this->button_ProduitSousReapro->Name = L"button_ProduitSousReapro";
+			this->button_ProduitSousReapro->Size = System::Drawing::Size(158, 42);
+			this->button_ProduitSousReapro->TabIndex = 0;
+			this->button_ProduitSousReapro->Text = L"Produits sous le seuil de réaprovisionement";
+			this->button_ProduitSousReapro->UseVisualStyleBackColor = true;
+			this->button_ProduitSousReapro->Click += gcnew System::EventHandler(this, &MyForm::button_ProduitSousReapro_Click);
+			// 
+			// button_retour_statitique
+			// 
+			this->button_retour_statitique->Location = System::Drawing::Point(3, 3);
+			this->button_retour_statitique->Name = L"button_retour_statitique";
+			this->button_retour_statitique->Size = System::Drawing::Size(75, 23);
+			this->button_retour_statitique->TabIndex = 2;
+			this->button_retour_statitique->Text = L"Retour";
+			this->button_retour_statitique->UseVisualStyleBackColor = true;
+			this->button_retour_statitique->Click += gcnew System::EventHandler(this, &MyForm::button_retour_statitique_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
+			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Personnel);
 			this->Controls->Add(this->Panel_Commandes);
 			this->Controls->Add(this->Commandes_Panel_Panier);
 			this->Controls->Add(this->Commandes_Panel_Livraison);
 			this->Controls->Add(this->Commandes_Panel_Paiments);
+			this->Controls->Add(this->Panel_Statistique);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
@@ -2102,6 +2155,8 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->Commandes_Panel_Paiments->ResumeLayout(false);
 			this->Commandes_Panel_Paiments->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Commandes_Paiments_DataGridView))->EndInit();
+			this->Panel_Statistique->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_Statistique))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2114,6 +2169,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		this->Controls->Add(this->Commandes_Panel_Panier);
 		this->Controls->Add(this->Commandes_Panel_Livraison);
 		this->Controls->Add(this->Commandes_Panel_Paiments);
+		this->Controls->Add(this->Panel_Statistique);
 		*/
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -2125,8 +2181,9 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		this->Commandes_Panel_Panier->Visible = false;
 		this->Commandes_Panel_Livraison->Visible = false;
 		this->Commandes_Panel_Paiments->Visible = false;
+		this->Panel_Statistique->Visible = false;
 	}
-			//##############PANEL BIENVENUE################
+		   //##############PANEL BIENVENUE################
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
@@ -2176,6 +2233,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
+		this->Panel_Statistique->Visible = true;
 	}
 		   //##############PANEL ADRESSE################
 	private: System::Void button14_Click_1(System::Object^ sender, System::EventArgs^ e) { // ajouter adresse
@@ -2326,7 +2384,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		dataGridView1->DataSource = StockObjdata3;
 		dataGridView1->DataMember = "Stock";
 	}
-			//##############PANEL PERSONNEL################
+		   //##############PANEL PERSONNEL################
 	private: System::Void Personnel_Retour_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Panel_Personnel->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
@@ -2369,7 +2427,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	}
 	private: System::Void Personnel_Modifier_Click(System::Object^ sender, System::EventArgs^ e) {
 		Personnel^ personnel = gcnew Personnel();
-		personnel->modifier(this->Personnel_Numero->Text,this->Personnel_Nom->Text, this->Personnel_Prenom->Text, this->Personnel_Date_Embauche->Text, this->Personnel_IDSup->Text, this->Personnel_Adresse_CodeP->Text, this->Personnel_Adresse_Ville->Text, this->Personnel_Adresse_LVoie->Text, this->Personnel_Adresse_TVoie->Text, this->Personnel_Adresse_Numero->Text);
+		personnel->modifier(this->Personnel_Numero->Text, this->Personnel_Nom->Text, this->Personnel_Prenom->Text, this->Personnel_Date_Embauche->Text, this->Personnel_IDSup->Text, this->Personnel_Adresse_CodeP->Text, this->Personnel_Adresse_Ville->Text, this->Personnel_Adresse_LVoie->Text, this->Personnel_Adresse_TVoie->Text, this->Personnel_Adresse_Numero->Text);
 		this->Personnel_Numero->Clear();
 		this->Personnel_Nom->Clear();
 		this->Personnel_Prenom->Clear();
@@ -2390,7 +2448,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		delete personneldata3;
 		delete personnel3;
 	}
-			//##############PANEL COMMANDES################
+		   //##############PANEL COMMANDES################
 	private: System::Void Commandes_button_client_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_button_commandes->BackColor = System::Drawing::Color::Transparent;
 		this->Commandes_button_client->BackColor = System::Drawing::SystemColors::ActiveCaption;
@@ -2431,7 +2489,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	}
 	private: System::Void Commandes_button_Retirer_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	//PANEL PANIER##############
+		   //PANEL PANIER##############
 	private: System::Void Commandes_Panier_buttonRetour_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_Panel_Panier->Visible = false;
 		this->Panel_Commandes->Visible = true;
@@ -2452,7 +2510,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	}
 	private: System::Void Commandes_Panier_buttonRetirer_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	//PANEL LIVRAISON##############
+		   //PANEL LIVRAISON##############
 	private: System::Void Commande_Livraison_buttonRetour_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Panel_Commandes->Visible = true;
 		this->Commandes_Panel_Livraison->Visible = false;
@@ -2467,7 +2525,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	}
 	private: System::Void Commandes_Livraison_buttonModifier_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	//PANEL PAIMENTS##############
+		   //PANEL PAIMENTS##############
 	private: System::Void Commandes_Paiments_buttonRetour_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_Panel_Paiments->Visible = false;
 		this->Panel_Commandes->Visible = true;
@@ -2490,12 +2548,20 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	}
 	private: System::Void Commandes_Paiments_buttonRetirer_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-		//##############PANEL STATISTIQUES################
+		   //##############PANEL STATISTIQUES################
+	private: System::Void button_ProduitSousReapro_Click(System::Object^ sender, System::EventArgs^ e) {
+		DataSet^ statdata1 = gcnew DataSet();
+		Affichage^ stat1 = gcnew Affichage();
+		stat1->afficher(System::IO::File::ReadAllText("ProduitSousReapro.sql"), statdata1);
+		dataGridView_Statistique->DataSource = statdata1;
+		dataGridView_Statistique->DataMember = "Stats";
+		delete statdata1;
+		delete stat1;
+	}
 
-
-
-
-
-private: System::Void client_nombre_achat_TextChanged(System::Object^ sender, System::EventArgs^ e) {}
-};
+	private: System::Void button_retour_statitique_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Panel_Bienvenue->Visible = true;
+		this->Panel_Statistique->Visible = false;
+	}
+	};
 }
