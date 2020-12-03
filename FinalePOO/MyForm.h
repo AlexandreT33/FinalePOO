@@ -1041,6 +1041,7 @@ private: System::Windows::Forms::Label^ label35;
 			this->Personnel_Retour->TabIndex = 92;
 			this->Personnel_Retour->Text = L"Retour";
 			this->Personnel_Retour->UseVisualStyleBackColor = true;
+			this->Personnel_Retour->Click += gcnew System::EventHandler(this, &MyForm::Personnel_Retour_Click);
 			// 
 			// Personnel_Adresse_NumPersonnel
 			// 
@@ -1360,6 +1361,9 @@ private: System::Windows::Forms::Label^ label35;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
+			this->Controls->Add(this->Panel_Bienvenue);
+			this->Controls->Add(this->Panel_Client);
+			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Personnel);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -1378,13 +1382,20 @@ private: System::Windows::Forms::Label^ label35;
 			this->ResumeLayout(false);
 
 		}
+		/* ##COMMANDES POUR LES PANELS##
+		this->Controls->Add(this->Panel_Bienvenue);
+		this->Controls->Add(this->Panel_Client);
+		this->Controls->Add(this->Panel_Stock);
+		this->Controls->Add(this->Panel_Personnel);
+		*/
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->Panel_Stock->Visible = false;
 		this->Panel_Client->Visible = false;
+		this->Panel_Personnel->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 	}
-		   //##############PANEL BIENVENUE################
+			//##############PANEL BIENVENUE################
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
@@ -1401,12 +1412,19 @@ private: System::Windows::Forms::Label^ label35;
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
+		this->Panel_Personnel->Visible = true;
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 		this->Panel_Stock->Visible = true;
+		//Crée gridview
+		DataSet^ objdata = gcnew DataSet();
+		Stock^ article = gcnew Stock();
+		article->afficher(objdata);
+		dataGridView1->DataSource = objdata;
+		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -1514,7 +1532,6 @@ private: System::Windows::Forms::Label^ label35;
 		dataGridView3->DataSource = objdata7;
 		dataGridView3->DataMember = "Adresse";
 	}
-
 		   //##############PANEL STOCK################
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) { //quitter stock
 		this->Panel_Stock->Visible = false;
@@ -1551,12 +1568,15 @@ private: System::Windows::Forms::Label^ label35;
 		article->supprimer(this->Ref->Text);
 		this->Ref->Clear();
 	}
-		   //##############PANEL COMMANDES################
+			//##############PANEL COMMANDES################
 
-		   //##############PANEL PERSONNEL################
+			//##############PANEL PERSONNEL################
+	private: System::Void Personnel_Retour_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Panel_Personnel->Visible = false;
+		this->Panel_Bienvenue->Visible = true;
+	}
+			//##############PANEL STATISTIQUES################
 
-		   //##############PANEL STATISTIQUES################
 
-
-	};
+};
 }
