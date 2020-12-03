@@ -34,5 +34,14 @@
     <None Include="AjouterStock.sql">
       <Filter>Fichiers de ressources</Filter>
     </None>
+    <None Include="RetirerStock.sql">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="AfficherStock.sql">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="ModifierStock.sql">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
   </ItemGroup>
 </Project>

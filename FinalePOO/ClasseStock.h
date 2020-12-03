@@ -10,14 +10,17 @@ public:
 	void setNom(System::String^);
 	int getQuantite();
 	void setQuantite(int^);
-	int getPrix();
+	float getPrix();
 	void setPrix(float^);
-	float getSeuil();
+	int getSeuil();
 	void setSeuil(int^);
 	int getTVA();
 	void setTVA(int^);
 	void ajouter(System::String^, System::String^, System::String^, System::String^, System::String^);
-	void supprimer();
+	void supprimer(System::String^);
+	void afficher(System::String^);
+	void modifier(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
+
 
 private:
 	int IDproduit;

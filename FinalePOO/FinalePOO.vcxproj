@@ -134,7 +134,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AfficherStock.sql" />
     <None Include="AjouterStock.sql" />
+    <None Include="RetirerStock.sql" />
+    <None Include="ModifierStock.sql" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
