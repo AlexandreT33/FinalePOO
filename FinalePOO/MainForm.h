@@ -41,7 +41,9 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Panel^ Panel_Bienvenue;
+
+
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
@@ -65,7 +67,9 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::Button^ button8;
-	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Panel^ Panel_Stock;
+
+
 	private: System::Windows::Forms::Button^ button9;
 
 	protected:
@@ -89,7 +93,7 @@ namespace FinalePOO {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->Panel_Bienvenue = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -107,11 +111,11 @@ namespace FinalePOO {
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->Panel_Stock = (gcnew System::Windows::Forms::Panel());
 			this->button9 = (gcnew System::Windows::Forms::Button());
-			this->panel1->SuspendLayout();
+			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->panel2->SuspendLayout();
+			this->Panel_Stock->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -177,19 +181,19 @@ namespace FinalePOO {
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
-			// panel1
+			// Panel_Bienvenue
 			// 
-			this->panel1->Controls->Add(this->button5);
-			this->panel1->Controls->Add(this->button4);
-			this->panel1->Controls->Add(this->button3);
-			this->panel1->Controls->Add(this->button2);
-			this->panel1->Controls->Add(this->button1);
-			this->panel1->Controls->Add(this->label1);
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1189, 686);
-			this->panel1->TabIndex = 6;
+			this->Panel_Bienvenue->Controls->Add(this->button5);
+			this->Panel_Bienvenue->Controls->Add(this->button4);
+			this->Panel_Bienvenue->Controls->Add(this->button3);
+			this->Panel_Bienvenue->Controls->Add(this->button2);
+			this->Panel_Bienvenue->Controls->Add(this->button1);
+			this->Panel_Bienvenue->Controls->Add(this->label1);
+			this->Panel_Bienvenue->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->Panel_Bienvenue->Location = System::Drawing::Point(0, 0);
+			this->Panel_Bienvenue->Name = L"Panel_Bienvenue";
+			this->Panel_Bienvenue->Size = System::Drawing::Size(1189, 686);
+			this->Panel_Bienvenue->TabIndex = 6;
 			// 
 			// label2
 			// 
@@ -358,31 +362,31 @@ namespace FinalePOO {
 			this->button8->Text = L"Retirer";
 			this->button8->UseVisualStyleBackColor = true;
 			// 
-			// panel2
+			// Panel_Stock
 			// 
-			this->panel2->Controls->Add(this->button9);
-			this->panel2->Controls->Add(this->button8);
-			this->panel2->Controls->Add(this->button7);
-			this->panel2->Controls->Add(this->button6);
-			this->panel2->Controls->Add(this->dataGridView1);
-			this->panel2->Controls->Add(this->TVA);
-			this->panel2->Controls->Add(this->seuil);
-			this->panel2->Controls->Add(this->prix);
-			this->panel2->Controls->Add(this->quantite);
-			this->panel2->Controls->Add(this->libelle);
-			this->panel2->Controls->Add(this->Ref);
-			this->panel2->Controls->Add(this->label8);
-			this->panel2->Controls->Add(this->label7);
-			this->panel2->Controls->Add(this->label6);
-			this->panel2->Controls->Add(this->label5);
-			this->panel2->Controls->Add(this->label4);
-			this->panel2->Controls->Add(this->label3);
-			this->panel2->Controls->Add(this->label2);
-			this->panel2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel2->Location = System::Drawing::Point(0, 0);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1189, 686);
-			this->panel2->TabIndex = 24;
+			this->Panel_Stock->Controls->Add(this->button9);
+			this->Panel_Stock->Controls->Add(this->button8);
+			this->Panel_Stock->Controls->Add(this->button7);
+			this->Panel_Stock->Controls->Add(this->button6);
+			this->Panel_Stock->Controls->Add(this->dataGridView1);
+			this->Panel_Stock->Controls->Add(this->TVA);
+			this->Panel_Stock->Controls->Add(this->seuil);
+			this->Panel_Stock->Controls->Add(this->prix);
+			this->Panel_Stock->Controls->Add(this->quantite);
+			this->Panel_Stock->Controls->Add(this->libelle);
+			this->Panel_Stock->Controls->Add(this->Ref);
+			this->Panel_Stock->Controls->Add(this->label8);
+			this->Panel_Stock->Controls->Add(this->label7);
+			this->Panel_Stock->Controls->Add(this->label6);
+			this->Panel_Stock->Controls->Add(this->label5);
+			this->Panel_Stock->Controls->Add(this->label4);
+			this->Panel_Stock->Controls->Add(this->label3);
+			this->Panel_Stock->Controls->Add(this->label2);
+			this->Panel_Stock->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->Panel_Stock->Location = System::Drawing::Point(0, 0);
+			this->Panel_Stock->Name = L"Panel_Stock";
+			this->Panel_Stock->Size = System::Drawing::Size(1189, 686);
+			this->Panel_Stock->TabIndex = 24;
 			// 
 			// button9
 			// 
@@ -399,53 +403,53 @@ namespace FinalePOO {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->Panel_Bienvenue);
+			this->Controls->Add(this->Panel_Stock);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
+			this->Panel_Bienvenue->ResumeLayout(false);
+			this->Panel_Bienvenue->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
+			this->Panel_Stock->ResumeLayout(false);
+			this->Panel_Stock->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		this->panel2->Visible = false;
-		this->panel1->Visible = true;
+		this->Panel_Stock->Visible = false;
+		this->Panel_Bienvenue->Visible = true;
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
-		this->panel1->Visible = false;
+		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
-		this->panel1->Visible = false;
+		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
-		this->panel1->Visible = false;
+		this->Panel_Bienvenue->Visible = false;
 		//Apparition
-		this->panel2->Visible = true;
+		this->Panel_Stock->Visible = true;
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
-		this->panel1->Visible = false;
+		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
-		this->panel1->Visible = false;
+		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 	}
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->panel2->Visible = false;
-		this->panel1->Visible = true;
+		this->Panel_Stock->Visible = false;
+		this->Panel_Bienvenue->Visible = true;
 	}
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 		Stock^ article = gcnew Stock();
