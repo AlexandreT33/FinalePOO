@@ -130,7 +130,7 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
 	private: System::Windows::Forms::Button^ client_afficher;
-	private: System::Windows::Forms::Button^ button17;
+
 
 
 	protected:
@@ -176,7 +176,6 @@ namespace FinalePOO {
 			this->button_afficher_stock = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Client = (gcnew System::Windows::Forms::Panel());
-			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->client_afficher = (gcnew System::Windows::Forms::Button());
 			this->button16 = (gcnew System::Windows::Forms::Button());
 			this->adresse_numero_de_client = (gcnew System::Windows::Forms::TextBox());
@@ -515,7 +514,6 @@ namespace FinalePOO {
 			// 
 			// Panel_Client
 			// 
-			this->Panel_Client->Controls->Add(this->button17);
 			this->Panel_Client->Controls->Add(this->client_afficher);
 			this->Panel_Client->Controls->Add(this->button16);
 			this->Panel_Client->Controls->Add(this->adresse_numero_de_client);
@@ -556,16 +554,6 @@ namespace FinalePOO {
 			this->Panel_Client->Name = L"Panel_Client";
 			this->Panel_Client->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Client->TabIndex = 0;
-			// 
-			// button17
-			// 
-			this->button17->Location = System::Drawing::Point(1065, 446);
-			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(99, 120);
-			this->button17->TabIndex = 61;
-			this->button17->Text = L"Afficher";
-			this->button17->UseVisualStyleBackColor = true;
-			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click_1);
 			// 
 			// client_afficher
 			// 
@@ -635,6 +623,7 @@ namespace FinalePOO {
 			this->button13->TabIndex = 54;
 			this->button13->Text = L"Retirer";
 			this->button13->UseVisualStyleBackColor = true;
+			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click_1);
 			// 
 			// button14
 			// 
@@ -654,6 +643,7 @@ namespace FinalePOO {
 			this->button15->TabIndex = 52;
 			this->button15->Text = L"Modifier";
 			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click_1);
 			// 
 			// dataGridView3
 			// 
@@ -917,7 +907,6 @@ namespace FinalePOO {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -946,6 +935,12 @@ namespace FinalePOO {
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 		this->Panel_Client->Visible = true;
+		//Crée GridView Adresse
+		DataSet^ objdata = gcnew DataSet();
+		Client^ client = gcnew Client();
+		client->afficherAdresse(this->client_numero->Text, objdata);
+		dataGridView3->DataSource = objdata;
+		dataGridView3->DataMember = "Adresse";
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -978,8 +973,15 @@ namespace FinalePOO {
 		this->adresse_type_de_voie->Clear();
 		this->adresse_numero->Clear();
 		this->adresse_numero_de_client->Clear();
+
+		//Afficher GridView Adresse
+		DataSet^ objdata2 = gcnew DataSet();
+		Client^ client2 = gcnew Client();
+		client2->afficherAdresse(this->client_numero->Text, objdata2);
+		dataGridView3->DataSource = objdata2;
+		dataGridView3->DataMember = "Adresse";
 	}
-	private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) { // modifier client
+	private: System::Void button15_Click_1(System::Object^ sender, System::EventArgs^ e) { // modifier adresse
 		Client^ client = gcnew Client();
 		client->modifierAdresse(this->adresse_id->Text, this->adresse_code_postal->Text, this->adresse_ville->Text, this->adresse_libelle_de_voie->Text, this->adresse_type_de_voie->Text, this->adresse_numero->Text, this->adresse_numero_de_client->Text);
 		this->adresse_id->Clear();
@@ -988,19 +990,27 @@ namespace FinalePOO {
 		this->client_prenom->Clear();
 		this->client_date_naissance->Clear();
 		this->client_nombre_achat->Clear();
-	}
-	private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer client
-		Client^ client = gcnew Client();
-		client->supprimer(this->adresse_id->Text);
-		this->adresse_id->Clear();
-	}
-	private: System::Void button17_Click_1(System::Object^ sender, System::EventArgs^ e) { //afficher client
-		DataSet^ objdata = gcnew DataSet();
-		Client^ client = gcnew Client();
-		client->afficherAdresse(this->client_numero->Text, objdata);
-		dataGridView3->DataSource = objdata;
+
+		//Afficher GridView Adresse
+		DataSet^ objdata3 = gcnew DataSet();
+		Client^ client3 = gcnew Client();
+		client3->afficherAdresse(this->client_numero->Text, objdata3);
+		dataGridView3->DataSource = objdata3;
 		dataGridView3->DataMember = "Adresse";
 	}
+	private: System::Void button13_Click_1(System::Object^ sender, System::EventArgs^ e) { // supprimer adresse
+		Client^ client = gcnew Client();
+		client->supprimerAdresse(this->adresse_id->Text);
+		this->adresse_id->Clear();
+
+		//Afficher GridView Adresse
+		DataSet^ objdata4 = gcnew DataSet();
+		Client^ client4 = gcnew Client();
+		client4->afficherAdresse(this->client_numero->Text, objdata4);
+		dataGridView3->DataSource = objdata4;
+		dataGridView3->DataMember = "Adresse";
+	}
+
 		   //##############PANEL CLIENT################
 	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) { // quitter client
 		this->Panel_Client->Visible = false;
@@ -1076,6 +1086,7 @@ namespace FinalePOO {
 		   //##############PANEL PERSONNEL################
 
 		   //##############PANEL STATISTIQUES################
+
 
 
 
