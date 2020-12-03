@@ -14,7 +14,7 @@ void Personnel::ajouter(System::String^ Nom, System::String^ Prenom, System::Str
     commande->Parameters->AddWithValue("@prenom", Prenom);
     commande->Parameters->AddWithValue("@date", System::Convert::ToDateTime(DateE));
     commande->Parameters->AddWithValue("@IDsuperieur", System::Convert::ToInt64(ID_Superieur));
-    commande->Parameters->AddWithValue("@code_postal", System::Convert::ToInt64(CodePostal);
+    commande->Parameters->AddWithValue("@code_postal", System::Convert::ToInt64(CodePostal));
     commande->Parameters->AddWithValue("@ville", Ville);
     commande->Parameters->AddWithValue("@libelle", Libelle);
     commande->Parameters->AddWithValue("@type", Type);
