@@ -59,24 +59,21 @@ void Stock::supprimer(System::String^ IDproduit)
     }
 }
 
-void Stock::afficher(System::String^ IDproduit, System::String^ nomProduit, System::String^ quantite, System::String^ seuil, System::String^ prixUnitaire, System::String^ TVApercent)
+void Stock::afficher(System::String^ IDproduit,System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AfficherStock.sql");
+    System::String^ requete = "SELECT * FROM [POO].[dbo].[Article] WHERE Reference = " + IDproduit + ";";
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
-    System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
-
-    commande->Parameters->AddWithValue("@Ref", System::Convert::ToInt32(IDproduit));
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
 
     //essai de la requete plus gestion de l'Exception.
     try
     {
         connexion->Open();
-        //Ici on récupère le résultat dans un dataReader
-        System::Data::IDataReader^ dataR = commande->ExecuteReader();
+        commande->Fill(objdata, "Stock");
         connexion->Close();
     }
     catch (System::Exception^ ex)

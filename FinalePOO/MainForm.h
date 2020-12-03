@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "ClasseStock.h"
 #include "Client.h"
 
@@ -12,7 +12,7 @@ namespace FinalePOO {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description rï¿½sumï¿½e de MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -27,7 +27,7 @@ namespace FinalePOO {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~MyForm()
 		{
@@ -72,6 +72,7 @@ namespace FinalePOO {
 
 
 	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::Button^ button_afficher_stock;
 	private: System::Windows::Forms::Panel^ Panel_Client;
 	private: System::Windows::Forms::Button^ button10;
 	private: System::Windows::Forms::Button^ button11;
@@ -129,18 +130,19 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
 
+
 	protected:
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -169,6 +171,7 @@ namespace FinalePOO {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Stock = (gcnew System::Windows::Forms::Panel());
+			this->button_afficher_stock = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Client = (gcnew System::Windows::Forms::Panel());
 			this->button16 = (gcnew System::Windows::Forms::Button());
@@ -310,7 +313,7 @@ namespace FinalePOO {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(142, 24);
 			this->label3->TabIndex = 8;
-			this->label3->Text = L"Référence (ID) :";
+			this->label3->Text = L"Rï¿½fï¿½rence (ID) :";
 			// 
 			// label4
 			// 
@@ -321,7 +324,7 @@ namespace FinalePOO {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(75, 24);
 			this->label4->TabIndex = 9;
-			this->label4->Text = L"Libellé :";
+			this->label4->Text = L"Libellï¿½ :";
 			// 
 			// label5
 			// 
@@ -332,7 +335,7 @@ namespace FinalePOO {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(90, 24);
 			this->label5->TabIndex = 10;
-			this->label5->Text = L"Quantité :";
+			this->label5->Text = L"Quantitï¿½ :";
 			// 
 			// label6
 			// 
@@ -343,7 +346,7 @@ namespace FinalePOO {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(272, 24);
 			this->label6->TabIndex = 11;
-			this->label6->Text = L"Seuil de réapprovisionnement :";
+			this->label6->Text = L"Seuil de rï¿½approvisionnement :";
 			// 
 			// label7
 			// 
@@ -461,6 +464,7 @@ namespace FinalePOO {
 			// 
 			// Panel_Stock
 			// 
+			this->Panel_Stock->Controls->Add(this->button_afficher_stock);
 			this->Panel_Stock->Controls->Add(this->button9);
 			this->Panel_Stock->Controls->Add(this->button8);
 			this->Panel_Stock->Controls->Add(this->button7);
@@ -484,6 +488,16 @@ namespace FinalePOO {
 			this->Panel_Stock->Name = L"Panel_Stock";
 			this->Panel_Stock->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Stock->TabIndex = 24;
+			// 
+			// button_afficher_stock
+			// 
+			this->button_afficher_stock->Location = System::Drawing::Point(799, 517);
+			this->button_afficher_stock->Name = L"button_afficher_stock";
+			this->button_afficher_stock->Size = System::Drawing::Size(138, 36);
+			this->button_afficher_stock->TabIndex = 25;
+			this->button_afficher_stock->Text = L"Afficher";
+			this->button_afficher_stock->UseVisualStyleBackColor = true;
+			this->button_afficher_stock->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			// 
 			// button9
 			// 
@@ -565,7 +579,7 @@ namespace FinalePOO {
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(168, 24);
 			this->label21->TabIndex = 57;
-			this->label21->Text = L"Numéro de Client :";
+			this->label21->Text = L"Numï¿½ro de Client :";
 			// 
 			// adresse_libelle_de_voie
 			// 
@@ -585,7 +599,7 @@ namespace FinalePOO {
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(89, 24);
 			this->label20->TabIndex = 55;
-			this->label20->Text = L"Numéro :";
+			this->label20->Text = L"Numï¿½ro :";
 			// 
 			// button13
 			// 
@@ -687,7 +701,7 @@ namespace FinalePOO {
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(142, 24);
 			this->label16->TabIndex = 44;
-			this->label16->Text = L"Libellé de voie :";
+			this->label16->Text = L"Libellï¿½ de voie :";
 			// 
 			// label17
 			// 
@@ -836,7 +850,7 @@ namespace FinalePOO {
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(87, 24);
 			this->label12->TabIndex = 27;
-			this->label12->Text = L"Prénom :";
+			this->label12->Text = L"Prï¿½nom :";
 			// 
 			// label13
 			// 
@@ -858,7 +872,7 @@ namespace FinalePOO {
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(165, 24);
 			this->label14->TabIndex = 25;
-			this->label14->Text = L"Numéro de client :";
+			this->label14->Text = L"Numï¿½ro de client :";
 			// 
 			// label15
 			// 
@@ -980,5 +994,14 @@ namespace FinalePOO {
 	}
 
 
+	};
+	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+		DataSet^ objdata = gcnew DataSet();
+		Stock^ article = gcnew Stock();
+		article->afficher(this->Ref->Text, objdata);
+		dataGridView1->DataSource = objdata;
+		dataGridView1->DataMember = "Stock";
+	}
+};
 };
 }
