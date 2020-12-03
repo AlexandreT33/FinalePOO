@@ -79,6 +79,29 @@ void Commande::panierdynamiqueRetirer(System::String^ ID, System::String^ Refere
     }
 }
 
+void Commande::panierdynamiqueRafraichir(System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("PanierDynamiqueRefresh.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Panier");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+}
+
 void Commande::retirerCommande(System::String^ ID)
 {
     //Source de la bdd, puis instanciation de la requete
