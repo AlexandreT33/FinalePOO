@@ -12,13 +12,14 @@ void Personnel::ajouter(System::String^ Nom, System::String^ Prenom, System::Str
 
     commande->Parameters->AddWithValue("@nom", Nom);
     commande->Parameters->AddWithValue("@prenom", Prenom);
-    commande->Parameters->AddWithValue("@date", DateE);
-    commande->Parameters->AddWithValue("@IDsuperieur", ID_Superieur);
-    commande->Parameters->AddWithValue("@code_postal", CodePostal );
+    commande->Parameters->AddWithValue("@date", System::Convert::ToDateTime(DateE));
+    commande->Parameters->AddWithValue("@IDsuperieur", System::Convert::ToInt64(ID_Superieur));
+    commande->Parameters->AddWithValue("@code_postal", System::Convert::ToInt64(CodePostal);
     commande->Parameters->AddWithValue("@ville", Ville);
     commande->Parameters->AddWithValue("@libelle", Libelle);
     commande->Parameters->AddWithValue("@type", Type);
-    commande->Parameters->AddWithValue("@numero", Numero);
+    commande->Parameters->AddWithValue("@numero", System::Convert::ToInt64(Numero));
+
 
 
     //essai de la requete plus gestion de l'Exception.
@@ -44,7 +45,7 @@ void Personnel::supprimer(System::String^ IDPersonnel)
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
     System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
 
-    commande->Parameters->AddWithValue("@ID", IDPersonnel);
+    commande->Parameters->AddWithValue("@ID", System::Convert::ToInt64(IDPersonnel));
     //essai de la requete plus gestion de l'Exception.
     try
     {
@@ -96,13 +97,13 @@ void Personnel::modifier(System::String^ ID, System::String^ Nom, System::String
     commande->Parameters->AddWithValue("@ID", ID);
     commande->Parameters->AddWithValue("@nom", Nom);
     commande->Parameters->AddWithValue("@prenom", Prenom);
-    commande->Parameters->AddWithValue("@date", DateE);
-    commande->Parameters->AddWithValue("@IDsuperieur", ID_Superieur);
-    commande->Parameters->AddWithValue("@code_postal", CodePostal);
+    commande->Parameters->AddWithValue("@date", System::Convert::ToDateTime(DateE));
+    commande->Parameters->AddWithValue("@IDsuperieur", System::Convert::ToInt64(ID_Superieur));
+    commande->Parameters->AddWithValue("@code_postal", System::Convert::ToInt64(CodePostal));
     commande->Parameters->AddWithValue("@ville", Ville);
     commande->Parameters->AddWithValue("@libelle", Libelle);
     commande->Parameters->AddWithValue("@type", Type);
-    commande->Parameters->AddWithValue("@numero", Numero);
+    commande->Parameters->AddWithValue("@numero", System::Convert::ToInt64(Numero));
 
 
     //essai de la requete plus gestion de l'Exception.
