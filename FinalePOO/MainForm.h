@@ -311,7 +311,7 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(748, 208);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(142, 24);
+			this->label3->Size = System::Drawing::Size(144, 24);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"R�f�rence (ID) :";
 			// 
@@ -322,7 +322,7 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label4->Location = System::Drawing::Point(815, 248);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(75, 24);
+			this->label4->Size = System::Drawing::Size(76, 24);
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Libell� :";
 			// 
@@ -333,7 +333,7 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(800, 290);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(90, 24);
+			this->label5->Size = System::Drawing::Size(91, 24);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"Quantit� :";
 			// 
@@ -344,7 +344,7 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label6->Location = System::Drawing::Point(618, 333);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(272, 24);
+			this->label6->Size = System::Drawing::Size(273, 24);
 			this->label6->TabIndex = 11;
 			this->label6->Text = L"Seuil de r�approvisionnement :";
 			// 
@@ -553,7 +553,7 @@ namespace FinalePOO {
 			// 
 			// button16
 			// 
-			this->button16->Location = System::Drawing::Point(12, 7);
+			this->button16->Location = System::Drawing::Point(3, 3);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(99, 26);
 			this->button16->TabIndex = 59;
@@ -565,7 +565,7 @@ namespace FinalePOO {
 			// 
 			this->adresse_numero_de_client->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->adresse_numero_de_client->Location = System::Drawing::Point(792, 604);
+			this->adresse_numero_de_client->Location = System::Drawing::Point(833, 609);
 			this->adresse_numero_de_client->Name = L"adresse_numero_de_client";
 			this->adresse_numero_de_client->Size = System::Drawing::Size(149, 24);
 			this->adresse_numero_de_client->TabIndex = 58;
@@ -575,9 +575,9 @@ namespace FinalePOO {
 			this->label21->AutoSize = true;
 			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label21->Location = System::Drawing::Point(618, 604);
+			this->label21->Location = System::Drawing::Point(659, 609);
 			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(168, 24);
+			this->label21->Size = System::Drawing::Size(169, 24);
 			this->label21->TabIndex = 57;
 			this->label21->Text = L"Num�ro de Client :";
 			// 
@@ -585,7 +585,7 @@ namespace FinalePOO {
 			// 
 			this->adresse_libelle_de_voie->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->adresse_libelle_de_voie->Location = System::Drawing::Point(792, 574);
+			this->adresse_libelle_de_voie->Location = System::Drawing::Point(833, 579);
 			this->adresse_libelle_de_voie->Name = L"adresse_libelle_de_voie";
 			this->adresse_libelle_de_voie->Size = System::Drawing::Size(149, 24);
 			this->adresse_libelle_de_voie->TabIndex = 56;
@@ -595,15 +595,15 @@ namespace FinalePOO {
 			this->label20->AutoSize = true;
 			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label20->Location = System::Drawing::Point(697, 513);
+			this->label20->Location = System::Drawing::Point(738, 518);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(89, 24);
+			this->label20->Size = System::Drawing::Size(90, 24);
 			this->label20->TabIndex = 55;
 			this->label20->Text = L"Num�ro :";
 			// 
 			// button13
 			// 
-			this->button13->Location = System::Drawing::Point(972, 526);
+			this->button13->Location = System::Drawing::Point(1013, 531);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(99, 26);
 			this->button13->TabIndex = 54;
@@ -612,7 +612,7 @@ namespace FinalePOO {
 			// 
 			// button14
 			// 
-			this->button14->Location = System::Drawing::Point(971, 431);
+			this->button14->Location = System::Drawing::Point(1012, 436);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(99, 26);
 			this->button14->TabIndex = 53;
@@ -621,7 +621,7 @@ namespace FinalePOO {
 			// 
 			// button15
 			// 
-			this->button15->Location = System::Drawing::Point(972, 478);
+			this->button15->Location = System::Drawing::Point(1013, 483);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(99, 26);
 			this->button15->TabIndex = 52;
@@ -631,7 +631,7 @@ namespace FinalePOO {
 			// dataGridView3
 			// 
 			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView3->Location = System::Drawing::Point(637, 140);
+			this->dataGridView3->Location = System::Drawing::Point(678, 145);
 			this->dataGridView3->Name = L"dataGridView3";
 			this->dataGridView3->Size = System::Drawing::Size(434, 268);
 			this->dataGridView3->TabIndex = 51;
@@ -640,7 +640,7 @@ namespace FinalePOO {
 			// 
 			this->adresse_numero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->adresse_numero->Location = System::Drawing::Point(792, 514);
+			this->adresse_numero->Location = System::Drawing::Point(833, 519);
 			this->adresse_numero->Name = L"adresse_numero";
 			this->adresse_numero->Size = System::Drawing::Size(149, 24);
 			this->adresse_numero->TabIndex = 50;
@@ -649,7 +649,7 @@ namespace FinalePOO {
 			// 
 			this->adresse_type_de_voie->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->adresse_type_de_voie->Location = System::Drawing::Point(792, 544);
+			this->adresse_type_de_voie->Location = System::Drawing::Point(833, 549);
 			this->adresse_type_de_voie->Name = L"adresse_type_de_voie";
 			this->adresse_type_de_voie->Size = System::Drawing::Size(149, 24);
 			this->adresse_type_de_voie->TabIndex = 49;
@@ -658,7 +658,7 @@ namespace FinalePOO {
 			// 
 			this->adresse_code_postal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->adresse_code_postal->Location = System::Drawing::Point(792, 484);
+			this->adresse_code_postal->Location = System::Drawing::Point(833, 489);
 			this->adresse_code_postal->Name = L"adresse_code_postal";
 			this->adresse_code_postal->Size = System::Drawing::Size(149, 24);
 			this->adresse_code_postal->TabIndex = 48;
@@ -667,7 +667,7 @@ namespace FinalePOO {
 			// 
 			this->adresse_ville->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->adresse_ville->Location = System::Drawing::Point(792, 454);
+			this->adresse_ville->Location = System::Drawing::Point(833, 459);
 			this->adresse_ville->Name = L"adresse_ville";
 			this->adresse_ville->Size = System::Drawing::Size(149, 24);
 			this->adresse_ville->TabIndex = 47;
@@ -676,7 +676,7 @@ namespace FinalePOO {
 			// 
 			this->adresse_id->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->adresse_id->Location = System::Drawing::Point(792, 424);
+			this->adresse_id->Location = System::Drawing::Point(833, 429);
 			this->adresse_id->Name = L"adresse_id";
 			this->adresse_id->Size = System::Drawing::Size(149, 24);
 			this->adresse_id->TabIndex = 46;
@@ -686,7 +686,7 @@ namespace FinalePOO {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(652, 543);
+			this->label9->Location = System::Drawing::Point(693, 548);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(134, 24);
 			this->label9->TabIndex = 45;
@@ -697,9 +697,9 @@ namespace FinalePOO {
 			this->label16->AutoSize = true;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label16->Location = System::Drawing::Point(644, 573);
+			this->label16->Location = System::Drawing::Point(685, 578);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(142, 24);
+			this->label16->Size = System::Drawing::Size(143, 24);
 			this->label16->TabIndex = 44;
 			this->label16->Text = L"Libell� de voie :";
 			// 
@@ -708,7 +708,7 @@ namespace FinalePOO {
 			this->label17->AutoSize = true;
 			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label17->Location = System::Drawing::Point(730, 454);
+			this->label17->Location = System::Drawing::Point(771, 459);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(56, 24);
 			this->label17->TabIndex = 43;
@@ -719,7 +719,7 @@ namespace FinalePOO {
 			this->label18->AutoSize = true;
 			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label18->Location = System::Drawing::Point(666, 483);
+			this->label18->Location = System::Drawing::Point(707, 488);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(120, 24);
 			this->label18->TabIndex = 42;
@@ -730,7 +730,7 @@ namespace FinalePOO {
 			this->label19->AutoSize = true;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label19->Location = System::Drawing::Point(749, 424);
+			this->label19->Location = System::Drawing::Point(790, 429);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(37, 24);
 			this->label19->TabIndex = 41;
@@ -738,7 +738,7 @@ namespace FinalePOO {
 			// 
 			// button10
 			// 
-			this->button10->Location = System::Drawing::Point(381, 526);
+			this->button10->Location = System::Drawing::Point(422, 531);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(99, 26);
 			this->button10->TabIndex = 40;
@@ -748,7 +748,7 @@ namespace FinalePOO {
 			// 
 			// button11
 			// 
-			this->button11->Location = System::Drawing::Point(380, 431);
+			this->button11->Location = System::Drawing::Point(421, 436);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(99, 26);
 			this->button11->TabIndex = 39;
@@ -758,7 +758,7 @@ namespace FinalePOO {
 			// 
 			// button12
 			// 
-			this->button12->Location = System::Drawing::Point(381, 478);
+			this->button12->Location = System::Drawing::Point(422, 483);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(99, 26);
 			this->button12->TabIndex = 38;
@@ -769,7 +769,7 @@ namespace FinalePOO {
 			// dataGridView2
 			// 
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(22, 140);
+			this->dataGridView2->Location = System::Drawing::Point(63, 145);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->Size = System::Drawing::Size(458, 268);
 			this->dataGridView2->TabIndex = 37;
@@ -778,7 +778,7 @@ namespace FinalePOO {
 			// 
 			this->client_date_naissance->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->client_date_naissance->Location = System::Drawing::Point(201, 514);
+			this->client_date_naissance->Location = System::Drawing::Point(242, 519);
 			this->client_date_naissance->Name = L"client_date_naissance";
 			this->client_date_naissance->Size = System::Drawing::Size(149, 24);
 			this->client_date_naissance->TabIndex = 35;
@@ -787,7 +787,7 @@ namespace FinalePOO {
 			// 
 			this->client_nombre_achat->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->client_nombre_achat->Location = System::Drawing::Point(201, 544);
+			this->client_nombre_achat->Location = System::Drawing::Point(242, 549);
 			this->client_nombre_achat->Name = L"client_nombre_achat";
 			this->client_nombre_achat->Size = System::Drawing::Size(149, 24);
 			this->client_nombre_achat->TabIndex = 34;
@@ -796,7 +796,7 @@ namespace FinalePOO {
 			// 
 			this->client_prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->client_prenom->Location = System::Drawing::Point(201, 484);
+			this->client_prenom->Location = System::Drawing::Point(242, 489);
 			this->client_prenom->Name = L"client_prenom";
 			this->client_prenom->Size = System::Drawing::Size(149, 24);
 			this->client_prenom->TabIndex = 33;
@@ -805,7 +805,7 @@ namespace FinalePOO {
 			// 
 			this->client_nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->client_nom->Location = System::Drawing::Point(201, 454);
+			this->client_nom->Location = System::Drawing::Point(242, 459);
 			this->client_nom->Name = L"client_nom";
 			this->client_nom->Size = System::Drawing::Size(149, 24);
 			this->client_nom->TabIndex = 32;
@@ -814,7 +814,7 @@ namespace FinalePOO {
 			// 
 			this->client_numero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->client_numero->Location = System::Drawing::Point(201, 424);
+			this->client_numero->Location = System::Drawing::Point(242, 429);
 			this->client_numero->Name = L"client_numero";
 			this->client_numero->Size = System::Drawing::Size(149, 24);
 			this->client_numero->TabIndex = 31;
@@ -824,7 +824,7 @@ namespace FinalePOO {
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(41, 544);
+			this->label10->Location = System::Drawing::Point(82, 549);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(154, 24);
 			this->label10->TabIndex = 29;
@@ -835,7 +835,7 @@ namespace FinalePOO {
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label11->Location = System::Drawing::Point(20, 514);
+			this->label11->Location = System::Drawing::Point(61, 519);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(175, 24);
 			this->label11->TabIndex = 28;
@@ -846,9 +846,9 @@ namespace FinalePOO {
 			this->label12->AutoSize = true;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label12->Location = System::Drawing::Point(108, 484);
+			this->label12->Location = System::Drawing::Point(149, 489);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(87, 24);
+			this->label12->Size = System::Drawing::Size(88, 24);
 			this->label12->TabIndex = 27;
 			this->label12->Text = L"Pr�nom :";
 			// 
@@ -857,7 +857,7 @@ namespace FinalePOO {
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label13->Location = System::Drawing::Point(137, 454);
+			this->label13->Location = System::Drawing::Point(178, 459);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(61, 24);
 			this->label13->TabIndex = 26;
@@ -868,9 +868,9 @@ namespace FinalePOO {
 			this->label14->AutoSize = true;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label14->Location = System::Drawing::Point(33, 424);
+			this->label14->Location = System::Drawing::Point(74, 429);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(165, 24);
+			this->label14->Size = System::Drawing::Size(166, 24);
 			this->label14->TabIndex = 25;
 			this->label14->Text = L"Num�ro de client :";
 			// 
@@ -879,7 +879,7 @@ namespace FinalePOO {
 			this->label15->AutoSize = true;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(435, 59);
+			this->label15->Location = System::Drawing::Point(476, 64);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(275, 39);
 			this->label15->TabIndex = 24;
@@ -911,12 +911,15 @@ namespace FinalePOO {
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->Panel_Stock->Visible = false;
+		this->Panel_Client->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 	}
+	//##############PANEL BIENVENUE################
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
+		this->Panel_Client->Visible = true;
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -939,7 +942,35 @@ namespace FinalePOO {
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 	}
-	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	//##############PANEL CLIENT################
+	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) { // quitter client
+		this->Panel_Client->Visible = false;
+		this->Panel_Bienvenue->Visible = true;
+	}
+	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter client
+		Client^ client = gcnew Client();
+		client->ajouter(this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
+		this->client_nom->Clear();
+		this->client_prenom->Clear();
+		this->client_date_naissance->Clear();
+		this->client_nombre_achat->Clear();
+	}
+	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) { // modifier client
+		Client^ client = gcnew Client();
+		client->modifier(this->client_numero->Text, this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
+		this->client_numero->Clear();
+		this->client_nom->Clear();
+		this->client_prenom->Clear();
+		this->client_date_naissance->Clear();
+		this->client_nombre_achat->Clear();
+	}
+	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer client
+		Client^ client = gcnew Client();
+		client->supprimer(this->client_numero->Text);
+		this->client_numero->Clear();
+	}
+	//##############PANEL STOCK################
+	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) { //quitter stock
 		this->Panel_Stock->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 	}
@@ -967,39 +998,18 @@ namespace FinalePOO {
 		article->supprimer(this->Ref->Text);
 		this->Ref->Clear();
 	}
-	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) { // afficher client
-		this->Panel_Client->Visible = false;
-		this->Panel_Bienvenue->Visible = true;
-	}
-	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter client
-		Client^ client = gcnew Client();
-		client->ajouter(this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
-		this->client_nom->Clear();
-		this->client_prenom->Clear();
-		this->client_date_naissance->Clear();
-		this->client_nombre_achat->Clear();
-	}
-	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) { // modifier client
-		Client^ client = gcnew Client();
-		client->modifier(this->client_numero->Text, this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
-		this->client_numero->Clear();
-		this->client_nom->Clear();
-		this->client_prenom->Clear();
-		this->client_date_naissance->Clear();
-		this->client_nombre_achat->Clear();
-	}
-	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer client
-		Client^ client = gcnew Client();
-		client->supprimer(this->client_numero->Text);
-		this->client_numero->Clear();
-	}
-	private: System::Void button_afficher_stock_click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button_afficher_stock_click(System::Object^ sender, System::EventArgs^ e) { //bouton afficher stock
 		DataSet^ objdata = gcnew DataSet();
 		Stock^ article = gcnew Stock();
 		article->afficher(this->Ref->Text, objdata);
 		dataGridView1->DataSource = objdata;
 		dataGridView1->DataMember = "Stock";
 	}
+	//##############PANEL COMMANDES################
 
-	};
+	//##############PANEL PERSONNEL################
+
+	//##############PANEL STATISTIQUES################
+
+};
 }

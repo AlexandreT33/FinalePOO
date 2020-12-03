@@ -173,9 +173,9 @@ void Client::modifierAdresse(System::String^ ID, System::String^ CodePostal, Sys
     }
 }
 
-void Client::ajouterNombreAchat()
+void Client::ajouterNombreAchat(System::String^ IDClient)
 {
-    throw gcnew System::NotImplementedException();
+    
 }
 
 void Client::afficherClient(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
