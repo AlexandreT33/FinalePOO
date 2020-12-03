@@ -9,8 +9,10 @@ public :
 	void supprimer(System::String^);
 	void afficher();
 	void modifier(System::String^, System::String^, System::String^, System::String^, System::String^);
-	void ajouterAdresse();
-	void supprimerAdresse();
+	void ajouterAdresse(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
+	void supprimerAdresse(System::String^);
+	void modifierAdresse(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 	void ajouterNombreAchat();
+	
 };
 

@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers de ressources\Stock">
+      <UniqueIdentifier>{aefbdca2-bdb1-4833-a57a-50a495592e08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Adresse">
+      <UniqueIdentifier>{992d9c9a-606d-42bd-be57-fcaf38a3b5bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Client">
+      <UniqueIdentifier>{14a06a2d-ffed-44b9-ad3c-0afe389548b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -43,26 +52,35 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AjouterStock.sql">
-      <Filter>Fichiers de ressources</Filter>
-    </None>
-    <None Include="RetirerStock.sql">
-      <Filter>Fichiers de ressources</Filter>
-    </None>
     <None Include="AfficherStock.sql">
-      <Filter>Fichiers de ressources</Filter>
+      <Filter>Fichiers de ressources\Stock</Filter>
+    </None>
+    <None Include="AjouterStock.sql">
+      <Filter>Fichiers de ressources\Stock</Filter>
     </None>
     <None Include="ModifierStock.sql">
-      <Filter>Fichiers de ressources</Filter>
+      <Filter>Fichiers de ressources\Stock</Filter>
+    </None>
+    <None Include="RetirerStock.sql">
+      <Filter>Fichiers de ressources\Stock</Filter>
     </None>
     <None Include="AjouterClient.sql">
-      <Filter>Fichiers de ressources</Filter>
-    </None>
-    <None Include="RetirerClient.sql">
-      <Filter>Fichiers de ressources</Filter>
+      <Filter>Fichiers de ressources\Client</Filter>
     </None>
     <None Include="ModifierClient.sql">
-      <Filter>Fichiers de ressources</Filter>
+      <Filter>Fichiers de ressources\Client</Filter>
+    </None>
+    <None Include="RetirerClient.sql">
+      <Filter>Fichiers de ressources\Client</Filter>
+    </None>
+    <None Include="AjouterAdresse.sql">
+      <Filter>Fichiers de ressources\Adresse</Filter>
+    </None>
+    <None Include="ModifierAdresse.sql">
+      <Filter>Fichiers de ressources\Adresse</Filter>
+    </None>
+    <None Include="RetirerAdresse.sql">
+      <Filter>Fichiers de ressources\Adresse</Filter>
     </None>
   </ItemGroup>
 </Project>
