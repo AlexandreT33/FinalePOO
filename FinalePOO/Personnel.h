@@ -8,6 +8,6 @@ public :
 	void ajouter(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 	void supprimer(System::String^);
 	void afficher();
-	void modifier();
+	void modifier(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 }; 
 
