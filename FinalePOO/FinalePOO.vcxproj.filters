@@ -82,5 +82,8 @@
     <None Include="RetirerAdresse.sql">
       <Filter>Fichiers de ressources\Adresse</Filter>
     </None>
+    <None Include="UpdateNBAchat.sql">
+      <Filter>Fichiers de ressources\Client</Filter>
+    </None>
   </ItemGroup>
 </Project>

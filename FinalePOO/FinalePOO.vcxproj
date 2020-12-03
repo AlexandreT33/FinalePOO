@@ -148,6 +148,7 @@
     <None Include="RetirerClient.sql" />
     <None Include="RetirerStock.sql" />
     <None Include="ModifierStock.sql" />
+    <None Include="UpdateNBAchat.sql" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
