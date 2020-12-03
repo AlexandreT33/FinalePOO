@@ -565,6 +565,7 @@ namespace FinalePOO {
 			this->button17->TabIndex = 61;
 			this->button17->Text = L"Afficher";
 			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click_1);
 			// 
 			// client_afficher
 			// 
@@ -993,12 +994,12 @@ namespace FinalePOO {
 		client->supprimer(this->adresse_id->Text);
 		this->adresse_id->Clear();
 	}
-	private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) { //afficher client
+	private: System::Void button17_Click_1(System::Object^ sender, System::EventArgs^ e) { //afficher client
 		DataSet^ objdata = gcnew DataSet();
 		Client^ client = gcnew Client();
 		client->afficherAdresse(this->client_numero->Text, objdata);
 		dataGridView3->DataSource = objdata;
-		dataGridView3->DataMember = "Client";
+		dataGridView3->DataMember = "Adresse";
 	}
 		   //##############PANEL CLIENT################
 	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) { // quitter client
@@ -1077,7 +1078,6 @@ namespace FinalePOO {
 		   //##############PANEL STATISTIQUES################
 
 
-private: System::Void button15_Click_1(System::Object^ sender, System::EventArgs^ e) {
-}
+
 };
 }
