@@ -1,30 +1,6 @@
 #include "ClasseCommande.h"
 
-void Commande::ajouterCommande(System::String^ dateE, System::String^ dateL, System::String^ NDC)
-{
-    //Source de la bdd, puis instanciation de la requete
-    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AjouterCommande.sql");
-
-    //Assignation de la requete et la Source à la commande de Connexion
-    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
-    System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
-
-    commande->Parameters->AddWithValue("@dateE", dateE);
-    commande->Parameters->AddWithValue("@dateL", dateL);
-    commande->Parameters->AddWithValue("@NDC", NDC);
-    //essai de la requete plus gestion de l'Exception.
-    try
-    {
-        connexion->Open();
-        commande->ExecuteNonQuery();
-        connexion->Close();
-    }
-    catch (System::Exception^ ex)
-    {
-        System::Windows::Forms::MessageBox::Show(ex->Message);
-    }
-}
+//PANIER---------------------------------------------------------------------------------------
 
 void Commande::panierdynamiqueAjout(System::String^ ID, System::String^ Reference, System::String^ Quantite)
 {
@@ -102,6 +78,34 @@ void Commande::panierdynamiqueRafraichir(System::Data::DataSet^ objdata)
     }
 }
 
+//Commande----------------------------------------------------------------------------------
+
+void Commande::ajouterCommande(System::String^ dateE, System::String^ dateL, System::String^ NDC)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("AjouterCommande.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
+
+    commande->Parameters->AddWithValue("@dateE", dateE);
+    commande->Parameters->AddWithValue("@dateL", dateL);
+    commande->Parameters->AddWithValue("@NDC", NDC);
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->ExecuteNonQuery();
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+}
+
 void Commande::retirerCommande(System::String^ ID)
 {
     //Source de la bdd, puis instanciation de la requete
@@ -151,7 +155,7 @@ void Commande::afficherCommande(System::Data::DataSet^ objdata)
 
 }
 
-void Commande::modifierCommande(System::String^ dateE, System::String^ dateL, System::String^ NDC)
+void Commande::modifierCommande(System::String^ ID, System::String^ dateE, System::String^ dateL, System::String^ NDC)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -161,6 +165,7 @@ void Commande::modifierCommande(System::String^ dateE, System::String^ dateL, Sy
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
     System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
 
+    commande->Parameters->AddWithValue("@ID", ID);
     commande->Parameters->AddWithValue("@dateE", dateE);
     commande->Parameters->AddWithValue("@dateL", dateL);
     commande->Parameters->AddWithValue("@NDC", NDC);
@@ -176,6 +181,9 @@ void Commande::modifierCommande(System::String^ dateE, System::String^ dateL, Sy
         System::Windows::Forms::MessageBox::Show(ex->Message);
     }
 }
+
+//Paiement----------------------------------------------------------------------------------
+
 void Commande::ajouterPaiement(System::String^ DatePE, System::String^ DatePR, System::String^ Moyen, System::String^ Montant, System::String^ ID, System::String^ ID_Adresse)
 {
     //Source de la bdd, puis instanciation de la requete
@@ -228,11 +236,14 @@ void Commande::afficherPaiement(System::String^ ID_Commande, System::Data::DataS
     }
 }
 
-void Commande::afficherAdresse(System::String^ ID_Client, System::Data::DataSet^ objdata)
+//Adresse-----------------------------------------------------------------------------------
+
+void Commande::afficherAdresse(System::String^ NDC, System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AfficherAdresse.sql");
+    System::String^ requete = System::IO::File::ReadAllText("SELECT* FROM POO.dbo.Adresse WHERE Numero_de_Client = " + NDC);
+
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
@@ -249,4 +260,31 @@ void Commande::afficherAdresse(System::String^ ID_Client, System::Data::DataSet^
     {
         System::Windows::Forms::MessageBox::Show(ex->Message);
     }
+}
+
+void Commande::ajouterAdresse(System::String^ NDC, System::String^ ID, System::String^ ID_Adresse)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("AjouterAdresseLivraison.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
+
+    commande->Parameters->AddWithValue("@NDC", NDC);
+    commande->Parameters->AddWithValue("@ID", ID);
+    commande->Parameters->AddWithValue("@ID_Adresse", ID_Adresse);
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->ExecuteNonQuery();
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+}
 }

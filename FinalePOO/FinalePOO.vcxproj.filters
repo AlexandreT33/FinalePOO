@@ -142,9 +142,6 @@
     <None Include="ProduitSousReapro.sql">
       <Filter>Fichiers de ressources\Statistique</Filter>
     </None>
-    <None Include="AfficherAdresse.sql">
-      <Filter>Fichiers de ressources\Commande\Livraison</Filter>
-    </None>
     <None Include="AfficherCommande.sql">
       <Filter>Fichiers de ressources\Commande\Commande</Filter>
     </None>
@@ -174,6 +171,9 @@
     </None>
     <None Include="AjouterPaiement.sql">
       <Filter>Fichiers de ressources\Commande\Paiement</Filter>
+    </None>
+    <None Include="AjouterAdresseLivraison.sql">
+      <Filter>Fichiers de ressources\Commande\Livraison</Filter>
     </None>
   </ItemGroup>
 </Project>

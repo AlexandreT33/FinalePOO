@@ -147,6 +147,7 @@
     <None Include="AfficherPersonnel.sql" />
     <None Include="AfficherStock.sql" />
     <None Include="AjouterAdresse.sql" />
+    <None Include="AjouterAdresseLivraison.sql" />
     <None Include="AjouterClient.sql" />
     <None Include="AjouterCommande.sql" />
     <None Include="AjouterPaiement.sql" />
@@ -169,7 +170,6 @@
     <None Include="AfficherPanier.sql" />
     <None Include="AfficherArticle.sql" />
     <None Include="AfficherPaiement.sql" />
-    <None Include="AfficherAdresse.sql" />
     <None Include="ProduitSousReapro.sql" />
     <None Include="UpdateNBAchat.sql" />
   </ItemGroup>
