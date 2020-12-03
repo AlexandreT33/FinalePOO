@@ -169,7 +169,7 @@ private: System::Windows::Forms::Button^ Personnel_Retirer;
 
 private: System::Windows::Forms::Button^ Personnel_Ajouter;
 private: System::Windows::Forms::Button^ Personnel_Modifier;
-private: System::Windows::Forms::TextBox^ Personnel_DateNaissance;
+
 private: System::Windows::Forms::TextBox^ Personnel_IDSup;
 
 
@@ -182,7 +182,7 @@ private: System::Windows::Forms::TextBox^ Personnel_Nom;
 private: System::Windows::Forms::TextBox^ Personnel_Numero;
 
 private: System::Windows::Forms::Label^ label29;
-private: System::Windows::Forms::Label^ label30;
+
 private: System::Windows::Forms::Label^ label31;
 private: System::Windows::Forms::Label^ label32;
 private: System::Windows::Forms::Label^ label33;
@@ -290,13 +290,11 @@ private: System::Windows::Forms::Label^ label28;
 			this->Personnel_Retirer = (gcnew System::Windows::Forms::Button());
 			this->Personnel_Ajouter = (gcnew System::Windows::Forms::Button());
 			this->Personnel_Modifier = (gcnew System::Windows::Forms::Button());
-			this->Personnel_DateNaissance = (gcnew System::Windows::Forms::TextBox());
 			this->Personnel_IDSup = (gcnew System::Windows::Forms::TextBox());
 			this->Personnel_Prenom = (gcnew System::Windows::Forms::TextBox());
 			this->Personnel_Nom = (gcnew System::Windows::Forms::TextBox());
 			this->Personnel_Numero = (gcnew System::Windows::Forms::TextBox());
 			this->label29 = (gcnew System::Windows::Forms::Label());
-			this->label30 = (gcnew System::Windows::Forms::Label());
 			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->label33 = (gcnew System::Windows::Forms::Label());
@@ -1010,13 +1008,11 @@ private: System::Windows::Forms::Label^ label28;
 			this->Panel_Personnel->Controls->Add(this->Personnel_Retirer);
 			this->Panel_Personnel->Controls->Add(this->Personnel_Ajouter);
 			this->Panel_Personnel->Controls->Add(this->Personnel_Modifier);
-			this->Panel_Personnel->Controls->Add(this->Personnel_DateNaissance);
 			this->Panel_Personnel->Controls->Add(this->Personnel_IDSup);
 			this->Panel_Personnel->Controls->Add(this->Personnel_Prenom);
 			this->Panel_Personnel->Controls->Add(this->Personnel_Nom);
 			this->Panel_Personnel->Controls->Add(this->Personnel_Numero);
 			this->Panel_Personnel->Controls->Add(this->label29);
-			this->Panel_Personnel->Controls->Add(this->label30);
 			this->Panel_Personnel->Controls->Add(this->label31);
 			this->Panel_Personnel->Controls->Add(this->label32);
 			this->Panel_Personnel->Controls->Add(this->label33);
@@ -1030,7 +1026,7 @@ private: System::Windows::Forms::Label^ label28;
 			// 
 			this->Personnel_Date_Embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->Personnel_Date_Embauche->Location = System::Drawing::Point(802, 570);
+			this->Personnel_Date_Embauche->Location = System::Drawing::Point(394, 541);
 			this->Personnel_Date_Embauche->Name = L"Personnel_Date_Embauche";
 			this->Personnel_Date_Embauche->Size = System::Drawing::Size(149, 24);
 			this->Personnel_Date_Embauche->TabIndex = 96;
@@ -1040,7 +1036,7 @@ private: System::Windows::Forms::Label^ label28;
 			this->label28->AutoSize = true;
 			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label28->Location = System::Drawing::Point(627, 570);
+			this->label28->Location = System::Drawing::Point(219, 542);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(169, 24);
 			this->label28->TabIndex = 95;
@@ -1094,6 +1090,7 @@ private: System::Windows::Forms::Label^ label28;
 			this->Personnel_DataGridView->Name = L"Personnel_DataGridView";
 			this->Personnel_DataGridView->Size = System::Drawing::Size(1134, 313);
 			this->Personnel_DataGridView->TabIndex = 84;
+			this->Personnel_DataGridView->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::Personnel_DataGridView_CellContentClick);
 			// 
 			// Personnel_Adresse_Numero
 			// 
@@ -1126,7 +1123,7 @@ private: System::Windows::Forms::Label^ label28;
 			// 
 			this->Personnel_Adresse_Ville->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->Personnel_Adresse_Ville->Location = System::Drawing::Point(394, 599);
+			this->Personnel_Adresse_Ville->Location = System::Drawing::Point(394, 576);
 			this->Personnel_Adresse_Ville->Name = L"Personnel_Adresse_Ville";
 			this->Personnel_Adresse_Ville->Size = System::Drawing::Size(149, 24);
 			this->Personnel_Adresse_Ville->TabIndex = 80;
@@ -1158,7 +1155,7 @@ private: System::Windows::Forms::Label^ label28;
 			this->label26->AutoSize = true;
 			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label26->Location = System::Drawing::Point(332, 599);
+			this->label26->Location = System::Drawing::Point(330, 576);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(56, 24);
 			this->label26->TabIndex = 76;
@@ -1205,20 +1202,11 @@ private: System::Windows::Forms::Label^ label28;
 			this->Personnel_Modifier->UseVisualStyleBackColor = true;
 			this->Personnel_Modifier->Click += gcnew System::EventHandler(this, &MyForm::Personnel_Modifier_Click);
 			// 
-			// Personnel_DateNaissance
-			// 
-			this->Personnel_DateNaissance->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->Personnel_DateNaissance->Location = System::Drawing::Point(394, 540);
-			this->Personnel_DateNaissance->Name = L"Personnel_DateNaissance";
-			this->Personnel_DateNaissance->Size = System::Drawing::Size(149, 24);
-			this->Personnel_DateNaissance->TabIndex = 70;
-			// 
 			// Personnel_IDSup
 			// 
 			this->Personnel_IDSup->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->Personnel_IDSup->Location = System::Drawing::Point(394, 570);
+			this->Personnel_IDSup->Location = System::Drawing::Point(802, 570);
 			this->Personnel_IDSup->Name = L"Personnel_IDSup";
 			this->Personnel_IDSup->Size = System::Drawing::Size(149, 24);
 			this->Personnel_IDSup->TabIndex = 69;
@@ -1255,22 +1243,11 @@ private: System::Windows::Forms::Label^ label28;
 			this->label29->AutoSize = true;
 			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label29->Location = System::Drawing::Point(263, 570);
+			this->label29->Location = System::Drawing::Point(671, 570);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(125, 24);
 			this->label29->TabIndex = 65;
 			this->label29->Text = L"ID Supérieur :";
-			// 
-			// label30
-			// 
-			this->label30->AutoSize = true;
-			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label30->Location = System::Drawing::Point(213, 540);
-			this->label30->Name = L"label30";
-			this->label30->Size = System::Drawing::Size(175, 24);
-			this->label30->TabIndex = 64;
-			this->label30->Text = L"Date de naissance :";
 			// 
 			// label31
 			// 
@@ -1310,10 +1287,10 @@ private: System::Windows::Forms::Label^ label28;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
+			this->Controls->Add(this->Panel_Personnel);
 			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
 			this->Controls->Add(this->Panel_Stock);
-			this->Controls->Add(this->Panel_Personnel);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
@@ -1594,6 +1571,7 @@ private: System::Windows::Forms::Label^ label28;
 			//##############PANEL COMMANDES################
 
 			//##############PANEL STATISTIQUES################
+
 
 
 

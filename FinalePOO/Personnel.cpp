@@ -13,14 +13,6 @@ void Personnel::ajouter(System::String^ Nom, System::String^ Prenom, System::Str
     commande->Parameters->AddWithValue("@nom", Nom);
     commande->Parameters->AddWithValue("@prenom", Prenom);
     commande->Parameters->AddWithValue("@date", System::Convert::ToDateTime(DateE));
-    try
-    {
-        System::Convert::ToInt64(ID_Superieur);
-    }
-    catch (System::Exception^ ex)
-    {
-        System::Windows::Forms::MessageBox::Show(ex->Message);
-    }
     commande->Parameters->AddWithValue("@IDsuperieur", ID_Superieur);
     commande->Parameters->AddWithValue("@code_postal", System::Convert::ToInt64(CodePostal));
     commande->Parameters->AddWithValue("@ville", Ville);
@@ -106,7 +98,7 @@ void Personnel::modifier(System::String^ ID, System::String^ Nom, System::String
     commande->Parameters->AddWithValue("@nom", Nom);
     commande->Parameters->AddWithValue("@prenom", Prenom);
     commande->Parameters->AddWithValue("@date", System::Convert::ToDateTime(DateE));
-    commande->Parameters->AddWithValue("@IDsuperieur", System::Convert::ToInt64(ID_Superieur));
+    commande->Parameters->AddWithValue("@IDsuperieur", ID_Superieur);
     commande->Parameters->AddWithValue("@code_postal", System::Convert::ToInt64(CodePostal));
     commande->Parameters->AddWithValue("@ville", Ville);
     commande->Parameters->AddWithValue("@libelle", Libelle);
