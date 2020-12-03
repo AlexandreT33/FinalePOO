@@ -58,7 +58,7 @@ void Personnel::supprimer(System::String^ IDPersonnel)
     }
 }
 
-void Personnel::afficher(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
+void Personnel::afficher(System::Data::DataSet^ objdata)
 {
 
     //Source de la bdd, puis instanciation de la requete
