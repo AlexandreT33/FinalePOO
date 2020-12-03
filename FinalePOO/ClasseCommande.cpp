@@ -176,16 +176,22 @@ void Commande::modifierCommande(System::String^ dateE, System::String^ dateL, Sy
         System::Windows::Forms::MessageBox::Show(ex->Message);
     }
 }
-void Commande::ajouterPaiement()
+void Commande::ajouterPaiement(System::String^ DatePE, System::String^ DatePR, System::String^ Moyen, System::String^ Montant, System::String^ ID, System::String^ ID_Adresse)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("ModifierCommande.sql");
+    System::String^ requete = System::IO::File::ReadAllText("AjouterPaiement.sql");
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
     System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
 
+    commande->Parameters->AddWithValue("@DatePE", DatePE);
+    commande->Parameters->AddWithValue("@DatePR", DatePR);
+    commande->Parameters->AddWithValue("@Moyen", Moyen);
+    commande->Parameters->AddWithValue("@Montant", Montant);
+    commande->Parameters->AddWithValue("@ID", ID);
+    commande->Parameters->AddWithValue("@ID_Adresse", ID_Adresse);
     //essai de la requete plus gestion de l'Exception.
     try
     {
