@@ -1,12 +1,11 @@
 ﻿#include "Affichage.h"
 
 
-void Affichage::Afficher(System::String^ fichier, System::Data::DataSet^ objdata)
+void Affichage::afficher(System::String^ requete, System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText(fichier);
-
+    
     //Assignation de la requete et la Source � la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
     System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
