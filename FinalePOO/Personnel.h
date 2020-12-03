@@ -7,7 +7,7 @@ puis  liaison à Adresse : K_ID, numero, typeDeVoie, LibelleDeVoie, Ville, codePo
 public :
 	void ajouter(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 	void supprimer(System::String^);
-	void afficher();
+	void afficher(System::String^, System::Data::DataSet^);
 	void modifier();
 }; 
 
