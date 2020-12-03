@@ -4,7 +4,7 @@ void Personnel::ajouter(System::String^ Nom, System::String^ Prenom, System::Str
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AjouterClient.sql");
+    System::String^ requete = System::IO::File::ReadAllText("AjouterPersonnel.sql");
 
     //Assignation de la requete et la Source � la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
@@ -13,12 +13,12 @@ void Personnel::ajouter(System::String^ Nom, System::String^ Prenom, System::Str
     commande->Parameters->AddWithValue("@nom", Nom);
     commande->Parameters->AddWithValue("@prenom", Prenom);
     commande->Parameters->AddWithValue("@date", DateE);
-    commande->Parameters->AddWithValue("IDsuperieur", ID_Superieur);
-    commande->Parameters->AddWithValue("code_postal", CodePostal );
-    commande->Parameters->AddWithValue("ville", Ville);
-    commande->Parameters->AddWithValue("libelle", Libelle);
-    commande->Parameters->AddWithValue("type", Type);
-    commande->Parameters->AddWithValue("numero", Numero);
+    commande->Parameters->AddWithValue("@IDsuperieur", ID_Superieur);
+    commande->Parameters->AddWithValue("@code_postal", CodePostal );
+    commande->Parameters->AddWithValue("@ville", Ville);
+    commande->Parameters->AddWithValue("@libelle", Libelle);
+    commande->Parameters->AddWithValue("@type", Type);
+    commande->Parameters->AddWithValue("@numero", Numero);
 
 
     //essai de la requete plus gestion de l'Exception.
@@ -38,7 +38,7 @@ void Personnel::supprimer(System::String^ IDPersonnel)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AjouterClient.sql");
+    System::String^ requete = System::IO::File::ReadAllText("RetirerPersonnel.sql");
 
     //Assignation de la requete et la Source � la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
@@ -87,22 +87,22 @@ void Personnel::modifier(System::String^ ID, System::String^ Nom, System::String
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AjouterClient.sql");
+    System::String^ requete = System::IO::File::ReadAllText("ModifierPersonnel.sql");
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
     System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
 
-    commande->Parameters->AddWithValue("ID", ID);
+    commande->Parameters->AddWithValue("@ID", ID);
     commande->Parameters->AddWithValue("@nom", Nom);
     commande->Parameters->AddWithValue("@prenom", Prenom);
     commande->Parameters->AddWithValue("@date", DateE);
-    commande->Parameters->AddWithValue("IDsuperieur", ID_Superieur);
-    commande->Parameters->AddWithValue("code_postal", CodePostal);
-    commande->Parameters->AddWithValue("ville", Ville);
-    commande->Parameters->AddWithValue("libelle", Libelle);
-    commande->Parameters->AddWithValue("type", Type);
-    commande->Parameters->AddWithValue("numero", Numero);
+    commande->Parameters->AddWithValue("@IDsuperieur", ID_Superieur);
+    commande->Parameters->AddWithValue("@code_postal", CodePostal);
+    commande->Parameters->AddWithValue("@ville", Ville);
+    commande->Parameters->AddWithValue("@libelle", Libelle);
+    commande->Parameters->AddWithValue("@type", Type);
+    commande->Parameters->AddWithValue("@numero", Numero);
 
 
     //essai de la requete plus gestion de l'Exception.

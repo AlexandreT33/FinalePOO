@@ -272,6 +272,8 @@ private: System::Windows::Forms::Label^ label28;
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->Panel_Personnel = (gcnew System::Windows::Forms::Panel());
+			this->Personnel_Date_Embauche = (gcnew System::Windows::Forms::TextBox());
+			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->label35 = (gcnew System::Windows::Forms::Label());
 			this->Personnel_Retour = (gcnew System::Windows::Forms::Button());
 			this->Personnel_Adresse_LVoie = (gcnew System::Windows::Forms::TextBox());
@@ -298,8 +300,6 @@ private: System::Windows::Forms::Label^ label28;
 			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->label33 = (gcnew System::Windows::Forms::Label());
-			this->Personnel_Date_Embauche = (gcnew System::Windows::Forms::TextBox());
-			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -1026,6 +1026,26 @@ private: System::Windows::Forms::Label^ label28;
 			this->Panel_Personnel->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Personnel->TabIndex = 0;
 			// 
+			// Personnel_Date_Embauche
+			// 
+			this->Personnel_Date_Embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Date_Embauche->Location = System::Drawing::Point(802, 570);
+			this->Personnel_Date_Embauche->Name = L"Personnel_Date_Embauche";
+			this->Personnel_Date_Embauche->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Date_Embauche->TabIndex = 96;
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label28->Location = System::Drawing::Point(627, 570);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(169, 24);
+			this->label28->TabIndex = 95;
+			this->label28->Text = L"Date d\'embauche :";
+			// 
 			// label35
 			// 
 			this->label35->AutoSize = true;
@@ -1163,6 +1183,7 @@ private: System::Windows::Forms::Label^ label28;
 			this->Personnel_Retirer->TabIndex = 73;
 			this->Personnel_Retirer->Text = L"Retirer";
 			this->Personnel_Retirer->UseVisualStyleBackColor = true;
+			this->Personnel_Retirer->Click += gcnew System::EventHandler(this, &MyForm::Personnel_Retirer_Click);
 			// 
 			// Personnel_Ajouter
 			// 
@@ -1182,6 +1203,7 @@ private: System::Windows::Forms::Label^ label28;
 			this->Personnel_Modifier->TabIndex = 71;
 			this->Personnel_Modifier->Text = L"Modifier";
 			this->Personnel_Modifier->UseVisualStyleBackColor = true;
+			this->Personnel_Modifier->Click += gcnew System::EventHandler(this, &MyForm::Personnel_Modifier_Click);
 			// 
 			// Personnel_DateNaissance
 			// 
@@ -1283,31 +1305,14 @@ private: System::Windows::Forms::Label^ label28;
 			this->label33->TabIndex = 61;
 			this->label33->Text = L"Numéro de personnel :";
 			// 
-			// Personnel_Date_Embauche
-			// 
-			this->Personnel_Date_Embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->Personnel_Date_Embauche->Location = System::Drawing::Point(802, 570);
-			this->Personnel_Date_Embauche->Name = L"Personnel_Date_Embauche";
-			this->Personnel_Date_Embauche->Size = System::Drawing::Size(149, 24);
-			this->Personnel_Date_Embauche->TabIndex = 96;
-			// 
-			// label28
-			// 
-			this->label28->AutoSize = true;
-			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label28->Location = System::Drawing::Point(627, 570);
-			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(169, 24);
-			this->label28->TabIndex = 95;
-			this->label28->Text = L"Date d\'embauche :";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
+			this->Controls->Add(this->Panel_Bienvenue);
+			this->Controls->Add(this->Panel_Client);
+			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Personnel);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -1358,6 +1363,12 @@ private: System::Windows::Forms::Label^ label28;
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 		this->Panel_Personnel->Visible = true;
+		//DataGridView
+		DataSet^ personneldata = gcnew DataSet();
+		Personnel^ personnel = gcnew Personnel();
+		personnel->afficher(personneldata);
+		Personnel_DataGridView->DataSource = personneldata;
+		Personnel_DataGridView->DataMember = "Personnel";
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -1513,8 +1524,6 @@ private: System::Windows::Forms::Label^ label28;
 		article->supprimer(this->Ref->Text);
 		this->Ref->Clear();
 	}
-			//##############PANEL COMMANDES################
-
 			//##############PANEL PERSONNEL################
 	private: System::Void Personnel_Retour_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Panel_Personnel->Visible = false;
@@ -1532,8 +1541,27 @@ private: System::Windows::Forms::Label^ label28;
 		this->Personnel_Adresse_LVoie->Clear();
 		this->Personnel_Adresse_TVoie->Clear();
 		this->Personnel_Adresse_Numero->Clear();
-
 	}
+	private: System::Void Personnel_Retirer_Click(System::Object^ sender, System::EventArgs^ e) {
+		Personnel^ personnel = gcnew Personnel();
+		personnel->supprimer(this->Personnel_Numero->Text);
+		this->Personnel_Numero->Clear();
+	}
+	private: System::Void Personnel_Modifier_Click(System::Object^ sender, System::EventArgs^ e) {
+		Personnel^ personnel = gcnew Personnel();
+		personnel->modifier(this->Personnel_Numero->Text,this->Personnel_Nom->Text, this->Personnel_Prenom->Text, this->Personnel_Date_Embauche->Text, this->Personnel_IDSup->Text, this->Personnel_Adresse_CodeP->Text, this->Personnel_Adresse_Ville->Text, this->Personnel_Adresse_LVoie->Text, this->Personnel_Adresse_TVoie->Text, this->Personnel_Adresse_Numero->Text);
+		this->Personnel_Numero->Clear();
+		this->Personnel_Nom->Clear();
+		this->Personnel_Prenom->Clear();
+		this->Personnel_Date_Embauche->Clear();
+		this->Personnel_IDSup->Clear();
+		this->Personnel_Adresse_CodeP->Clear();
+		this->Personnel_Adresse_Ville->Clear();
+		this->Personnel_Adresse_LVoie->Clear();
+		this->Personnel_Adresse_TVoie->Clear();
+		this->Personnel_Adresse_Numero->Clear();
+	}
+			//##############PANEL COMMANDES################
 
 			//##############PANEL STATISTIQUES################
 
