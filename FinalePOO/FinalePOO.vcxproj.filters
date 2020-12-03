@@ -61,5 +61,8 @@
     <None Include="RetirerClient.sql">
       <Filter>Fichiers de ressources</Filter>
     </None>
+    <None Include="ModifierClient.sql">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
   </ItemGroup>
 </Project>

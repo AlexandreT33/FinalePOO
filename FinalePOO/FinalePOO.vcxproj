@@ -141,6 +141,7 @@
     <None Include="AfficherStock.sql" />
     <None Include="AjouterClient.sql" />
     <None Include="AjouterStock.sql" />
+    <None Include="ModifierClient.sql" />
     <None Include="RetirerClient.sql" />
     <None Include="RetirerStock.sql" />
     <None Include="ModifierStock.sql" />
