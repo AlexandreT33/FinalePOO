@@ -12,7 +12,7 @@ public :
 	void ajouterAdresse(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 	void supprimerAdresse(System::String^);
 	void modifierAdresse(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
-	void ajouterNombreAchat();
+	void ajouterNombreAchat(System::String^);
 	
 };
 
