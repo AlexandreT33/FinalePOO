@@ -465,9 +465,9 @@ namespace FinalePOO {
 			this->Commandes_Paiments_buttonAdresseClient = (gcnew System::Windows::Forms::Button());
 			this->Commandes_Paiments_buttonPaiments = (gcnew System::Windows::Forms::Button());
 			this->Panel_Statistique = (gcnew System::Windows::Forms::Panel());
+			this->button_retour_statitique = (gcnew System::Windows::Forms::Button());
 			this->dataGridView_Statistique = (gcnew System::Windows::Forms::DataGridView());
 			this->button_ProduitSousReapro = (gcnew System::Windows::Forms::Button());
-			this->button_retour_statitique = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -2087,6 +2087,16 @@ namespace FinalePOO {
 			this->Panel_Statistique->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Statistique->TabIndex = 0;
 			// 
+			// button_retour_statitique
+			// 
+			this->button_retour_statitique->Location = System::Drawing::Point(3, 3);
+			this->button_retour_statitique->Name = L"button_retour_statitique";
+			this->button_retour_statitique->Size = System::Drawing::Size(75, 23);
+			this->button_retour_statitique->TabIndex = 2;
+			this->button_retour_statitique->Text = L"Retour";
+			this->button_retour_statitique->UseVisualStyleBackColor = true;
+			this->button_retour_statitique->Click += gcnew System::EventHandler(this, &MyForm::button_retour_statitique_Click);
+			// 
 			// dataGridView_Statistique
 			// 
 			this->dataGridView_Statistique->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -2104,16 +2114,6 @@ namespace FinalePOO {
 			this->button_ProduitSousReapro->Text = L"Produits sous le seuil de réaprovisionement";
 			this->button_ProduitSousReapro->UseVisualStyleBackColor = true;
 			this->button_ProduitSousReapro->Click += gcnew System::EventHandler(this, &MyForm::button_ProduitSousReapro_Click);
-			// 
-			// button_retour_statitique
-			// 
-			this->button_retour_statitique->Location = System::Drawing::Point(3, 3);
-			this->button_retour_statitique->Name = L"button_retour_statitique";
-			this->button_retour_statitique->Size = System::Drawing::Size(75, 23);
-			this->button_retour_statitique->TabIndex = 2;
-			this->button_retour_statitique->Text = L"Retour";
-			this->button_retour_statitique->UseVisualStyleBackColor = true;
-			this->button_retour_statitique->Click += gcnew System::EventHandler(this, &MyForm::button_retour_statitique_Click);
 			// 
 			// MyForm
 			// 
@@ -2523,8 +2523,32 @@ namespace FinalePOO {
 	private: System::Void Commandes_buttonActualiser_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void Commandes_button_Ajouter_Click(System::Object^ sender, System::EventArgs^ e) {
+		Commande^ commandel = gcnew Commande();
+		commandel->ajouterCommande(this->Commandes_DateEmmission->Text, this->Commandes_DateLivraison->Text, this->Commandes_NumClient->Text);
+		this->Commandes_DateEmmission->Clear();
+		this->Commandes_DateLivraison->Clear();
+		this->Commandes_NumClient->Clear();
+		DataSet^ objdatan3 = gcnew DataSet();
+		Commande^ clientn3 = gcnew Commande();
+		clientn3->afficherCommande(objdatan3);
+		Commandes_DataGridView->DataSource = objdatan3;
+		Commandes_DataGridView->DataMember = "Commande";
+		delete objdatan3;
+		delete clientn3;
 	}
 	private: System::Void Commandes_button_Modifier_Click(System::Object^ sender, System::EventArgs^ e) {
+		Commande^ commande2 = gcnew Commande();
+		commande2->modifierCommande(this->Commandes_IdCommande->Text, this->Commandes_DateEmmission->Text, this->Commandes_DateLivraison->Text);
+		this->Commandes_DateEmmission->Clear();
+		this->Commandes_DateLivraison->Clear();
+		this->Commandes_IdCommande->Clear();
+		DataSet^ objdatan4 = gcnew DataSet();
+		Commande^ clientn4 = gcnew Commande();
+		clientn4->afficherCommande(objdatan4);
+		Commandes_DataGridView->DataSource = objdatan4;
+		Commandes_DataGridView->DataMember = "Commande";
+		delete objdatan4;
+		delete clientn4;
 	}
 	private: System::Void Commandes_button_Retirer_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -2582,6 +2606,7 @@ namespace FinalePOO {
 	private: System::Void Commandes_Paiments_buttonActualiser_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void Commandes_Paiments_buttonAjouter_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	}
 	private: System::Void Commandes_Paiments_buttonModifier_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
