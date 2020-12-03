@@ -440,6 +440,7 @@ namespace FinalePOO {
 			this->button6->TabIndex = 21;
 			this->button6->Text = L"Modifier";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
 			// button7
 			// 
@@ -459,6 +460,7 @@ namespace FinalePOO {
 			this->button8->TabIndex = 23;
 			this->button8->Text = L"Retirer";
 			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
 			// 
 			// Panel_Stock
 			// 
@@ -742,6 +744,7 @@ namespace FinalePOO {
 			this->button10->TabIndex = 40;
 			this->button10->Text = L"Retirer";
 			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			// 
 			// button11
 			// 
@@ -761,6 +764,7 @@ namespace FinalePOO {
 			this->button12->TabIndex = 38;
 			this->button12->Text = L"Modifier";
 			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
 			// 
 			// dataGridView2
 			// 
@@ -939,7 +943,7 @@ namespace FinalePOO {
 		this->Panel_Stock->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 	}
-	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter stock
 		Stock^ article = gcnew Stock();
 		article->ajouter(this->libelle->Text, this->quantite->Text, this->seuil->Text, this->prix->Text, this->TVA->Text);
 		this->libelle->Clear();
@@ -948,7 +952,22 @@ namespace FinalePOO {
 		this->prix->Clear();
 		this->TVA->Clear();
 	}
-	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) { // modifier stock
+		Stock^ article = gcnew Stock();
+		article->modifier(this->Ref->Text, this->libelle->Text, this->quantite->Text, this->seuil->Text, this->prix->Text, this->TVA->Text);
+		this->Ref->Clear();
+		this->libelle->Clear();
+		this->quantite->Clear();
+		this->seuil->Clear();
+		this->prix->Clear();
+		this->TVA->Clear();
+	}
+	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer stock
+		Stock^ article = gcnew Stock();
+		article->supprimer(this->Ref->Text);
+		this->Ref->Clear();
+	}
+	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) { // afficher client
 		this->Panel_Client->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 	}
@@ -960,6 +979,20 @@ namespace FinalePOO {
 		this->client_date_naissance->Clear();
 		this->client_nombre_achat->Clear();
 	}
+	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) { // modifier client
+		Client^ client = gcnew Client();
+		client->modifier(this->client_numero->Text, this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
+		this->client_numero->Clear();
+		this->client_nom->Clear();
+		this->client_prenom->Clear();
+		this->client_date_naissance->Clear();
+		this->client_nombre_achat->Clear();
+	}
+	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer client
+		Client^ client = gcnew Client();
+		client->supprimer(this->client_numero->Text);
+		this->client_numero->Clear();
+	}
 
 	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
 		DataSet^ objdata = gcnew DataSet();
@@ -968,5 +1001,6 @@ namespace FinalePOO {
 		dataGridView1->DataSource = objdata;
 		dataGridView1->DataMember = "Stock";
 	}
+};
 };
 }
