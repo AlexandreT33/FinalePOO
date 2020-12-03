@@ -86,4 +86,9 @@
       <Filter>Fichiers de ressources\Client</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\OneDrive - Association Cesi Viacesi mail\Bureau\Donibane Ultimate Frisbee\Photo\Background.JPG">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

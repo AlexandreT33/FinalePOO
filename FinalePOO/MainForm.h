@@ -227,10 +227,12 @@ namespace FinalePOO {
 			this->label1->Size = System::Drawing::Size(196, 42);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Bienvenue";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->BackColor = System::Drawing::Color::LemonChiffon;
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button1->Location = System::Drawing::Point(474, 163);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(219, 56);
@@ -241,6 +243,7 @@ namespace FinalePOO {
 			// 
 			// button2
 			// 
+			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button2->Location = System::Drawing::Point(474, 248);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(219, 56);
@@ -251,16 +254,19 @@ namespace FinalePOO {
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::Color::Orange;
+			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button3->Location = System::Drawing::Point(474, 339);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(219, 56);
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"Gestion Stock";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// button4
 			// 
+			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button4->Location = System::Drawing::Point(474, 431);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(219, 56);
@@ -271,6 +277,7 @@ namespace FinalePOO {
 			// 
 			// button5
 			// 
+			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button5->Location = System::Drawing::Point(474, 524);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(219, 56);
@@ -281,6 +288,7 @@ namespace FinalePOO {
 			// 
 			// Panel_Bienvenue
 			// 
+			this->Panel_Bienvenue->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->Panel_Bienvenue->Controls->Add(this->button5);
 			this->Panel_Bienvenue->Controls->Add(this->button4);
 			this->Panel_Bienvenue->Controls->Add(this->button3);
@@ -464,6 +472,7 @@ namespace FinalePOO {
 			// 
 			// Panel_Stock
 			// 
+			this->Panel_Stock->BackColor = System::Drawing::Color::Orange;
 			this->Panel_Stock->Controls->Add(this->button_afficher_stock);
 			this->Panel_Stock->Controls->Add(this->button9);
 			this->Panel_Stock->Controls->Add(this->button8);
@@ -511,6 +520,7 @@ namespace FinalePOO {
 			// 
 			// Panel_Client
 			// 
+			this->Panel_Client->BackColor = System::Drawing::Color::LemonChiffon;
 			this->Panel_Client->Controls->Add(this->button16);
 			this->Panel_Client->Controls->Add(this->adresse_numero_de_client);
 			this->Panel_Client->Controls->Add(this->label21);
@@ -886,6 +896,7 @@ namespace FinalePOO {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
 			this->Controls->Add(this->Panel_Bienvenue);
+			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Client);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
