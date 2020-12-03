@@ -1363,12 +1363,14 @@ private: System::Windows::Forms::Label^ label28;
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 		this->Panel_Personnel->Visible = true;
-		//DataGridView
+		//DataGridView Personnel
 		DataSet^ personneldata = gcnew DataSet();
 		Personnel^ personnel = gcnew Personnel();
 		personnel->afficher(personneldata);
 		Personnel_DataGridView->DataSource = personneldata;
 		Personnel_DataGridView->DataMember = "Personnel";
+		delete personneldata;
+		delete personnel;
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -1381,6 +1383,7 @@ private: System::Windows::Forms::Label^ label28;
 		article->afficher(objdata);
 		dataGridView1->DataSource = objdata;
 		dataGridView1->DataMember = "Stock";
+
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -1541,11 +1544,29 @@ private: System::Windows::Forms::Label^ label28;
 		this->Personnel_Adresse_LVoie->Clear();
 		this->Personnel_Adresse_TVoie->Clear();
 		this->Personnel_Adresse_Numero->Clear();
+
+		//DataGridView Personnel
+		DataSet^ personneldata1 = gcnew DataSet();
+		Personnel^ personnel1 = gcnew Personnel();
+		personnel1->afficher(personneldata1);
+		Personnel_DataGridView->DataSource = personneldata1;
+		Personnel_DataGridView->DataMember = "Personnel";
+		delete personneldata1;
+		delete personnel1;
 	}
 	private: System::Void Personnel_Retirer_Click(System::Object^ sender, System::EventArgs^ e) {
 		Personnel^ personnel = gcnew Personnel();
 		personnel->supprimer(this->Personnel_Numero->Text);
 		this->Personnel_Numero->Clear();
+
+		//DataGridView Personnel
+		DataSet^ personneldata2 = gcnew DataSet();
+		Personnel^ personnel2 = gcnew Personnel();
+		personnel2->afficher(personneldata2);
+		Personnel_DataGridView->DataSource = personneldata2;
+		Personnel_DataGridView->DataMember = "Personnel";
+		delete personneldata2;
+		delete personnel2;
 	}
 	private: System::Void Personnel_Modifier_Click(System::Object^ sender, System::EventArgs^ e) {
 		Personnel^ personnel = gcnew Personnel();
@@ -1560,6 +1581,15 @@ private: System::Windows::Forms::Label^ label28;
 		this->Personnel_Adresse_LVoie->Clear();
 		this->Personnel_Adresse_TVoie->Clear();
 		this->Personnel_Adresse_Numero->Clear();
+
+		//DataGridView Personnel
+		DataSet^ personneldata3 = gcnew DataSet();
+		Personnel^ personnel3 = gcnew Personnel();
+		personnel3->afficher(personneldata3);
+		Personnel_DataGridView->DataSource = personneldata3;
+		Personnel_DataGridView->DataMember = "Personnel";
+		delete personneldata3;
+		delete personnel3;
 	}
 			//##############PANEL COMMANDES################
 
