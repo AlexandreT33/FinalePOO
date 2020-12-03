@@ -71,6 +71,8 @@ namespace FinalePOO {
 
 
 	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::Button^ button_afficher_stock;
+
 
 	protected:
 
@@ -112,6 +114,7 @@ namespace FinalePOO {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Stock = (gcnew System::Windows::Forms::Panel());
+			this->button_afficher_stock = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -364,6 +367,7 @@ namespace FinalePOO {
 			// 
 			// Panel_Stock
 			// 
+			this->Panel_Stock->Controls->Add(this->button_afficher_stock);
 			this->Panel_Stock->Controls->Add(this->button9);
 			this->Panel_Stock->Controls->Add(this->button8);
 			this->Panel_Stock->Controls->Add(this->button7);
@@ -387,6 +391,16 @@ namespace FinalePOO {
 			this->Panel_Stock->Name = L"Panel_Stock";
 			this->Panel_Stock->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Stock->TabIndex = 24;
+			// 
+			// button_afficher_stock
+			// 
+			this->button_afficher_stock->Location = System::Drawing::Point(799, 517);
+			this->button_afficher_stock->Name = L"button_afficher_stock";
+			this->button_afficher_stock->Size = System::Drawing::Size(138, 36);
+			this->button_afficher_stock->TabIndex = 25;
+			this->button_afficher_stock->Text = L"Afficher";
+			this->button_afficher_stock->UseVisualStyleBackColor = true;
+			this->button_afficher_stock->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			// 
 			// button9
 			// 
@@ -459,6 +473,13 @@ namespace FinalePOO {
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
+	}
+	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+		DataSet^ objdata = gcnew DataSet();
+		Stock^ article = gcnew Stock();
+		article->afficher(this->Ref->Text, objdata);
+		dataGridView1->DataSource = objdata;
+		dataGridView1->DataMember = "Stock";
 	}
 };
 }
