@@ -360,9 +360,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label6->Location = System::Drawing::Point(618, 333);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(273, 24);
+			this->label6->Size = System::Drawing::Size(272, 24);
 			this->label6->TabIndex = 11;
-			this->label6->Text = L"Seuil de r�approvisionnement :";
+			this->label6->Text = L"Seuil de réapprovisionnement :";
 			// 
 			// label7
 			// 
@@ -886,9 +886,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label14->Location = System::Drawing::Point(74, 429);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(166, 24);
+			this->label14->Size = System::Drawing::Size(165, 24);
 			this->label14->TabIndex = 25;
-			this->label14->Text = L"Num�ro de client :";
+			this->label14->Text = L"Numéro de client :";
 			// 
 			// label15
 			// 
@@ -902,9 +902,9 @@ namespace FinalePOO {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->Panel_Stock);
-			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
+			this->Controls->Add(this->Panel_Bienvenue);
+			this->Controls->Add(this->Panel_Stock);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
