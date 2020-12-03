@@ -1090,6 +1090,7 @@ private: System::Windows::Forms::Label^ label28;
 			this->Personnel_DataGridView->Name = L"Personnel_DataGridView";
 			this->Personnel_DataGridView->Size = System::Drawing::Size(1134, 313);
 			this->Personnel_DataGridView->TabIndex = 84;
+			this->Personnel_DataGridView->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::Personnel_DataGridView_CellContentClick);
 			// 
 			// Personnel_Adresse_Numero
 			// 
@@ -1570,6 +1571,7 @@ private: System::Windows::Forms::Label^ label28;
 			//##############PANEL COMMANDES################
 
 			//##############PANEL STATISTIQUES################
+
 
 
 

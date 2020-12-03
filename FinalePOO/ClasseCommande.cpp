@@ -119,12 +119,104 @@ void Commande::retirerCommande(System::String^ ID)
     }
 }
 
-void Commande::afficher()
+void Commande::afficherCommande(System::Data::DataSet^ objdata)
 {
-    throw gcnew System::NotImplementedException();
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("AfficherCommande.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Stock");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+
 }
+
+void Commande::afficherPanier(System::String^ ID_Client, System::String^ ID_Commande, System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("AfficherPanier.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Stock");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+
+}
+
+
+
 
 void Commande::modifier()
 {
     throw gcnew System::NotImplementedException();
+}
+
+void Commande::afficherPaiement(System::String^ ID_Commande, System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("AfficherPaiement.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Stock");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+}
+
+void Commande::afficherAdresse(System::String^ ID_Client, System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("AfficherAdresse.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Stock");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
 }
