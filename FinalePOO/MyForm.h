@@ -190,6 +190,11 @@ private: System::Windows::Forms::Label^ label33;
 private: System::Windows::Forms::Label^ label35;
 private: System::Windows::Forms::TextBox^ Personnel_Date_Embauche;
 private: System::Windows::Forms::Label^ label28;
+private: System::Windows::Forms::Panel^ Panel_Commandes;
+private: System::Windows::Forms::Button^ Commandes_retour;
+private: System::Windows::Forms::DataGridView^ Commandes_DataGridView;
+private: System::Windows::Forms::Button^ Commandes_button_commandes;
+private: System::Windows::Forms::Button^ Commandes_button_client;
 
 
 
@@ -298,6 +303,11 @@ private: System::Windows::Forms::Label^ label28;
 			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->Panel_Commandes = (gcnew System::Windows::Forms::Panel());
+			this->Commandes_retour = (gcnew System::Windows::Forms::Button());
+			this->Commandes_DataGridView = (gcnew System::Windows::Forms::DataGridView());
+			this->Commandes_button_commandes = (gcnew System::Windows::Forms::Button());
+			this->Commandes_button_client = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -305,6 +315,8 @@ private: System::Windows::Forms::Label^ label28;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
 			this->Panel_Personnel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Personnel_DataGridView))->BeginInit();
+			this->Panel_Commandes->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Commandes_DataGridView))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -1281,15 +1293,69 @@ private: System::Windows::Forms::Label^ label28;
 			this->label33->TabIndex = 61;
 			this->label33->Text = L"Numéro de personnel :";
 			// 
+			// Panel_Commandes
+			// 
+			this->Panel_Commandes->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Commandes.BackgroundImage")));
+			this->Panel_Commandes->Controls->Add(this->Commandes_retour);
+			this->Panel_Commandes->Controls->Add(this->Commandes_DataGridView);
+			this->Panel_Commandes->Controls->Add(this->Commandes_button_commandes);
+			this->Panel_Commandes->Controls->Add(this->Commandes_button_client);
+			this->Panel_Commandes->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->Panel_Commandes->Location = System::Drawing::Point(0, 0);
+			this->Panel_Commandes->Name = L"Panel_Commandes";
+			this->Panel_Commandes->Size = System::Drawing::Size(1189, 686);
+			this->Panel_Commandes->TabIndex = 0;
+			// 
+			// Commandes_retour
+			// 
+			this->Commandes_retour->Location = System::Drawing::Point(3, 3);
+			this->Commandes_retour->Name = L"Commandes_retour";
+			this->Commandes_retour->Size = System::Drawing::Size(75, 23);
+			this->Commandes_retour->TabIndex = 3;
+			this->Commandes_retour->Text = L"Retour";
+			this->Commandes_retour->UseVisualStyleBackColor = true;
+			this->Commandes_retour->Click += gcnew System::EventHandler(this, &MyForm::Commandes_retour_Click);
+			// 
+			// Commandes_DataGridView
+			// 
+			this->Commandes_DataGridView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->Commandes_DataGridView->Location = System::Drawing::Point(125, 128);
+			this->Commandes_DataGridView->Name = L"Commandes_DataGridView";
+			this->Commandes_DataGridView->Size = System::Drawing::Size(921, 255);
+			this->Commandes_DataGridView->TabIndex = 0;
+			// 
+			// Commandes_button_commandes
+			// 
+			this->Commandes_button_commandes->BackColor = System::Drawing::Color::Transparent;
+			this->Commandes_button_commandes->Location = System::Drawing::Point(249, 109);
+			this->Commandes_button_commandes->Name = L"Commandes_button_commandes";
+			this->Commandes_button_commandes->Size = System::Drawing::Size(127, 23);
+			this->Commandes_button_commandes->TabIndex = 2;
+			this->Commandes_button_commandes->Text = L"Commandes";
+			this->Commandes_button_commandes->UseVisualStyleBackColor = false;
+			this->Commandes_button_commandes->Click += gcnew System::EventHandler(this, &MyForm::Commandes_button_commandes_Click);
+			// 
+			// Commandes_button_client
+			// 
+			this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
+			this->Commandes_button_client->Location = System::Drawing::Point(125, 109);
+			this->Commandes_button_client->Name = L"Commandes_button_client";
+			this->Commandes_button_client->Size = System::Drawing::Size(127, 23);
+			this->Commandes_button_client->TabIndex = 1;
+			this->Commandes_button_client->Text = L"Clients";
+			this->Commandes_button_client->UseVisualStyleBackColor = false;
+			this->Commandes_button_client->Click += gcnew System::EventHandler(this, &MyForm::Commandes_button_client_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->Panel_Personnel);
 			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
 			this->Controls->Add(this->Panel_Stock);
+			this->Controls->Add(this->Panel_Personnel);
+			this->Controls->Add(this->Panel_Commandes);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
@@ -1305,6 +1371,8 @@ private: System::Windows::Forms::Label^ label28;
 			this->Panel_Personnel->ResumeLayout(false);
 			this->Panel_Personnel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Personnel_DataGridView))->EndInit();
+			this->Panel_Commandes->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Commandes_DataGridView))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1313,6 +1381,7 @@ private: System::Windows::Forms::Label^ label28;
 		this->Controls->Add(this->Panel_Client);
 		this->Controls->Add(this->Panel_Stock);
 		this->Controls->Add(this->Panel_Personnel);
+		this->Controls->Add(this->Panel_Commandes);
 		*/
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -1320,6 +1389,7 @@ private: System::Windows::Forms::Label^ label28;
 		this->Panel_Client->Visible = false;
 		this->Panel_Personnel->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
+		this->Panel_Commandes->Visible = false;
 	}
 			//##############PANEL BIENVENUE################
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1362,9 +1432,12 @@ private: System::Windows::Forms::Label^ label28;
 
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
+		this->Panel_Commandes->Visible = true;
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -1568,8 +1641,20 @@ private: System::Windows::Forms::Label^ label28;
 		delete personnel3;
 	}
 			//##############PANEL COMMANDES################
-
+	private: System::Void Commandes_button_client_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Commandes_button_commandes->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_button_client->BackColor = System::Drawing::SystemColors::ActiveCaption;
+	}
+	private: System::Void Commandes_button_commandes_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_button_commandes->BackColor = System::Drawing::SystemColors::ActiveCaption;
+	}
+	private: System::Void Commandes_retour_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Panel_Commandes->Visible = false;
+		this->Panel_Bienvenue->Visible = true;
+	}
 			//##############PANEL STATISTIQUES################
+
 
 
 
