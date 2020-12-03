@@ -119,12 +119,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ClasseCommande.cpp" />
     <ClCompile Include="ClasseStock.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClasseCommande.h" />
     <ClInclude Include="ClasseStock.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="MyForm.h">
@@ -142,6 +144,7 @@
     <None Include="AfficherStock.sql" />
     <None Include="AjouterAdresse.sql" />
     <None Include="AjouterClient.sql" />
+    <None Include="AjouterCommande.sql" />
     <None Include="AjouterPersonnel.sql" />
     <None Include="AjouterStock.sql" />
     <None Include="ModifierAdresse.sql" />

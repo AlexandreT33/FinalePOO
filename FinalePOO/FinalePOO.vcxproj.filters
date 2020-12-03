@@ -25,6 +25,9 @@
     <Filter Include="Fichiers de ressources\Personnel">
       <UniqueIdentifier>{34884c75-db0c-4523-bdd2-7cad76881625}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Commande">
+      <UniqueIdentifier>{3c4dfef0-7408-4cce-ac14-22d0736491fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClasseStock.cpp">
@@ -37,6 +40,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MyForm.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ClasseCommande.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="MyForm.h">
       <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="ClasseCommande.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +108,9 @@
     </None>
     <None Include="AfficherPersonnel.sql">
       <Filter>Fichiers de ressources\Personnel</Filter>
+    </None>
+    <None Include="AjouterCommande.sql">
+      <Filter>Fichiers de ressources\Commande</Filter>
     </None>
   </ItemGroup>
 </Project>
