@@ -994,12 +994,6 @@ namespace FinalePOO {
 		this->client_numero->Clear();
 	}
 
-	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
-		DataSet^ objdata = gcnew DataSet();
-		Stock^ article = gcnew Stock();
-		article->afficher(this->Ref->Text, objdata);
-		dataGridView1->DataSource = objdata;
-		dataGridView1->DataMember = "Stock";
-	}
+
 };
 }
