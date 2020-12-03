@@ -1,5 +1,6 @@
 #pragma once
 #include "ClasseStock.h"
+#include "Client.h"
 
 namespace FinalePOO {
 
@@ -119,14 +120,14 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label19;
-private: System::Windows::Forms::TextBox^ adresse_numero_de_client;
+	private: System::Windows::Forms::TextBox^ adresse_numero_de_client;
 
 	private: System::Windows::Forms::Label^ label21;
-private: System::Windows::Forms::TextBox^ adresse_libelle_de_voie;
+	private: System::Windows::Forms::TextBox^ adresse_libelle_de_voie;
 
 
 	private: System::Windows::Forms::Label^ label20;
-private: System::Windows::Forms::Button^ button16;
+	private: System::Windows::Forms::Button^ button16;
 
 	protected:
 
@@ -134,7 +135,7 @@ private: System::Windows::Forms::Button^ button16;
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -685,7 +686,6 @@ private: System::Windows::Forms::Button^ button16;
 			this->label16->Size = System::Drawing::Size(142, 24);
 			this->label16->TabIndex = 44;
 			this->label16->Text = L"Libellé de voie :";
-			this->label16->Click += gcnew System::EventHandler(this, &MyForm::label16_Click);
 			// 
 			// label17
 			// 
@@ -722,7 +722,7 @@ private: System::Windows::Forms::Button^ button16;
 			// 
 			// button10
 			// 
-			this->button10->Location = System::Drawing::Point(357, 526);
+			this->button10->Location = System::Drawing::Point(381, 526);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(99, 26);
 			this->button10->TabIndex = 40;
@@ -731,16 +731,17 @@ private: System::Windows::Forms::Button^ button16;
 			// 
 			// button11
 			// 
-			this->button11->Location = System::Drawing::Point(356, 431);
+			this->button11->Location = System::Drawing::Point(380, 431);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(99, 26);
 			this->button11->TabIndex = 39;
 			this->button11->Text = L"Ajouter";
 			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
 			// 
 			// button12
 			// 
-			this->button12->Location = System::Drawing::Point(357, 478);
+			this->button12->Location = System::Drawing::Point(381, 478);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(99, 26);
 			this->button12->TabIndex = 38;
@@ -752,14 +753,14 @@ private: System::Windows::Forms::Button^ button16;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView2->Location = System::Drawing::Point(22, 140);
 			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->Size = System::Drawing::Size(434, 268);
+			this->dataGridView2->Size = System::Drawing::Size(458, 268);
 			this->dataGridView2->TabIndex = 37;
 			// 
 			// client_date_naissance
 			// 
 			this->client_date_naissance->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->client_date_naissance->Location = System::Drawing::Point(177, 514);
+			this->client_date_naissance->Location = System::Drawing::Point(201, 514);
 			this->client_date_naissance->Name = L"client_date_naissance";
 			this->client_date_naissance->Size = System::Drawing::Size(149, 24);
 			this->client_date_naissance->TabIndex = 35;
@@ -768,7 +769,7 @@ private: System::Windows::Forms::Button^ button16;
 			// 
 			this->client_nombre_achat->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->client_nombre_achat->Location = System::Drawing::Point(177, 544);
+			this->client_nombre_achat->Location = System::Drawing::Point(201, 544);
 			this->client_nombre_achat->Name = L"client_nombre_achat";
 			this->client_nombre_achat->Size = System::Drawing::Size(149, 24);
 			this->client_nombre_achat->TabIndex = 34;
@@ -777,7 +778,7 @@ private: System::Windows::Forms::Button^ button16;
 			// 
 			this->client_prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->client_prenom->Location = System::Drawing::Point(177, 484);
+			this->client_prenom->Location = System::Drawing::Point(201, 484);
 			this->client_prenom->Name = L"client_prenom";
 			this->client_prenom->Size = System::Drawing::Size(149, 24);
 			this->client_prenom->TabIndex = 33;
@@ -786,7 +787,7 @@ private: System::Windows::Forms::Button^ button16;
 			// 
 			this->client_nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->client_nom->Location = System::Drawing::Point(177, 454);
+			this->client_nom->Location = System::Drawing::Point(201, 454);
 			this->client_nom->Name = L"client_nom";
 			this->client_nom->Size = System::Drawing::Size(149, 24);
 			this->client_nom->TabIndex = 32;
@@ -795,7 +796,7 @@ private: System::Windows::Forms::Button^ button16;
 			// 
 			this->client_numero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->client_numero->Location = System::Drawing::Point(177, 424);
+			this->client_numero->Location = System::Drawing::Point(201, 424);
 			this->client_numero->Name = L"client_numero";
 			this->client_numero->Size = System::Drawing::Size(149, 24);
 			this->client_numero->TabIndex = 31;
@@ -805,7 +806,7 @@ private: System::Windows::Forms::Button^ button16;
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(17, 544);
+			this->label10->Location = System::Drawing::Point(41, 544);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(154, 24);
 			this->label10->TabIndex = 29;
@@ -816,7 +817,7 @@ private: System::Windows::Forms::Button^ button16;
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label11->Location = System::Drawing::Point(-4, 514);
+			this->label11->Location = System::Drawing::Point(20, 514);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(175, 24);
 			this->label11->TabIndex = 28;
@@ -827,7 +828,7 @@ private: System::Windows::Forms::Button^ button16;
 			this->label12->AutoSize = true;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label12->Location = System::Drawing::Point(84, 484);
+			this->label12->Location = System::Drawing::Point(108, 484);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(87, 24);
 			this->label12->TabIndex = 27;
@@ -838,7 +839,7 @@ private: System::Windows::Forms::Button^ button16;
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label13->Location = System::Drawing::Point(113, 454);
+			this->label13->Location = System::Drawing::Point(137, 454);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(61, 24);
 			this->label13->TabIndex = 26;
@@ -849,12 +850,11 @@ private: System::Windows::Forms::Button^ button16;
 			this->label14->AutoSize = true;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label14->Location = System::Drawing::Point(9, 424);
+			this->label14->Location = System::Drawing::Point(33, 424);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(165, 24);
 			this->label14->TabIndex = 25;
 			this->label14->Text = L"Numéro de client :";
-			this->label14->Click += gcnew System::EventHandler(this, &MyForm::label14_Click);
 			// 
 			// label15
 			// 
@@ -925,16 +925,26 @@ private: System::Windows::Forms::Button^ button16;
 	}
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 		Stock^ article = gcnew Stock();
-		article->ajouter(this->libelle->Text,this->quantite->Text,this->seuil->Text,this->prix->Text,this->TVA->Text);
+		article->ajouter(this->libelle->Text, this->quantite->Text, this->seuil->Text, this->prix->Text, this->TVA->Text);
 		this->libelle->Clear();
 		this->quantite->Clear();
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
 	}
-private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Panel_Client->Visible = false;
-	this->Panel_Bienvenue->Visible = true;
-}
-};
+	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Panel_Client->Visible = false;
+		this->Panel_Bienvenue->Visible = true;
+	}
+	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter client
+		Client^ client = gcnew Client();
+		client->ajouter(this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
+		this->client_nom->Clear();
+		this->client_prenom->Clear();
+		this->client_date_naissance->Clear();
+		this->client_nombre_achat->Clear();
+	}
+
+
+	};
 }
