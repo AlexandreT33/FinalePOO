@@ -63,7 +63,7 @@ void Stock::afficher(System::String^ IDproduit,System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = "SELECT * FROM [POO].[dbo].[Article] WHERE Reference = " + IDproduit + ";";
+    System::String^ requete = System::IO::File::ReadAllText("AfficherStock.sql");
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
