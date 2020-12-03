@@ -153,6 +153,7 @@
     <None Include="AjouterStock.sql" />
     <None Include="ModifierAdresse.sql" />
     <None Include="ModifierClient.sql" />
+    <None Include="ModifierCommande.sql" />
     <None Include="ModifierPersonnel.sql" />
     <None Include="PanierAjout.sql" />
     <None Include="PanierDynamiqueRefresh.sql" />
