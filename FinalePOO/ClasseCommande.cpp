@@ -29,7 +29,7 @@ void Commande::ajouterCommande(System::String^ dateE, System::String^ Ref, Syste
         System::Windows::Forms::MessageBox::Show(ex->Message);
     }
 }
-}
+
 
 void Commande::ajouterPanier()
 {
