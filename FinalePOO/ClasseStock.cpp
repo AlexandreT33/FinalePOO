@@ -60,7 +60,7 @@ void Stock::setTVA(int^ extTVA)
     TVApercent = *extTVA;
 }
 
-void Stock::ajouter(System::String^ nomProduit, System::String^ quantite, System::String^ seuil, System::String^ prixUnitaire, System::String^ TVApercent, )
+void Stock::ajouter(System::String^ nomProduit, System::String^ quantite, System::String^ seuil, System::String^ prixUnitaire, System::String^ TVApercent)
 {
     System::String^ connectionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
     System::String^ requete = System::IO::File::ReadAllText("AjouterStock.sql");
