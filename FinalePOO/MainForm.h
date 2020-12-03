@@ -993,13 +993,12 @@ namespace FinalePOO {
 		client->supprimer(this->client_numero->Text);
 		this->client_numero->Clear();
 	}
-	private: System::Void button_afficher_stock_click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button_afficher_stock_click(System::Object^ sender, System::EventArgs^ e) { //afficher stock
 		DataSet^ objdata = gcnew DataSet();
 		Stock^ article = gcnew Stock();
 		article->afficher(this->Ref->Text, objdata);
 		dataGridView1->DataSource = objdata;
 		dataGridView1->DataMember = "Stock";
 	}
-
-	};
+};
 }
