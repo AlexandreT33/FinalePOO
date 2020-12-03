@@ -2,9 +2,9 @@
 ref class Commande
 {
 public :
-	void ajouterCommande();
-	void ajouterArticle();
-	void retirerArticle();
+	void ajouterCommande(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
+	void ajouterPanier();
+	void retirerPanier();
 	void panierdynamiqueAjout();
 	void panierdynamiqueRetirer();
 	void retirer();
