@@ -2192,7 +2192,7 @@ namespace FinalePOO {
 		//Crée GridView Adresse
 		DataSet^ objdata3000 = gcnew DataSet();
 		Client^ client3000 = gcnew Client();
-		client3000->afficherAdresse(this->client_numero->Text, objdata30000);
+		client3000->afficherAdresse(this->client_numero->Text, objdata3000);
 		dataGridView3->DataSource = objdata3000;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata3000;

@@ -31,6 +31,18 @@
     <Filter Include="Fichiers de ressources\Statistique">
       <UniqueIdentifier>{b791cb48-e5de-4472-a483-789e643733a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Commande\Commande">
+      <UniqueIdentifier>{158d4814-5b3e-48ab-aa8f-d1a4d5d524d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Commande\Paiement">
+      <UniqueIdentifier>{ea59301d-137a-45a0-9574-af9fe8eb988f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Commande\Livraison">
+      <UniqueIdentifier>{dd2f3f90-d037-4eb4-a9c9-3f93c48cce6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Commande\Panier">
+      <UniqueIdentifier>{21671e3a-9095-47f3-aeb0-d5234359ae2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClasseStock.cpp">
@@ -124,41 +136,44 @@
     <None Include="AfficherPersonnel.sql">
       <Filter>Fichiers de ressources\Personnel</Filter>
     </None>
-    <None Include="AjouterCommande.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
-    <None Include="PanierDynamiqueRefresh.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
-    <None Include="PanierAjout.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
-    <None Include="PanierRetirer.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
-    <None Include="RetirerCommande.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
-    <None Include="AfficherCommande.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
-    <None Include="AfficherPanier.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
     <None Include="AfficherArticle.sql">
       <Filter>Fichiers de ressources\Stock</Filter>
-    </None>
-    <None Include="AfficherPaiement.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
-    </None>
-    <None Include="AfficherAdresse.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
     </None>
     <None Include="ProduitSousReapro.sql">
       <Filter>Fichiers de ressources\Statistique</Filter>
     </None>
+    <None Include="AfficherAdresse.sql">
+      <Filter>Fichiers de ressources\Commande\Livraison</Filter>
+    </None>
+    <None Include="AfficherCommande.sql">
+      <Filter>Fichiers de ressources\Commande\Commande</Filter>
+    </None>
+    <None Include="AfficherPaiement.sql">
+      <Filter>Fichiers de ressources\Commande\Paiement</Filter>
+    </None>
+    <None Include="AfficherPanier.sql">
+      <Filter>Fichiers de ressources\Commande\Panier</Filter>
+    </None>
+    <None Include="AjouterCommande.sql">
+      <Filter>Fichiers de ressources\Commande\Commande</Filter>
+    </None>
     <None Include="ModifierCommande.sql">
-      <Filter>Fichiers de ressources\Commande</Filter>
+      <Filter>Fichiers de ressources\Commande\Commande</Filter>
+    </None>
+    <None Include="PanierAjout.sql">
+      <Filter>Fichiers de ressources\Commande\Panier</Filter>
+    </None>
+    <None Include="PanierDynamiqueRefresh.sql">
+      <Filter>Fichiers de ressources\Commande\Panier</Filter>
+    </None>
+    <None Include="PanierRetirer.sql">
+      <Filter>Fichiers de ressources\Commande\Panier</Filter>
+    </None>
+    <None Include="RetirerCommande.sql">
+      <Filter>Fichiers de ressources\Commande\Commande</Filter>
+    </None>
+    <None Include="AjouterPaiement.sql">
+      <Filter>Fichiers de ressources\Commande\Paiement</Filter>
     </None>
   </ItemGroup>
 </Project>
