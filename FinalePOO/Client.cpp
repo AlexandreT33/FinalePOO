@@ -1,6 +1,6 @@
 #include "Client.h"
 
-void Client::ajouter(System::String^ Nom, System::String^ Prenom, System::String^ DateN, System::String^ NbAchat)
+void Client::ajouter(System::String^ Nom, System::String^ Prenom, System::String^ DateN)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -13,7 +13,6 @@ void Client::ajouter(System::String^ Nom, System::String^ Prenom, System::String
     commande->Parameters->AddWithValue("@Nom", Nom);
     commande->Parameters->AddWithValue("@Prenom", Prenom);
     commande->Parameters->AddWithValue("@Date", DateN);
-    commande->Parameters->AddWithValue("@Nombre_d_achat", NbAchat);
 
 
     //essai de la requete plus gestion de l'Exception.
@@ -56,7 +55,7 @@ void Client::supprimer(System::String^ ID)
 
 
 
-void Client::modifier(System::String^ ID, System::String^ Nom, System::String^ Prenom, System::String^ DateN, System::String^ NbAchat)
+void Client::modifier(System::String^ ID, System::String^ Nom, System::String^ Prenom, System::String^ DateN)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -70,8 +69,6 @@ void Client::modifier(System::String^ ID, System::String^ Nom, System::String^ P
     commande->Parameters->AddWithValue("@Nom", Nom);
     commande->Parameters->AddWithValue("@Prenom", Prenom);
     commande->Parameters->AddWithValue("@Date", System::Convert::ToDateTime(DateN));
-    commande->Parameters->AddWithValue("@Nombre_d_achat", System::Convert::ToInt32(NbAchat));
-
 
     //essai de la requete plus gestion de l'Exception.
     try
