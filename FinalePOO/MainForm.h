@@ -450,6 +450,11 @@ namespace FinalePOO {
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 		Stock^ article = gcnew Stock();
 		article->ajouter(this->libelle->Text,this->quantite->Text,this->seuil->Text,this->prix->Text,this->TVA->Text);
+		this->libelle->Clear();
+		this->quantite->Clear();
+		this->seuil->Clear();
+		this->prix->Clear();
+		this->TVA->Clear();
 	}
 };
 }
