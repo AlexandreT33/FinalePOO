@@ -22,6 +22,9 @@
     <Filter Include="Fichiers de ressources\Client">
       <UniqueIdentifier>{14a06a2d-ffed-44b9-ad3c-0afe389548b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Personnel">
+      <UniqueIdentifier>{34884c75-db0c-4523-bdd2-7cad76881625}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -84,6 +87,18 @@
     </None>
     <None Include="UpdateNBAchat.sql">
       <Filter>Fichiers de ressources\Client</Filter>
+    </None>
+    <None Include="AjouterPersonnel.sql">
+      <Filter>Fichiers de ressources\Personnel</Filter>
+    </None>
+    <None Include="ModifierPersonnel.sql">
+      <Filter>Fichiers de ressources\Personnel</Filter>
+    </None>
+    <None Include="RetirerPersonnel.sql">
+      <Filter>Fichiers de ressources\Personnel</Filter>
+    </None>
+    <None Include="AfficherPersonnel.sql">
+      <Filter>Fichiers de ressources\Personnel</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
