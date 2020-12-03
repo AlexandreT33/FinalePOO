@@ -174,6 +174,7 @@ namespace FinalePOO {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Stock = (gcnew System::Windows::Forms::Panel());
+			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Client = (gcnew System::Windows::Forms::Panel());
 			this->button16 = (gcnew System::Windows::Forms::Button());
@@ -209,7 +210,6 @@ namespace FinalePOO {
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -331,9 +331,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label4->Location = System::Drawing::Point(815, 248);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(76, 24);
+			this->label4->Size = System::Drawing::Size(75, 24);
 			this->label4->TabIndex = 9;
-			this->label4->Text = L"Libell� :";
+			this->label4->Text = L"Libellé :";
 			// 
 			// label5
 			// 
@@ -342,9 +342,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(800, 290);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(91, 24);
+			this->label5->Size = System::Drawing::Size(90, 24);
 			this->label5->TabIndex = 10;
-			this->label5->Text = L"Quantit� :";
+			this->label5->Text = L"Quantité :";
 			// 
 			// label6
 			// 
@@ -499,6 +499,16 @@ namespace FinalePOO {
 			this->Panel_Stock->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Stock->TabIndex = 24;
 			// 
+			// button17
+			// 
+			this->button17->Location = System::Drawing::Point(594, 576);
+			this->button17->Name = L"button17";
+			this->button17->Size = System::Drawing::Size(138, 36);
+			this->button17->TabIndex = 25;
+			this->button17->Text = L"Actualiser";
+			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
+			// 
 			// button9
 			// 
 			this->button9->Location = System::Drawing::Point(3, 3);
@@ -577,9 +587,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label21->Location = System::Drawing::Point(607, 618);
 			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(169, 24);
+			this->label21->Size = System::Drawing::Size(168, 24);
 			this->label21->TabIndex = 57;
-			this->label21->Text = L"Num�ro de Client :";
+			this->label21->Text = L"Numéro de Client :";
 			// 
 			// adresse_libelle_de_voie
 			// 
@@ -597,9 +607,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label20->Location = System::Drawing::Point(686, 527);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(90, 24);
+			this->label20->Size = System::Drawing::Size(89, 24);
 			this->label20->TabIndex = 55;
-			this->label20->Text = L"Num�ro :";
+			this->label20->Text = L"Numéro :";
 			// 
 			// button13
 			// 
@@ -702,9 +712,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label16->Location = System::Drawing::Point(633, 587);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(143, 24);
+			this->label16->Size = System::Drawing::Size(142, 24);
 			this->label16->TabIndex = 44;
-			this->label16->Text = L"Libell� de voie :";
+			this->label16->Text = L"Libellé de voie :";
 			// 
 			// label17
 			// 
@@ -843,9 +853,9 @@ namespace FinalePOO {
 				static_cast<System::Byte>(0)));
 			this->label12->Location = System::Drawing::Point(149, 489);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(88, 24);
+			this->label12->Size = System::Drawing::Size(87, 24);
 			this->label12->TabIndex = 27;
-			this->label12->Text = L"Pr�nom :";
+			this->label12->Text = L"Prénom :";
 			// 
 			// label13
 			// 
@@ -869,24 +879,21 @@ namespace FinalePOO {
 			this->label14->TabIndex = 25;
 			this->label14->Text = L"Num�ro de client :";
 			// 
-			// button17
+			// label15
 			// 
-			this->button17->Location = System::Drawing::Point(594, 576);
-			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(138, 36);
-			this->button17->TabIndex = 25;
-			this->button17->Text = L"Actualiser";
-			this->button17->UseVisualStyleBackColor = true;
-			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
+			this->label15->Location = System::Drawing::Point(0, 0);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(100, 23);
+			this->label15->TabIndex = 60;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
+			this->Controls->Add(this->Panel_Client);
 			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Bienvenue);
-			this->Controls->Add(this->Panel_Client);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
