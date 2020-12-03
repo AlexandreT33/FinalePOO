@@ -886,7 +886,9 @@ namespace FinalePOO {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
+			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
+			this->Controls->Add(this->Panel_Stock);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -959,8 +961,6 @@ namespace FinalePOO {
 		this->client_nombre_achat->Clear();
 	}
 
-
-	};
 	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
 		DataSet^ objdata = gcnew DataSet();
 		Stock^ article = gcnew Stock();
