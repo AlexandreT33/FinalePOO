@@ -72,7 +72,7 @@ namespace FinalePOO {
 
 
 	private: System::Windows::Forms::Button^ button9;
-	private: System::Windows::Forms::Button^ button_afficher_stock;
+
 	private: System::Windows::Forms::Panel^ Panel_Client;
 	private: System::Windows::Forms::Button^ button10;
 	private: System::Windows::Forms::Button^ button11;
@@ -173,7 +173,6 @@ namespace FinalePOO {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Stock = (gcnew System::Windows::Forms::Panel());
-			this->button_afficher_stock = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Client = (gcnew System::Windows::Forms::Panel());
 			this->button16 = (gcnew System::Windows::Forms::Button());
@@ -473,7 +472,6 @@ namespace FinalePOO {
 			// Panel_Stock
 			// 
 			this->Panel_Stock->BackColor = System::Drawing::Color::Orange;
-			this->Panel_Stock->Controls->Add(this->button_afficher_stock);
 			this->Panel_Stock->Controls->Add(this->button9);
 			this->Panel_Stock->Controls->Add(this->button8);
 			this->Panel_Stock->Controls->Add(this->button7);
@@ -497,16 +495,6 @@ namespace FinalePOO {
 			this->Panel_Stock->Name = L"Panel_Stock";
 			this->Panel_Stock->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Stock->TabIndex = 24;
-			// 
-			// button_afficher_stock
-			// 
-			this->button_afficher_stock->Location = System::Drawing::Point(799, 517);
-			this->button_afficher_stock->Name = L"button_afficher_stock";
-			this->button_afficher_stock->Size = System::Drawing::Size(138, 36);
-			this->button_afficher_stock->TabIndex = 25;
-			this->button_afficher_stock->Text = L"Afficher";
-			this->button_afficher_stock->UseVisualStyleBackColor = true;
-			this->button_afficher_stock->Click += gcnew System::EventHandler(this, &MyForm::button_afficher_stock_click);
 			// 
 			// button9
 			// 
@@ -895,8 +883,8 @@ namespace FinalePOO {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Stock);
+			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -941,6 +929,12 @@ namespace FinalePOO {
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 		this->Panel_Stock->Visible = true;
+
+		DataSet^ objdata1 = gcnew DataSet();
+		Stock^ article1 = gcnew Stock();
+		article1->afficher(this->Ref->Text, objdata1);
+		dataGridView1->DataSource = objdata1;
+		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -1053,6 +1047,8 @@ namespace FinalePOO {
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) { //quitter stock
 		this->Panel_Stock->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
+
+
 	}
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter stock
 		Stock^ article = gcnew Stock();
@@ -1062,6 +1058,12 @@ namespace FinalePOO {
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
+
+		DataSet^ objdata2 = gcnew DataSet();
+		Stock^ article2 = gcnew Stock();
+		article2->afficher(this->Ref->Text, objdata2);
+		dataGridView1->DataSource = objdata2;
+		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) { // modifier stock
 		Stock^ article = gcnew Stock();
@@ -1072,17 +1074,22 @@ namespace FinalePOO {
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
+
+		DataSet^ objdata3 = gcnew DataSet();
+		Stock^ article3 = gcnew Stock();
+		article3->afficher(this->Ref->Text, objdata3);
+		dataGridView1->DataSource = objdata3;
+		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer stock
 		Stock^ article = gcnew Stock();
 		article->supprimer(this->Ref->Text);
 		this->Ref->Clear();
-	}
-	private: System::Void button_afficher_stock_click(System::Object^ sender, System::EventArgs^ e) { //bouton afficher stock
-		DataSet^ objdata = gcnew DataSet();
-		Stock^ article = gcnew Stock();
-		article->afficher(this->Ref->Text, objdata);
-		dataGridView1->DataSource = objdata;
+
+		DataSet^ objdata4 = gcnew DataSet();
+		Stock^ article4 = gcnew Stock();
+		article4->afficher(this->Ref->Text, objdata4);
+		dataGridView1->DataSource = objdata4;
 		dataGridView1->DataMember = "Stock";
 	}
 		   //##############PANEL COMMANDES################
