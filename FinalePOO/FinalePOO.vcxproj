@@ -119,6 +119,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ClasseCommande.cpp" />
     <ClCompile Include="ClasseStock.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="MyForm.cpp" />
@@ -149,8 +150,12 @@
     <None Include="ModifierAdresse.sql" />
     <None Include="ModifierClient.sql" />
     <None Include="ModifierPersonnel.sql" />
+    <None Include="PanierAjout.sql" />
+    <None Include="PanierDynamiqueRefresh.sql" />
+    <None Include="PanierRetirer.sql" />
     <None Include="RetirerAdresse.sql" />
     <None Include="RetirerClient.sql" />
+    <None Include="RetirerCommande.sql" />
     <None Include="RetirerPersonnel.sql" />
     <None Include="RetirerStock.sql" />
     <None Include="ModifierStock.sql" />
