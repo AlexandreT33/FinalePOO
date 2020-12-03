@@ -90,7 +90,7 @@ void Client::ajouterAdresse(System::String^ CodePostal, System::String^ Ville, S
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("ModifierAdresse.sql");
+    System::String^ requete = System::IO::File::ReadAllText("AjouterAdresse.sql");
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
@@ -101,7 +101,7 @@ void Client::ajouterAdresse(System::String^ CodePostal, System::String^ Ville, S
     commande->Parameters->AddWithValue("@libelle_de_voie", Libelle);
     commande->Parameters->AddWithValue("@type_de_voie", Type);
     commande->Parameters->AddWithValue("@numero", System::Convert::ToInt32(Numero));
-    commande->Parameters->AddWithValue("@NDC", NDC);
+    commande->Parameters->AddWithValue("@NDC", System::Convert::ToInt32(NDC));
 
     //essai de la requete plus gestion de l'Exception.
     try
@@ -193,6 +193,29 @@ void Client::afficherClient(System::String^ Numero_de_Client, System::Data::Data
     {
         connexion->Open();
         commande->Fill(objdata, "Client");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+
+}
+void Client::afficherAdresse(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = "SELECT * FROM [POO].[dbo].[Adresse];";
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Adresse");
         connexion->Close();
     }
     catch (System::Exception^ ex)

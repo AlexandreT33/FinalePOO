@@ -8,6 +8,7 @@ public :
 	void ajouter(System::String^, System::String^, System::String^, System::String^);
 	void supprimer(System::String^);
 	void afficherClient(System::String^, System::Data::DataSet^);
+	void afficherAdresse(System::String^, System::Data::DataSet^);
 	void modifier(System::String^, System::String^, System::String^, System::String^, System::String^);
 	void ajouterAdresse(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 	void supprimerAdresse(System::String^);
