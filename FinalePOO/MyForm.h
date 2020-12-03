@@ -195,6 +195,49 @@ private: System::Windows::Forms::Button^ Commandes_retour;
 private: System::Windows::Forms::DataGridView^ Commandes_DataGridView;
 private: System::Windows::Forms::Button^ Commandes_button_commandes;
 private: System::Windows::Forms::Button^ Commandes_button_client;
+private: System::Windows::Forms::Button^ Commandes_button_Retirer;
+private: System::Windows::Forms::Button^ Commandes_button_Modifier;
+private: System::Windows::Forms::Button^ Commandes_button_Ajouter;
+private: System::Windows::Forms::Label^ label36;
+private: System::Windows::Forms::Label^ label34;
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::Label^ label22;
+private: System::Windows::Forms::TextBox^ Commandes_DateLivraison;
+private: System::Windows::Forms::TextBox^ Commandes_DateEmmission;
+private: System::Windows::Forms::TextBox^ Commandes_NumClient;
+private: System::Windows::Forms::TextBox^ Commandes_IdCommande;
+private: System::Windows::Forms::Button^ Commandes_buttonLivraison;
+private: System::Windows::Forms::Button^ Commandes_buttonPaiment;
+private: System::Windows::Forms::Button^ Commandes_buttonPanier;
+private: System::Windows::Forms::Button^ Commandes_buttonActualiser;
+private: System::Windows::Forms::Panel^ Commandes_Panel_Panier;
+private: System::Windows::Forms::Button^ Commandes_Panier_buttonRetirer;
+
+private: System::Windows::Forms::Button^ Commandes_Panier_buttonAjouter;
+
+
+
+
+private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::TextBox^ Commandes_Panier_Quantite;
+
+
+
+private: System::Windows::Forms::TextBox^ Commandes_Panier_RefObj;
+
+
+
+
+private: System::Windows::Forms::DataGridView^ dataGridView2;
+private: System::Windows::Forms::Button^ Commandes_Panier_buttonActualiser;
+private: System::Windows::Forms::Button^ Commandes_Panier_buttonRetour;
+
+
+private: System::Windows::Forms::Button^ Commandes_Panier_buttonPaniers;
+
+private: System::Windows::Forms::Button^ Commandes_Panier_buttonArticles;
+
 
 
 
@@ -304,10 +347,37 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->label33 = (gcnew System::Windows::Forms::Label());
 			this->Panel_Commandes = (gcnew System::Windows::Forms::Panel());
-			this->Commandes_retour = (gcnew System::Windows::Forms::Button());
+			this->Commandes_button_Retirer = (gcnew System::Windows::Forms::Button());
+			this->Commandes_button_Modifier = (gcnew System::Windows::Forms::Button());
+			this->Commandes_button_Ajouter = (gcnew System::Windows::Forms::Button());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->Commandes_DateLivraison = (gcnew System::Windows::Forms::TextBox());
+			this->Commandes_DateEmmission = (gcnew System::Windows::Forms::TextBox());
+			this->Commandes_NumClient = (gcnew System::Windows::Forms::TextBox());
+			this->Commandes_IdCommande = (gcnew System::Windows::Forms::TextBox());
+			this->Commandes_buttonLivraison = (gcnew System::Windows::Forms::Button());
+			this->Commandes_buttonPaiment = (gcnew System::Windows::Forms::Button());
+			this->Commandes_buttonPanier = (gcnew System::Windows::Forms::Button());
 			this->Commandes_DataGridView = (gcnew System::Windows::Forms::DataGridView());
+			this->Commandes_buttonActualiser = (gcnew System::Windows::Forms::Button());
+			this->Commandes_retour = (gcnew System::Windows::Forms::Button());
 			this->Commandes_button_commandes = (gcnew System::Windows::Forms::Button());
 			this->Commandes_button_client = (gcnew System::Windows::Forms::Button());
+			this->Commandes_Panel_Panier = (gcnew System::Windows::Forms::Panel());
+			this->Commandes_Panier_buttonRetirer = (gcnew System::Windows::Forms::Button());
+			this->Commandes_Panier_buttonAjouter = (gcnew System::Windows::Forms::Button());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->Commandes_Panier_Quantite = (gcnew System::Windows::Forms::TextBox());
+			this->Commandes_Panier_RefObj = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->Commandes_Panier_buttonActualiser = (gcnew System::Windows::Forms::Button());
+			this->Commandes_Panier_buttonRetour = (gcnew System::Windows::Forms::Button());
+			this->Commandes_Panier_buttonPaniers = (gcnew System::Windows::Forms::Button());
+			this->Commandes_Panier_buttonArticles = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -317,6 +387,8 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Personnel_DataGridView))->BeginInit();
 			this->Panel_Commandes->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Commandes_DataGridView))->BeginInit();
+			this->Commandes_Panel_Panier->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -1296,8 +1368,23 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			// Panel_Commandes
 			// 
 			this->Panel_Commandes->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Commandes.BackgroundImage")));
-			this->Panel_Commandes->Controls->Add(this->Commandes_retour);
+			this->Panel_Commandes->Controls->Add(this->Commandes_button_Retirer);
+			this->Panel_Commandes->Controls->Add(this->Commandes_button_Modifier);
+			this->Panel_Commandes->Controls->Add(this->Commandes_button_Ajouter);
+			this->Panel_Commandes->Controls->Add(this->label36);
+			this->Panel_Commandes->Controls->Add(this->label34);
+			this->Panel_Commandes->Controls->Add(this->label30);
+			this->Panel_Commandes->Controls->Add(this->label22);
+			this->Panel_Commandes->Controls->Add(this->Commandes_DateLivraison);
+			this->Panel_Commandes->Controls->Add(this->Commandes_DateEmmission);
+			this->Panel_Commandes->Controls->Add(this->Commandes_NumClient);
+			this->Panel_Commandes->Controls->Add(this->Commandes_IdCommande);
+			this->Panel_Commandes->Controls->Add(this->Commandes_buttonLivraison);
+			this->Panel_Commandes->Controls->Add(this->Commandes_buttonPaiment);
+			this->Panel_Commandes->Controls->Add(this->Commandes_buttonPanier);
 			this->Panel_Commandes->Controls->Add(this->Commandes_DataGridView);
+			this->Panel_Commandes->Controls->Add(this->Commandes_buttonActualiser);
+			this->Panel_Commandes->Controls->Add(this->Commandes_retour);
 			this->Panel_Commandes->Controls->Add(this->Commandes_button_commandes);
 			this->Panel_Commandes->Controls->Add(this->Commandes_button_client);
 			this->Panel_Commandes->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -1305,6 +1392,150 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->Panel_Commandes->Name = L"Panel_Commandes";
 			this->Panel_Commandes->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Commandes->TabIndex = 0;
+			// 
+			// Commandes_button_Retirer
+			// 
+			this->Commandes_button_Retirer->Location = System::Drawing::Point(688, 588);
+			this->Commandes_button_Retirer->Name = L"Commandes_button_Retirer";
+			this->Commandes_button_Retirer->Size = System::Drawing::Size(112, 31);
+			this->Commandes_button_Retirer->TabIndex = 18;
+			this->Commandes_button_Retirer->Text = L"Retirer";
+			this->Commandes_button_Retirer->UseVisualStyleBackColor = true;
+			// 
+			// Commandes_button_Modifier
+			// 
+			this->Commandes_button_Modifier->Location = System::Drawing::Point(546, 588);
+			this->Commandes_button_Modifier->Name = L"Commandes_button_Modifier";
+			this->Commandes_button_Modifier->Size = System::Drawing::Size(112, 31);
+			this->Commandes_button_Modifier->TabIndex = 17;
+			this->Commandes_button_Modifier->Text = L"Modifier";
+			this->Commandes_button_Modifier->UseVisualStyleBackColor = true;
+			// 
+			// Commandes_button_Ajouter
+			// 
+			this->Commandes_button_Ajouter->Location = System::Drawing::Point(408, 588);
+			this->Commandes_button_Ajouter->Name = L"Commandes_button_Ajouter";
+			this->Commandes_button_Ajouter->Size = System::Drawing::Size(112, 31);
+			this->Commandes_button_Ajouter->TabIndex = 16;
+			this->Commandes_button_Ajouter->Text = L"Ajouter";
+			this->Commandes_button_Ajouter->UseVisualStyleBackColor = true;
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label36->Location = System::Drawing::Point(543, 543);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(125, 18);
+			this->label36->TabIndex = 15;
+			this->label36->Text = L"Date de livraison :";
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label34->Location = System::Drawing::Point(279, 543);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(135, 18);
+			this->label34->TabIndex = 14;
+			this->label34->Text = L"Date d\'émmission :";
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label30->Location = System::Drawing::Point(574, 413);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(89, 18);
+			this->label30->TabIndex = 13;
+			this->label30->Text = L"Num Client :";
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label22->Location = System::Drawing::Point(302, 410);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(112, 18);
+			this->label22->TabIndex = 12;
+			this->label22->Text = L"ID Commande :";
+			// 
+			// Commandes_DateLivraison
+			// 
+			this->Commandes_DateLivraison->Location = System::Drawing::Point(669, 541);
+			this->Commandes_DateLivraison->Name = L"Commandes_DateLivraison";
+			this->Commandes_DateLivraison->Size = System::Drawing::Size(100, 20);
+			this->Commandes_DateLivraison->TabIndex = 11;
+			// 
+			// Commandes_DateEmmission
+			// 
+			this->Commandes_DateEmmission->Location = System::Drawing::Point(420, 541);
+			this->Commandes_DateEmmission->Name = L"Commandes_DateEmmission";
+			this->Commandes_DateEmmission->Size = System::Drawing::Size(100, 20);
+			this->Commandes_DateEmmission->TabIndex = 10;
+			// 
+			// Commandes_NumClient
+			// 
+			this->Commandes_NumClient->Location = System::Drawing::Point(669, 411);
+			this->Commandes_NumClient->Name = L"Commandes_NumClient";
+			this->Commandes_NumClient->Size = System::Drawing::Size(100, 20);
+			this->Commandes_NumClient->TabIndex = 9;
+			// 
+			// Commandes_IdCommande
+			// 
+			this->Commandes_IdCommande->Location = System::Drawing::Point(420, 408);
+			this->Commandes_IdCommande->Name = L"Commandes_IdCommande";
+			this->Commandes_IdCommande->Size = System::Drawing::Size(100, 20);
+			this->Commandes_IdCommande->TabIndex = 8;
+			// 
+			// Commandes_buttonLivraison
+			// 
+			this->Commandes_buttonLivraison->Location = System::Drawing::Point(733, 461);
+			this->Commandes_buttonLivraison->Name = L"Commandes_buttonLivraison";
+			this->Commandes_buttonLivraison->Size = System::Drawing::Size(147, 46);
+			this->Commandes_buttonLivraison->TabIndex = 7;
+			this->Commandes_buttonLivraison->Text = L"Livraison";
+			this->Commandes_buttonLivraison->UseVisualStyleBackColor = true;
+			// 
+			// Commandes_buttonPaiment
+			// 
+			this->Commandes_buttonPaiment->Location = System::Drawing::Point(521, 461);
+			this->Commandes_buttonPaiment->Name = L"Commandes_buttonPaiment";
+			this->Commandes_buttonPaiment->Size = System::Drawing::Size(147, 46);
+			this->Commandes_buttonPaiment->TabIndex = 6;
+			this->Commandes_buttonPaiment->Text = L"Paiment";
+			this->Commandes_buttonPaiment->UseVisualStyleBackColor = true;
+			// 
+			// Commandes_buttonPanier
+			// 
+			this->Commandes_buttonPanier->Location = System::Drawing::Point(314, 461);
+			this->Commandes_buttonPanier->Name = L"Commandes_buttonPanier";
+			this->Commandes_buttonPanier->Size = System::Drawing::Size(147, 46);
+			this->Commandes_buttonPanier->TabIndex = 5;
+			this->Commandes_buttonPanier->Text = L"Panier";
+			this->Commandes_buttonPanier->UseVisualStyleBackColor = true;
+			this->Commandes_buttonPanier->Click += gcnew System::EventHandler(this, &MyForm::Commandes_buttonPanier_Click);
+			// 
+			// Commandes_DataGridView
+			// 
+			this->Commandes_DataGridView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->Commandes_DataGridView->Location = System::Drawing::Point(125, 128);
+			this->Commandes_DataGridView->Name = L"Commandes_DataGridView";
+			this->Commandes_DataGridView->Size = System::Drawing::Size(921, 255);
+			this->Commandes_DataGridView->TabIndex = 0;
+			// 
+			// Commandes_buttonActualiser
+			// 
+			this->Commandes_buttonActualiser->Location = System::Drawing::Point(125, 378);
+			this->Commandes_buttonActualiser->Name = L"Commandes_buttonActualiser";
+			this->Commandes_buttonActualiser->Size = System::Drawing::Size(114, 28);
+			this->Commandes_buttonActualiser->TabIndex = 4;
+			this->Commandes_buttonActualiser->Text = L"Actualiser";
+			this->Commandes_buttonActualiser->UseVisualStyleBackColor = true;
 			// 
 			// Commandes_retour
 			// 
@@ -1315,14 +1546,6 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->Commandes_retour->Text = L"Retour";
 			this->Commandes_retour->UseVisualStyleBackColor = true;
 			this->Commandes_retour->Click += gcnew System::EventHandler(this, &MyForm::Commandes_retour_Click);
-			// 
-			// Commandes_DataGridView
-			// 
-			this->Commandes_DataGridView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->Commandes_DataGridView->Location = System::Drawing::Point(125, 128);
-			this->Commandes_DataGridView->Name = L"Commandes_DataGridView";
-			this->Commandes_DataGridView->Size = System::Drawing::Size(921, 255);
-			this->Commandes_DataGridView->TabIndex = 0;
 			// 
 			// Commandes_button_commandes
 			// 
@@ -1346,6 +1569,129 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->Commandes_button_client->UseVisualStyleBackColor = false;
 			this->Commandes_button_client->Click += gcnew System::EventHandler(this, &MyForm::Commandes_button_client_Click);
 			// 
+			// Commandes_Panel_Panier
+			// 
+			this->Commandes_Panel_Panier->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Commandes_Panel_Panier.BackgroundImage")));
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_buttonRetirer);
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_buttonAjouter);
+			this->Commandes_Panel_Panier->Controls->Add(this->label39);
+			this->Commandes_Panel_Panier->Controls->Add(this->label40);
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_Quantite);
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_RefObj);
+			this->Commandes_Panel_Panier->Controls->Add(this->dataGridView2);
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_buttonActualiser);
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_buttonRetour);
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_buttonPaniers);
+			this->Commandes_Panel_Panier->Controls->Add(this->Commandes_Panier_buttonArticles);
+			this->Commandes_Panel_Panier->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->Commandes_Panel_Panier->Location = System::Drawing::Point(0, 0);
+			this->Commandes_Panel_Panier->Name = L"Commandes_Panel_Panier";
+			this->Commandes_Panel_Panier->Size = System::Drawing::Size(1189, 686);
+			this->Commandes_Panel_Panier->TabIndex = 0;
+			// 
+			// Commandes_Panier_buttonRetirer
+			// 
+			this->Commandes_Panier_buttonRetirer->Location = System::Drawing::Point(610, 477);
+			this->Commandes_Panier_buttonRetirer->Name = L"Commandes_Panier_buttonRetirer";
+			this->Commandes_Panier_buttonRetirer->Size = System::Drawing::Size(112, 31);
+			this->Commandes_Panier_buttonRetirer->TabIndex = 37;
+			this->Commandes_Panier_buttonRetirer->Text = L"Retirer";
+			this->Commandes_Panier_buttonRetirer->UseVisualStyleBackColor = true;
+			// 
+			// Commandes_Panier_buttonAjouter
+			// 
+			this->Commandes_Panier_buttonAjouter->Location = System::Drawing::Point(477, 477);
+			this->Commandes_Panier_buttonAjouter->Name = L"Commandes_Panier_buttonAjouter";
+			this->Commandes_Panier_buttonAjouter->Size = System::Drawing::Size(112, 31);
+			this->Commandes_Panier_buttonAjouter->TabIndex = 35;
+			this->Commandes_Panier_buttonAjouter->Text = L"Ajouter";
+			this->Commandes_Panier_buttonAjouter->UseVisualStyleBackColor = true;
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label39->Location = System::Drawing::Point(591, 413);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(71, 18);
+			this->label39->TabIndex = 32;
+			this->label39->Text = L"Quantité :";
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label40->Location = System::Drawing::Point(373, 413);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(78, 18);
+			this->label40->TabIndex = 31;
+			this->label40->Text = L"Ref Objet :";
+			// 
+			// Commandes_Panier_Quantite
+			// 
+			this->Commandes_Panier_Quantite->Location = System::Drawing::Point(668, 411);
+			this->Commandes_Panier_Quantite->Name = L"Commandes_Panier_Quantite";
+			this->Commandes_Panier_Quantite->Size = System::Drawing::Size(100, 20);
+			this->Commandes_Panier_Quantite->TabIndex = 28;
+			// 
+			// Commandes_Panier_RefObj
+			// 
+			this->Commandes_Panier_RefObj->Location = System::Drawing::Point(457, 411);
+			this->Commandes_Panier_RefObj->Name = L"Commandes_Panier_RefObj";
+			this->Commandes_Panier_RefObj->Size = System::Drawing::Size(100, 20);
+			this->Commandes_Panier_RefObj->TabIndex = 27;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Location = System::Drawing::Point(124, 128);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->Size = System::Drawing::Size(921, 255);
+			this->dataGridView2->TabIndex = 19;
+			// 
+			// Commandes_Panier_buttonActualiser
+			// 
+			this->Commandes_Panier_buttonActualiser->Location = System::Drawing::Point(124, 378);
+			this->Commandes_Panier_buttonActualiser->Name = L"Commandes_Panier_buttonActualiser";
+			this->Commandes_Panier_buttonActualiser->Size = System::Drawing::Size(114, 28);
+			this->Commandes_Panier_buttonActualiser->TabIndex = 23;
+			this->Commandes_Panier_buttonActualiser->Text = L"Actualiser";
+			this->Commandes_Panier_buttonActualiser->UseVisualStyleBackColor = true;
+			// 
+			// Commandes_Panier_buttonRetour
+			// 
+			this->Commandes_Panier_buttonRetour->Location = System::Drawing::Point(2, 3);
+			this->Commandes_Panier_buttonRetour->Name = L"Commandes_Panier_buttonRetour";
+			this->Commandes_Panier_buttonRetour->Size = System::Drawing::Size(75, 23);
+			this->Commandes_Panier_buttonRetour->TabIndex = 22;
+			this->Commandes_Panier_buttonRetour->Text = L"Retour";
+			this->Commandes_Panier_buttonRetour->UseVisualStyleBackColor = true;
+			this->Commandes_Panier_buttonRetour->Click += gcnew System::EventHandler(this, &MyForm::Commandes_Panier_buttonRetour_Click);
+			// 
+			// Commandes_Panier_buttonPaniers
+			// 
+			this->Commandes_Panier_buttonPaniers->BackColor = System::Drawing::Color::Transparent;
+			this->Commandes_Panier_buttonPaniers->Location = System::Drawing::Point(248, 109);
+			this->Commandes_Panier_buttonPaniers->Name = L"Commandes_Panier_buttonPaniers";
+			this->Commandes_Panier_buttonPaniers->Size = System::Drawing::Size(127, 23);
+			this->Commandes_Panier_buttonPaniers->TabIndex = 21;
+			this->Commandes_Panier_buttonPaniers->Text = L"Paniers";
+			this->Commandes_Panier_buttonPaniers->UseVisualStyleBackColor = false;
+			this->Commandes_Panier_buttonPaniers->Click += gcnew System::EventHandler(this, &MyForm::Commandes_Panier_buttonPaniers_Click);
+			// 
+			// Commandes_Panier_buttonArticles
+			// 
+			this->Commandes_Panier_buttonArticles->BackColor = System::Drawing::Color::Transparent;
+			this->Commandes_Panier_buttonArticles->Location = System::Drawing::Point(124, 109);
+			this->Commandes_Panier_buttonArticles->Name = L"Commandes_Panier_buttonArticles";
+			this->Commandes_Panier_buttonArticles->Size = System::Drawing::Size(127, 23);
+			this->Commandes_Panier_buttonArticles->TabIndex = 20;
+			this->Commandes_Panier_buttonArticles->Text = L"Articles";
+			this->Commandes_Panier_buttonArticles->UseVisualStyleBackColor = false;
+			this->Commandes_Panier_buttonArticles->Click += gcnew System::EventHandler(this, &MyForm::Commandes_Panier_buttonArticles_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1356,6 +1702,7 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Personnel);
 			this->Controls->Add(this->Panel_Commandes);
+			this->Controls->Add(this->Commandes_Panel_Panier);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
@@ -1372,7 +1719,11 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->Panel_Personnel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Personnel_DataGridView))->EndInit();
 			this->Panel_Commandes->ResumeLayout(false);
+			this->Panel_Commandes->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Commandes_DataGridView))->EndInit();
+			this->Commandes_Panel_Panier->ResumeLayout(false);
+			this->Commandes_Panel_Panier->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1382,6 +1733,7 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 		this->Controls->Add(this->Panel_Stock);
 		this->Controls->Add(this->Panel_Personnel);
 		this->Controls->Add(this->Panel_Commandes);
+		this->Controls->Add(this->Commandes_Panel_Panier);
 		*/
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -1390,6 +1742,7 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 		this->Panel_Personnel->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 		this->Panel_Commandes->Visible = false;
+		this->Commandes_Panel_Panier->Visible = false;
 	}
 			//##############PANEL BIENVENUE################
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1464,11 +1817,12 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 		Client^ client = gcnew Client();
 		client->modifierAdresse(this->adresse_id->Text, this->adresse_code_postal->Text, this->adresse_ville->Text, this->adresse_libelle_de_voie->Text, this->adresse_type_de_voie->Text, this->adresse_numero->Text, this->adresse_numero_de_client->Text);
 		this->adresse_id->Clear();
-		this->client_numero->Clear();
-		this->client_nom->Clear();
-		this->client_prenom->Clear();
-		this->client_date_naissance->Clear();
-		this->client_nombre_achat->Clear();
+		this->adresse_code_postal->Clear();
+		this->adresse_ville->Clear();
+		this->adresse_libelle_de_voie->Clear();
+		this->adresse_type_de_voie->Clear();
+		this->adresse_numero->Clear();
+		this->adresse_numero_de_client->Clear();
 
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata3 = gcnew DataSet();
@@ -1648,16 +2002,31 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 		this->Commandes_button_commandes->BackColor = System::Drawing::SystemColors::ActiveCaption;
 	}
 	private: System::Void Commandes_retour_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
-		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
 		this->Panel_Commandes->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
+		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_button_commandes->BackColor = System::Drawing::Color::Transparent;
 	}
-
+	private: System::Void Commandes_buttonPanier_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Panel_Commandes->Visible = false;
+		this->Commandes_Panel_Panier->Visible = true;
+	}
+	//PANEL PANIER##############
+	private: System::Void Commandes_Panier_buttonRetour_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Commandes_Panel_Panier->Visible = false;
+		this->Panel_Commandes->Visible = true;
+		this->Commandes_Panier_buttonPaniers->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_Panier_buttonArticles->BackColor = System::Drawing::Color::Transparent;
+	}
+	private: System::Void Commandes_Panier_buttonArticles_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Commandes_Panier_buttonPaniers->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_Panier_buttonArticles->BackColor = System::Drawing::SystemColors::ActiveCaption;
+	}
+	private: System::Void Commandes_Panier_buttonPaniers_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Commandes_Panier_buttonArticles->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_Panier_buttonPaniers->BackColor = System::Drawing::SystemColors::ActiveCaption;
+	}
 		//##############PANEL STATISTIQUES################
-
-
-
 
 };
 }
