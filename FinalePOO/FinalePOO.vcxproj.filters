@@ -35,9 +35,6 @@
     <ClInclude Include="ClasseStock.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Personne.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Personnel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>

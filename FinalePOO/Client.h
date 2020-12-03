@@ -1,7 +1,6 @@
 #pragma once
-#include "Personne.h"
 
-ref class Client : public Personne
+ref class Client
 {
 /*Rappel des attributs : K_ID, Nom, Prenom, Date, NbAchat
 puis  liaison à Adresse : K_ID, numero, typeDeVoie, LibelleDeVoie, Ville, codePostal, FK_IDClient*/
