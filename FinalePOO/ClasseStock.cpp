@@ -60,7 +60,7 @@ void Stock::setTVA(int^ extTVA)
     TVApercent = *extTVA;
 }
 
-void Stock::ajouter(System::String^ nomProduit, System::String^ quantite, System::String^ seuil, System::String^ prixUnitaire, System::String^ TVApercent, )
+void Stock::ajouter(System::String^ nomProduit, System::String^ quantite, System::String^ seuil, System::String^ prixUnitaire, System::String^ TVApercent )
 {
     System::String^ connectionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
     System::String^ requete = System::IO::File::ReadAllText("AjouterStock.sql");
@@ -69,10 +69,10 @@ void Stock::ajouter(System::String^ nomProduit, System::String^ quantite, System
     System::Data::SqlClient::SqlCommand^ command = gcnew System::Data::SqlClient::SqlCommand(requete, connection);
 
     command->Parameters->AddWithValue("@Libelle", nomProduit);
-    command->Parameters->AddWithValue("@Quantite", quantite);
-    command->Parameters->AddWithValue("@Seuil", seuil);
-    command->Parameters->AddWithValue("@prixUHT", (prixUnitaire));
-    command->Parameters->AddWithValue("@TVA", (TVApercent));
+    command->Parameters->AddWithValue("@Quantite", System::Convert::ToInt64(quantite));
+    command->Parameters->AddWithValue("@Seuil", System::Convert::ToInt64(seuil));
+    command->Parameters->AddWithValue("@prixUHT", System::Convert::ToDecimal(prixUnitaire));
+    command->Parameters->AddWithValue("@TVA", System::Convert::ToInt64(TVApercent));
     
     try
     {
