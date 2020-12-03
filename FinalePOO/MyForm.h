@@ -1102,7 +1102,6 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->Personnel_DataGridView->Name = L"Personnel_DataGridView";
 			this->Personnel_DataGridView->Size = System::Drawing::Size(1134, 313);
 			this->Personnel_DataGridView->TabIndex = 84;
-			this->Personnel_DataGridView->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::Personnel_DataGridView_CellContentClick);
 			// 
 			// Personnel_Adresse_Numero
 			// 
@@ -1433,8 +1432,6 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
-		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
 		//Disparition
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
@@ -1651,10 +1648,13 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 		this->Commandes_button_commandes->BackColor = System::Drawing::SystemColors::ActiveCaption;
 	}
 	private: System::Void Commandes_retour_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
+		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
 		this->Panel_Commandes->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
 	}
-			//##############PANEL STATISTIQUES################
+
+		//##############PANEL STATISTIQUES################
 
 
 
