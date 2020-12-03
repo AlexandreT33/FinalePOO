@@ -201,6 +201,7 @@ void Client::afficherClient(System::String^ Numero_de_Client, System::Data::Data
     }
 
 }
+
 void Client::afficherAdresse(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete

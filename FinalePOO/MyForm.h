@@ -1102,6 +1102,7 @@ private: System::Windows::Forms::Button^ Commandes_button_client;
 			this->Personnel_DataGridView->Name = L"Personnel_DataGridView";
 			this->Personnel_DataGridView->Size = System::Drawing::Size(1134, 313);
 			this->Personnel_DataGridView->TabIndex = 84;
+			this->Personnel_DataGridView->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::Personnel_DataGridView_CellContentClick);
 			// 
 			// Personnel_Adresse_Numero
 			// 
