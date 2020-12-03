@@ -139,9 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AfficherStock.sql" />
+    <None Include="AjouterAdresse.sql" />
     <None Include="AjouterClient.sql" />
     <None Include="AjouterStock.sql" />
+    <None Include="ModifierAdresse.sql" />
     <None Include="ModifierClient.sql" />
+    <None Include="RetirerAdresse.sql" />
     <None Include="RetirerClient.sql" />
     <None Include="RetirerStock.sql" />
     <None Include="ModifierStock.sql" />
