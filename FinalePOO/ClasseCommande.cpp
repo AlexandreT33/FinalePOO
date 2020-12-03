@@ -141,7 +141,7 @@ void Commande::afficherCommande(System::Data::DataSet^ objdata)
     try
     {
         connexion->Open();
-        commande->Fill(objdata, "Stock");
+        commande->Fill(objdata, "Commande");
         connexion->Close();
     }
     catch (System::Exception^ ex)
