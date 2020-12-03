@@ -159,6 +159,11 @@
     <None Include="RetirerPersonnel.sql" />
     <None Include="RetirerStock.sql" />
     <None Include="ModifierStock.sql" />
+    <None Include="AfficherCommande.sql" />
+    <None Include="AfficherPanier.sql" />
+    <None Include="AfficherArticle.sql" />
+    <None Include="AfficherPaiement.sql" />
+    <None Include="AfficherAdresse.sql" />
     <None Include="UpdateNBAchat.sql" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

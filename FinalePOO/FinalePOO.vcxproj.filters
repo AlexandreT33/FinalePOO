@@ -124,5 +124,20 @@
     <None Include="RetirerCommande.sql">
       <Filter>Fichiers de ressources\Commande</Filter>
     </None>
+    <None Include="AfficherCommande.sql">
+      <Filter>Fichiers de ressources\Commande</Filter>
+    </None>
+    <None Include="AfficherPanier.sql">
+      <Filter>Fichiers de ressources\Commande</Filter>
+    </None>
+    <None Include="AfficherArticle.sql">
+      <Filter>Fichiers de ressources\Stock</Filter>
+    </None>
+    <None Include="AfficherPaiement.sql">
+      <Filter>Fichiers de ressources\Commande</Filter>
+    </None>
+    <None Include="AfficherAdresse.sql">
+      <Filter>Fichiers de ressources\Commande</Filter>
+    </None>
   </ItemGroup>
 </Project>
