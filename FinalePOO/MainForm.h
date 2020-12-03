@@ -77,7 +77,7 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Button^ button10;
 	private: System::Windows::Forms::Button^ button11;
 	private: System::Windows::Forms::Button^ button12;
-	private: System::Windows::Forms::DataGridView^ dataGridView2;
+
 	private: System::Windows::Forms::TextBox^ client_date_naissance;
 	private: System::Windows::Forms::TextBox^ client_nombre_achat;
 
@@ -129,7 +129,7 @@ namespace FinalePOO {
 
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
-	private: System::Windows::Forms::Button^ client_afficher;
+
 
 
 
@@ -176,7 +176,6 @@ namespace FinalePOO {
 			this->button_afficher_stock = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Client = (gcnew System::Windows::Forms::Panel());
-			this->client_afficher = (gcnew System::Windows::Forms::Button());
 			this->button16 = (gcnew System::Windows::Forms::Button());
 			this->adresse_numero_de_client = (gcnew System::Windows::Forms::TextBox());
 			this->label21 = (gcnew System::Windows::Forms::Label());
@@ -199,7 +198,6 @@ namespace FinalePOO {
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->button12 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->client_date_naissance = (gcnew System::Windows::Forms::TextBox());
 			this->client_nombre_achat = (gcnew System::Windows::Forms::TextBox());
 			this->client_prenom = (gcnew System::Windows::Forms::TextBox());
@@ -216,7 +214,6 @@ namespace FinalePOO {
 			this->Panel_Stock->SuspendLayout();
 			this->Panel_Client->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -514,7 +511,6 @@ namespace FinalePOO {
 			// 
 			// Panel_Client
 			// 
-			this->Panel_Client->Controls->Add(this->client_afficher);
 			this->Panel_Client->Controls->Add(this->button16);
 			this->Panel_Client->Controls->Add(this->adresse_numero_de_client);
 			this->Panel_Client->Controls->Add(this->label21);
@@ -537,7 +533,6 @@ namespace FinalePOO {
 			this->Panel_Client->Controls->Add(this->button10);
 			this->Panel_Client->Controls->Add(this->button11);
 			this->Panel_Client->Controls->Add(this->button12);
-			this->Panel_Client->Controls->Add(this->dataGridView2);
 			this->Panel_Client->Controls->Add(this->client_date_naissance);
 			this->Panel_Client->Controls->Add(this->client_nombre_achat);
 			this->Panel_Client->Controls->Add(this->client_prenom);
@@ -554,16 +549,6 @@ namespace FinalePOO {
 			this->Panel_Client->Name = L"Panel_Client";
 			this->Panel_Client->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Client->TabIndex = 0;
-			// 
-			// client_afficher
-			// 
-			this->client_afficher->Location = System::Drawing::Point(526, 436);
-			this->client_afficher->Name = L"client_afficher";
-			this->client_afficher->Size = System::Drawing::Size(99, 121);
-			this->client_afficher->TabIndex = 60;
-			this->client_afficher->Text = L"Afficher";
-			this->client_afficher->UseVisualStyleBackColor = true;
-			this->client_afficher->Click += gcnew System::EventHandler(this, &MyForm::client_afficher_Click);
 			// 
 			// button16
 			// 
@@ -648,9 +633,9 @@ namespace FinalePOO {
 			// dataGridView3
 			// 
 			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView3->Location = System::Drawing::Point(678, 145);
+			this->dataGridView3->Location = System::Drawing::Point(24, 100);
 			this->dataGridView3->Name = L"dataGridView3";
-			this->dataGridView3->Size = System::Drawing::Size(434, 268);
+			this->dataGridView3->Size = System::Drawing::Size(1134, 313);
 			this->dataGridView3->TabIndex = 51;
 			// 
 			// adresse_numero
@@ -747,11 +732,11 @@ namespace FinalePOO {
 			this->label19->AutoSize = true;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label19->Location = System::Drawing::Point(738, 438);
+			this->label19->Location = System::Drawing::Point(664, 438);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(37, 24);
+			this->label19->Size = System::Drawing::Size(112, 24);
 			this->label19->TabIndex = 41;
-			this->label19->Text = L"ID :";
+			this->label19->Text = L"ID Adresse :";
 			// 
 			// button10
 			// 
@@ -782,14 +767,6 @@ namespace FinalePOO {
 			this->button12->Text = L"Modifier";
 			this->button12->UseVisualStyleBackColor = true;
 			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
-			// 
-			// dataGridView2
-			// 
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(63, 145);
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->Size = System::Drawing::Size(458, 268);
-			this->dataGridView2->TabIndex = 37;
 			// 
 			// client_date_naissance
 			// 
@@ -896,17 +873,19 @@ namespace FinalePOO {
 			this->label15->AutoSize = true;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(476, 64);
+			this->label15->Location = System::Drawing::Point(471, 41);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(275, 39);
 			this->label15->TabIndex = 24;
 			this->label15->Text = L"Gestion du client";
+			this->label15->Click += gcnew System::EventHandler(this, &MyForm::label15_Click);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
+			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -919,7 +898,6 @@ namespace FinalePOO {
 			this->Panel_Client->ResumeLayout(false);
 			this->Panel_Client->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -974,7 +952,7 @@ namespace FinalePOO {
 		this->adresse_numero->Clear();
 		this->adresse_numero_de_client->Clear();
 
-		//Afficher GridView Adresse
+		//Actualiser GridView Client & Adresse
 		DataSet^ objdata2 = gcnew DataSet();
 		Client^ client2 = gcnew Client();
 		client2->afficherAdresse(this->client_numero->Text, objdata2);
@@ -991,7 +969,7 @@ namespace FinalePOO {
 		this->client_date_naissance->Clear();
 		this->client_nombre_achat->Clear();
 
-		//Afficher GridView Adresse
+		//Actualiser GridView Client & Adresse
 		DataSet^ objdata3 = gcnew DataSet();
 		Client^ client3 = gcnew Client();
 		client3->afficherAdresse(this->client_numero->Text, objdata3);
@@ -1003,7 +981,7 @@ namespace FinalePOO {
 		client->supprimerAdresse(this->adresse_id->Text);
 		this->adresse_id->Clear();
 
-		//Afficher GridView Adresse
+		//Actualiser GridView Client & Adresse
 		DataSet^ objdata4 = gcnew DataSet();
 		Client^ client4 = gcnew Client();
 		client4->afficherAdresse(this->client_numero->Text, objdata4);
@@ -1023,6 +1001,13 @@ namespace FinalePOO {
 		this->client_prenom->Clear();
 		this->client_date_naissance->Clear();
 		this->client_nombre_achat->Clear();
+
+		//Actualiser GridView Client & Adresse
+		DataSet^ objdata5 = gcnew DataSet();
+		Client^ client5 = gcnew Client();
+		client5->afficherAdresse(this->client_numero->Text, objdata5);
+		dataGridView3->DataSource = objdata5;
+		dataGridView3->DataMember = "Adresse";
 	}
 	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) { // modifier client
 		Client^ client = gcnew Client();
@@ -1032,19 +1017,27 @@ namespace FinalePOO {
 		this->client_prenom->Clear();
 		this->client_date_naissance->Clear();
 		this->client_nombre_achat->Clear();
+
+		//Actualiser GridView Client & Adresse
+		DataSet^ objdata6 = gcnew DataSet();
+		Client^ client6 = gcnew Client();
+		client6->afficherAdresse(this->client_numero->Text, objdata6);
+		dataGridView3->DataSource = objdata6;
+		dataGridView3->DataMember = "Adresse";
 	}
 	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer client
 		Client^ client = gcnew Client();
 		client->supprimer(this->client_numero->Text);
 		this->client_numero->Clear();
+
+		//Actualiser GridView Client & Adresse
+		DataSet^ objdata7 = gcnew DataSet();
+		Client^ client7 = gcnew Client();
+		client7->afficherAdresse(this->client_numero->Text, objdata7);
+		dataGridView3->DataSource = objdata7;
+		dataGridView3->DataMember = "Adresse";
 	}
-	private: System::Void client_afficher_Click(System::Object^ sender, System::EventArgs^ e) { //afficher client
-		DataSet^ objdata = gcnew DataSet();
-		Client^ client = gcnew Client();
-		client->afficherClient(this->client_numero->Text, objdata);
-		dataGridView2->DataSource = objdata;
-		dataGridView2->DataMember = "Client";
-	}
+
 		   //##############PANEL STOCK################
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) { //quitter stock
 		this->Panel_Stock->Visible = false;
@@ -1090,5 +1083,7 @@ namespace FinalePOO {
 
 
 
+private: System::Void label15_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
