@@ -3,6 +3,7 @@
 #include "Client.h"
 #include "Personnel.h"
 #include "Affichage.h"
+#include "ClasseCommande.h"
 
 namespace FinalePOO {
 
@@ -2476,10 +2477,24 @@ namespace FinalePOO {
 	private: System::Void Commandes_button_client_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_button_commandes->BackColor = System::Drawing::Color::Transparent;
 		this->Commandes_button_client->BackColor = System::Drawing::SystemColors::ActiveCaption;
+		DataSet^ objdatan1 = gcnew DataSet();
+		Client^ clientn1 = gcnew Client();
+		clientn1->afficherClient(this->client_numero->Text, objdatan1);
+		Commandes_DataGridView->DataSource = objdatan1;
+		Commandes_DataGridView->DataMember = "Client";
+		delete objdatan1;
+		delete clientn1;
 	}
 	private: System::Void Commandes_button_commandes_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_button_client->BackColor = System::Drawing::Color::Transparent;
 		this->Commandes_button_commandes->BackColor = System::Drawing::SystemColors::ActiveCaption;
+		DataSet^ objdatan2 = gcnew DataSet();
+		Commande^ clientn2 = gcnew Commande();
+		clientn2->afficherCommande(objdatan2);
+		Commandes_DataGridView->DataSource = objdatan2;
+		Commandes_DataGridView->DataMember = "Commande";
+		delete objdatan2;
+		delete clientn2;
 	}
 	private: System::Void Commandes_retour_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Panel_Commandes->Visible = false;
