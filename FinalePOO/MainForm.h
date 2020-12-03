@@ -1,4 +1,5 @@
 #pragma once
+#include "ClasseStock.h"
 
 namespace FinalePOO {
 
@@ -48,12 +49,18 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ Ref;
+	private: System::Windows::Forms::TextBox^ libelle;
+	private: System::Windows::Forms::TextBox^ quantite;
+	private: System::Windows::Forms::TextBox^ prix;
+
+
+
+
+	private: System::Windows::Forms::TextBox^ seuil;
+	private: System::Windows::Forms::TextBox^ TVA;
+
+
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
@@ -90,12 +97,12 @@ namespace FinalePOO {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->Ref = (gcnew System::Windows::Forms::TextBox());
+			this->libelle = (gcnew System::Windows::Forms::TextBox());
+			this->quantite = (gcnew System::Windows::Forms::TextBox());
+			this->prix = (gcnew System::Windows::Forms::TextBox());
+			this->seuil = (gcnew System::Windows::Forms::TextBox());
+			this->TVA = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
@@ -261,59 +268,59 @@ namespace FinalePOO {
 			this->label8->TabIndex = 13;
 			this->label8->Text = L"TVA :";
 			// 
-			// textBox1
+			// Ref
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Ref->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(896, 209);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(188, 24);
-			this->textBox1->TabIndex = 14;
+			this->Ref->Location = System::Drawing::Point(896, 209);
+			this->Ref->Name = L"Ref";
+			this->Ref->Size = System::Drawing::Size(188, 24);
+			this->Ref->TabIndex = 14;
 			// 
-			// textBox2
+			// libelle
 			// 
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->libelle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->Location = System::Drawing::Point(896, 249);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(188, 24);
-			this->textBox2->TabIndex = 15;
+			this->libelle->Location = System::Drawing::Point(896, 249);
+			this->libelle->Name = L"libelle";
+			this->libelle->Size = System::Drawing::Size(188, 24);
+			this->libelle->TabIndex = 15;
 			// 
-			// textBox3
+			// quantite
 			// 
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->quantite->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox3->Location = System::Drawing::Point(896, 291);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(188, 24);
-			this->textBox3->TabIndex = 16;
+			this->quantite->Location = System::Drawing::Point(896, 291);
+			this->quantite->Name = L"quantite";
+			this->quantite->Size = System::Drawing::Size(188, 24);
+			this->quantite->TabIndex = 16;
 			// 
-			// textBox4
+			// prix
 			// 
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->prix->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox4->Location = System::Drawing::Point(896, 375);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(188, 24);
-			this->textBox4->TabIndex = 17;
+			this->prix->Location = System::Drawing::Point(896, 375);
+			this->prix->Name = L"prix";
+			this->prix->Size = System::Drawing::Size(188, 24);
+			this->prix->TabIndex = 17;
 			// 
-			// textBox5
+			// seuil
 			// 
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->seuil->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox5->Location = System::Drawing::Point(896, 334);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(188, 24);
-			this->textBox5->TabIndex = 18;
+			this->seuil->Location = System::Drawing::Point(896, 334);
+			this->seuil->Name = L"seuil";
+			this->seuil->Size = System::Drawing::Size(188, 24);
+			this->seuil->TabIndex = 18;
 			// 
-			// textBox6
+			// TVA
 			// 
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->TVA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox6->Location = System::Drawing::Point(896, 418);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(188, 24);
-			this->textBox6->TabIndex = 19;
+			this->TVA->Location = System::Drawing::Point(896, 418);
+			this->TVA->Name = L"TVA";
+			this->TVA->Size = System::Drawing::Size(188, 24);
+			this->TVA->TabIndex = 19;
 			// 
 			// dataGridView1
 			// 
@@ -340,6 +347,7 @@ namespace FinalePOO {
 			this->button7->TabIndex = 22;
 			this->button7->Text = L"Ajouter";
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// button8
 			// 
@@ -357,12 +365,12 @@ namespace FinalePOO {
 			this->panel2->Controls->Add(this->button7);
 			this->panel2->Controls->Add(this->button6);
 			this->panel2->Controls->Add(this->dataGridView1);
-			this->panel2->Controls->Add(this->textBox6);
-			this->panel2->Controls->Add(this->textBox5);
-			this->panel2->Controls->Add(this->textBox4);
-			this->panel2->Controls->Add(this->textBox3);
-			this->panel2->Controls->Add(this->textBox2);
-			this->panel2->Controls->Add(this->textBox1);
+			this->panel2->Controls->Add(this->TVA);
+			this->panel2->Controls->Add(this->seuil);
+			this->panel2->Controls->Add(this->prix);
+			this->panel2->Controls->Add(this->quantite);
+			this->panel2->Controls->Add(this->libelle);
+			this->panel2->Controls->Add(this->Ref);
 			this->panel2->Controls->Add(this->label8);
 			this->panel2->Controls->Add(this->label7);
 			this->panel2->Controls->Add(this->label6);
@@ -438,6 +446,10 @@ namespace FinalePOO {
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->panel2->Visible = false;
 		this->panel1->Visible = true;
+	}
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+		Stock^ article = gcnew Stock();
+		article->ajouter(this->libelle->Text,this->quantite->Text,this->seuil->Text,this->prix->Text,this->TVA->Text);
 	}
 };
 }
