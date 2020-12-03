@@ -129,6 +129,7 @@ namespace FinalePOO {
 
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
+	private: System::Windows::Forms::Button^ button17;
 
 
 
@@ -208,6 +209,7 @@ namespace FinalePOO {
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -472,6 +474,7 @@ namespace FinalePOO {
 			// Panel_Stock
 			// 
 			this->Panel_Stock->BackColor = System::Drawing::Color::Orange;
+			this->Panel_Stock->Controls->Add(this->button17);
 			this->Panel_Stock->Controls->Add(this->button9);
 			this->Panel_Stock->Controls->Add(this->button8);
 			this->Panel_Stock->Controls->Add(this->button7);
@@ -866,17 +869,15 @@ namespace FinalePOO {
 			this->label14->TabIndex = 25;
 			this->label14->Text = L"Num�ro de client :";
 			// 
-			// label15
+			// button17
 			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(471, 41);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(275, 39);
-			this->label15->TabIndex = 24;
-			this->label15->Text = L"Gestion du client";
-			this->label15->Click += gcnew System::EventHandler(this, &MyForm::label15_Click);
+			this->button17->Location = System::Drawing::Point(594, 576);
+			this->button17->Name = L"button17";
+			this->button17->Size = System::Drawing::Size(138, 36);
+			this->button17->TabIndex = 25;
+			this->button17->Text = L"Actualiser";
+			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
 			// 
 			// MyForm
 			// 
@@ -929,12 +930,6 @@ namespace FinalePOO {
 		this->Panel_Bienvenue->Visible = false;
 		//Apparition
 		this->Panel_Stock->Visible = true;
-
-		DataSet^ objdata1 = gcnew DataSet();
-		Stock^ article1 = gcnew Stock();
-		article1->afficher(this->Ref->Text, objdata1);
-		dataGridView1->DataSource = objdata1;
-		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -1047,8 +1042,13 @@ namespace FinalePOO {
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) { //quitter stock
 		this->Panel_Stock->Visible = false;
 		this->Panel_Bienvenue->Visible = true;
-
-
+	}
+	private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) { //afficher stock
+		DataSet^ objdata = gcnew DataSet();
+		Stock^ article = gcnew Stock();
+		article->afficher(objdata);
+		dataGridView1->DataSource = objdata;
+		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter stock
 		Stock^ article = gcnew Stock();
@@ -1058,12 +1058,6 @@ namespace FinalePOO {
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
-
-		DataSet^ objdata2 = gcnew DataSet();
-		Stock^ article2 = gcnew Stock();
-		article2->afficher(this->Ref->Text, objdata2);
-		dataGridView1->DataSource = objdata2;
-		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) { // modifier stock
 		Stock^ article = gcnew Stock();
@@ -1074,23 +1068,11 @@ namespace FinalePOO {
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
-
-		DataSet^ objdata3 = gcnew DataSet();
-		Stock^ article3 = gcnew Stock();
-		article3->afficher(this->Ref->Text, objdata3);
-		dataGridView1->DataSource = objdata3;
-		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer stock
 		Stock^ article = gcnew Stock();
 		article->supprimer(this->Ref->Text);
 		this->Ref->Clear();
-
-		DataSet^ objdata4 = gcnew DataSet();
-		Stock^ article4 = gcnew Stock();
-		article4->afficher(this->Ref->Text, objdata4);
-		dataGridView1->DataSource = objdata4;
-		dataGridView1->DataMember = "Stock";
 	}
 		   //##############PANEL COMMANDES################
 
@@ -1099,9 +1081,5 @@ namespace FinalePOO {
 		   //##############PANEL STATISTIQUES################
 
 
-
-
-private: System::Void label15_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	};
 }

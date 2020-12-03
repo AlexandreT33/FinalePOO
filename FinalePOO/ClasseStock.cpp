@@ -59,7 +59,7 @@ void Stock::supprimer(System::String^ IDproduit)
     }
 }
 
-void Stock::afficher(System::String^ IDproduit,System::Data::DataSet^ objdata)
+void Stock::afficher(System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
