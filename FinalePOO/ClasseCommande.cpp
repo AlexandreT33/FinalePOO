@@ -1,6 +1,6 @@
 #include "ClasseCommande.h"
 
-void Commande::ajouterCommande(System::String^ dateE, System::String^ Ref, System::String^ dateL, System::String^ remise, System::String^ total, System::String^ NDC, System::String^ livraison)
+void Commande::ajouterCommande(System::String^ dateE, System::String^ dateL, System::String^ NDC)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -11,12 +11,8 @@ void Commande::ajouterCommande(System::String^ dateE, System::String^ Ref, Syste
     System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
 
     commande->Parameters->AddWithValue("@dateE", dateE);
-    commande->Parameters->AddWithValue("@Ref", Ref);
     commande->Parameters->AddWithValue("@dateL", dateL);
-    commande->Parameters->AddWithValue("@remise", remise);
-    commande->Parameters->AddWithValue("@total", total);
     commande->Parameters->AddWithValue("@NDC", NDC);
-    commande->Parameters->AddWithValue("@livraison", livraison);
     //essai de la requete plus gestion de l'Exception.
     try
     {
@@ -30,22 +26,11 @@ void Commande::ajouterCommande(System::String^ dateE, System::String^ Ref, Syste
     }
 }
 
-
-void Commande::ajouterPanier(System::String^ NomProduit, System::String^ ID, System::String^ )
-{
-    throw gcnew System::NotImplementedException();
-}
-
-void Commande::retirerPanier()
-{
-    throw gcnew System::NotImplementedException();
-}
-
 void Commande::panierdynamiqueAjout(System::String^ ID, System::String^ Reference, System::String^ Quantite)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("PanierRetirer.sql");
+    System::String^ requete = System::IO::File::ReadAllText("PanierAjout.sql");
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
