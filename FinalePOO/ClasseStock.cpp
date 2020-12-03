@@ -77,7 +77,6 @@ void Stock::afficher(System::String^ IDproduit, System::String^ nomProduit, Syst
         connexion->Open();
         //Ici on récupère le résultat dans un dataReader
         System::Data::IDataReader^ dataR = commande->ExecuteReader();
-        quantite = System::Convert::ToString(dataR);
         connexion->Close();
     }
     catch (System::Exception^ ex)

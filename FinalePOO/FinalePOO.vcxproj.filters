@@ -55,5 +55,11 @@
     <None Include="ModifierStock.sql">
       <Filter>Fichiers de ressources</Filter>
     </None>
+    <None Include="AjouterClient.sql">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="RetirerClient.sql">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
   </ItemGroup>
 </Project>
