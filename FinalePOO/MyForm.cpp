@@ -1,4 +1,4 @@
-#include "MainForm.h"
+#include "MyForm.h"
 #include "ClasseStock.h"
 
 using namespace System;
