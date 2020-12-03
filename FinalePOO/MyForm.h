@@ -2538,10 +2538,11 @@ namespace FinalePOO {
 	}
 	private: System::Void Commandes_button_Modifier_Click(System::Object^ sender, System::EventArgs^ e) {
 		Commande^ commande2 = gcnew Commande();
-		commande2->modifierCommande(this->Commandes_IdCommande->Text, this->Commandes_DateEmmission->Text, this->Commandes_DateLivraison->Text);
+		commande2->modifierCommande(this->Commandes_IdCommande->Text, this->Commandes_DateEmmission->Text, this->Commandes_DateLivraison->Text, this->Commandes_NumClient->Text);
 		this->Commandes_DateEmmission->Clear();
 		this->Commandes_DateLivraison->Clear();
 		this->Commandes_IdCommande->Clear();
+		this->Commandes_NumClient->Clear();
 		DataSet^ objdatan4 = gcnew DataSet();
 		Commande^ clientn4 = gcnew Commande();
 		clientn4->afficherCommande(objdatan4);
