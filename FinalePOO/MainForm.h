@@ -497,7 +497,7 @@ namespace FinalePOO {
 			this->button_afficher_stock->TabIndex = 25;
 			this->button_afficher_stock->Text = L"Afficher";
 			this->button_afficher_stock->UseVisualStyleBackColor = true;
-			this->button_afficher_stock->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
+			this->button_afficher_stock->Click += gcnew System::EventHandler(this, &MyForm::button_afficher_stock_click);
 			// 
 			// button9
 			// 
@@ -993,8 +993,7 @@ namespace FinalePOO {
 		client->supprimer(this->client_numero->Text);
 		this->client_numero->Clear();
 	}
-
-	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button_afficher_stock_click(System::Object^ sender, System::EventArgs^ e) { //afficher stock
 		DataSet^ objdata = gcnew DataSet();
 		Stock^ article = gcnew Stock();
 		article->afficher(this->Ref->Text, objdata);
