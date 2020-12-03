@@ -130,6 +130,63 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
 	private: System::Windows::Forms::Button^ button17;
+private: System::Windows::Forms::Panel^ Panel_Personnel;
+private: System::Windows::Forms::Button^ Personnel_Retour;
+private: System::Windows::Forms::TextBox^ Personnel_Adresse_NumPersonnel;
+
+
+private: System::Windows::Forms::Label^ label22;
+private: System::Windows::Forms::TextBox^ Personnel_Adresse_LVoie;
+
+private: System::Windows::Forms::Label^ label23;
+private: System::Windows::Forms::Button^ Personnel_Adresse_Retirer;
+
+private: System::Windows::Forms::Button^ Personnel_Adresse_Ajouter;
+private: System::Windows::Forms::Button^ Personnel_Adresse_Modifier;
+private: System::Windows::Forms::DataGridView^ Personnel_DataGridView;
+private: System::Windows::Forms::TextBox^ Personnel_Adresse_Numero;
+private: System::Windows::Forms::TextBox^ Personnel_Adresse_TVoie;
+
+
+
+
+
+private: System::Windows::Forms::TextBox^ Personnel_Adresse_CodeP;
+
+private: System::Windows::Forms::TextBox^ Personnel_Adresse_Ville;
+
+private: System::Windows::Forms::TextBox^ Personnel_Adresse_ID;
+
+
+
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::Label^ label25;
+private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Label^ label28;
+private: System::Windows::Forms::Button^ Personnel_Retirer;
+
+private: System::Windows::Forms::Button^ Personnel_Ajouter;
+private: System::Windows::Forms::Button^ Personnel_Modifier;
+private: System::Windows::Forms::TextBox^ Personnel_DateNaissance;
+private: System::Windows::Forms::TextBox^ Personnel_IDSup;
+
+
+
+
+private: System::Windows::Forms::TextBox^ Personnel_Prenom;
+
+private: System::Windows::Forms::TextBox^ Personnel_Nom;
+
+private: System::Windows::Forms::TextBox^ Personnel_Numero;
+
+private: System::Windows::Forms::Label^ label29;
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Label^ label33;
+
+private: System::Windows::Forms::Label^ label35;
 
 
 
@@ -211,11 +268,47 @@ namespace FinalePOO {
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->Panel_Personnel = (gcnew System::Windows::Forms::Panel());
+			this->Personnel_Retour = (gcnew System::Windows::Forms::Button());
+			this->Personnel_Adresse_NumPersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->Personnel_Adresse_LVoie = (gcnew System::Windows::Forms::TextBox());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->Personnel_Adresse_Retirer = (gcnew System::Windows::Forms::Button());
+			this->Personnel_Adresse_Ajouter = (gcnew System::Windows::Forms::Button());
+			this->Personnel_Adresse_Modifier = (gcnew System::Windows::Forms::Button());
+			this->Personnel_DataGridView = (gcnew System::Windows::Forms::DataGridView());
+			this->Personnel_Adresse_Numero = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_Adresse_TVoie = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_Adresse_CodeP = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_Adresse_Ville = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_Adresse_ID = (gcnew System::Windows::Forms::TextBox());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->Personnel_Retirer = (gcnew System::Windows::Forms::Button());
+			this->Personnel_Ajouter = (gcnew System::Windows::Forms::Button());
+			this->Personnel_Modifier = (gcnew System::Windows::Forms::Button());
+			this->Personnel_DateNaissance = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_IDSup = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_Prenom = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_Nom = (gcnew System::Windows::Forms::TextBox());
+			this->Personnel_Numero = (gcnew System::Windows::Forms::TextBox());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
 			this->Panel_Client->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			this->Panel_Personnel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Personnel_DataGridView))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -897,14 +990,377 @@ namespace FinalePOO {
 			this->label15->Size = System::Drawing::Size(100, 23);
 			this->label15->TabIndex = 60;
 			// 
+			// Panel_Personnel
+			// 
+			this->Panel_Personnel->BackColor = System::Drawing::Color::Transparent;
+			this->Panel_Personnel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Personnel.BackgroundImage")));
+			this->Panel_Personnel->Controls->Add(this->label35);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Retour);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_NumPersonnel);
+			this->Panel_Personnel->Controls->Add(this->label22);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_LVoie);
+			this->Panel_Personnel->Controls->Add(this->label23);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_Retirer);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_Ajouter);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_Modifier);
+			this->Panel_Personnel->Controls->Add(this->Personnel_DataGridView);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_Numero);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_TVoie);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_CodeP);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_Ville);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Adresse_ID);
+			this->Panel_Personnel->Controls->Add(this->label24);
+			this->Panel_Personnel->Controls->Add(this->label25);
+			this->Panel_Personnel->Controls->Add(this->label26);
+			this->Panel_Personnel->Controls->Add(this->label27);
+			this->Panel_Personnel->Controls->Add(this->label28);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Retirer);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Ajouter);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Modifier);
+			this->Panel_Personnel->Controls->Add(this->Personnel_DateNaissance);
+			this->Panel_Personnel->Controls->Add(this->Personnel_IDSup);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Prenom);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Nom);
+			this->Panel_Personnel->Controls->Add(this->Personnel_Numero);
+			this->Panel_Personnel->Controls->Add(this->label29);
+			this->Panel_Personnel->Controls->Add(this->label30);
+			this->Panel_Personnel->Controls->Add(this->label31);
+			this->Panel_Personnel->Controls->Add(this->label32);
+			this->Panel_Personnel->Controls->Add(this->label33);
+			this->Panel_Personnel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->Panel_Personnel->Location = System::Drawing::Point(0, 0);
+			this->Panel_Personnel->Name = L"Panel_Personnel";
+			this->Panel_Personnel->Size = System::Drawing::Size(1189, 686);
+			this->Panel_Personnel->TabIndex = 0;
+			// 
+			// Personnel_Retour
+			// 
+			this->Personnel_Retour->Location = System::Drawing::Point(3, 3);
+			this->Personnel_Retour->Name = L"Personnel_Retour";
+			this->Personnel_Retour->Size = System::Drawing::Size(99, 26);
+			this->Personnel_Retour->TabIndex = 92;
+			this->Personnel_Retour->Text = L"Retour";
+			this->Personnel_Retour->UseVisualStyleBackColor = true;
+			// 
+			// Personnel_Adresse_NumPersonnel
+			// 
+			this->Personnel_Adresse_NumPersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Adresse_NumPersonnel->Location = System::Drawing::Point(796, 640);
+			this->Personnel_Adresse_NumPersonnel->Name = L"Personnel_Adresse_NumPersonnel";
+			this->Personnel_Adresse_NumPersonnel->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Adresse_NumPersonnel->TabIndex = 91;
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label22->Location = System::Drawing::Point(583, 639);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(207, 24);
+			this->label22->TabIndex = 90;
+			this->label22->Text = L"Numéro de Personnel :";
+			// 
+			// Personnel_Adresse_LVoie
+			// 
+			this->Personnel_Adresse_LVoie->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Adresse_LVoie->Location = System::Drawing::Point(796, 610);
+			this->Personnel_Adresse_LVoie->Name = L"Personnel_Adresse_LVoie";
+			this->Personnel_Adresse_LVoie->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Adresse_LVoie->TabIndex = 89;
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label23->Location = System::Drawing::Point(701, 549);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(89, 24);
+			this->label23->TabIndex = 88;
+			this->label23->Text = L"Numéro :";
+			// 
+			// Personnel_Adresse_Retirer
+			// 
+			this->Personnel_Adresse_Retirer->Location = System::Drawing::Point(976, 562);
+			this->Personnel_Adresse_Retirer->Name = L"Personnel_Adresse_Retirer";
+			this->Personnel_Adresse_Retirer->Size = System::Drawing::Size(99, 26);
+			this->Personnel_Adresse_Retirer->TabIndex = 87;
+			this->Personnel_Adresse_Retirer->Text = L"Retirer";
+			this->Personnel_Adresse_Retirer->UseVisualStyleBackColor = true;
+			// 
+			// Personnel_Adresse_Ajouter
+			// 
+			this->Personnel_Adresse_Ajouter->Location = System::Drawing::Point(975, 467);
+			this->Personnel_Adresse_Ajouter->Name = L"Personnel_Adresse_Ajouter";
+			this->Personnel_Adresse_Ajouter->Size = System::Drawing::Size(99, 26);
+			this->Personnel_Adresse_Ajouter->TabIndex = 86;
+			this->Personnel_Adresse_Ajouter->Text = L"Ajouter";
+			this->Personnel_Adresse_Ajouter->UseVisualStyleBackColor = true;
+			// 
+			// Personnel_Adresse_Modifier
+			// 
+			this->Personnel_Adresse_Modifier->Location = System::Drawing::Point(976, 514);
+			this->Personnel_Adresse_Modifier->Name = L"Personnel_Adresse_Modifier";
+			this->Personnel_Adresse_Modifier->Size = System::Drawing::Size(99, 26);
+			this->Personnel_Adresse_Modifier->TabIndex = 85;
+			this->Personnel_Adresse_Modifier->Text = L"Modifier";
+			this->Personnel_Adresse_Modifier->UseVisualStyleBackColor = true;
+			// 
+			// Personnel_DataGridView
+			// 
+			this->Personnel_DataGridView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->Personnel_DataGridView->Location = System::Drawing::Point(39, 122);
+			this->Personnel_DataGridView->Name = L"Personnel_DataGridView";
+			this->Personnel_DataGridView->Size = System::Drawing::Size(1134, 313);
+			this->Personnel_DataGridView->TabIndex = 84;
+			// 
+			// Personnel_Adresse_Numero
+			// 
+			this->Personnel_Adresse_Numero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Adresse_Numero->Location = System::Drawing::Point(796, 550);
+			this->Personnel_Adresse_Numero->Name = L"Personnel_Adresse_Numero";
+			this->Personnel_Adresse_Numero->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Adresse_Numero->TabIndex = 83;
+			// 
+			// Personnel_Adresse_TVoie
+			// 
+			this->Personnel_Adresse_TVoie->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Adresse_TVoie->Location = System::Drawing::Point(796, 580);
+			this->Personnel_Adresse_TVoie->Name = L"Personnel_Adresse_TVoie";
+			this->Personnel_Adresse_TVoie->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Adresse_TVoie->TabIndex = 82;
+			// 
+			// Personnel_Adresse_CodeP
+			// 
+			this->Personnel_Adresse_CodeP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Adresse_CodeP->Location = System::Drawing::Point(796, 520);
+			this->Personnel_Adresse_CodeP->Name = L"Personnel_Adresse_CodeP";
+			this->Personnel_Adresse_CodeP->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Adresse_CodeP->TabIndex = 81;
+			// 
+			// Personnel_Adresse_Ville
+			// 
+			this->Personnel_Adresse_Ville->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Adresse_Ville->Location = System::Drawing::Point(796, 490);
+			this->Personnel_Adresse_Ville->Name = L"Personnel_Adresse_Ville";
+			this->Personnel_Adresse_Ville->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Adresse_Ville->TabIndex = 80;
+			// 
+			// Personnel_Adresse_ID
+			// 
+			this->Personnel_Adresse_ID->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Adresse_ID->Location = System::Drawing::Point(796, 460);
+			this->Personnel_Adresse_ID->Name = L"Personnel_Adresse_ID";
+			this->Personnel_Adresse_ID->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Adresse_ID->TabIndex = 79;
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label24->Location = System::Drawing::Point(656, 579);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(134, 24);
+			this->label24->TabIndex = 78;
+			this->label24->Text = L"Type de Voie :";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label25->Location = System::Drawing::Point(648, 609);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(142, 24);
+			this->label25->TabIndex = 77;
+			this->label25->Text = L"Libellé de voie :";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label26->Location = System::Drawing::Point(734, 490);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(56, 24);
+			this->label26->TabIndex = 76;
+			this->label26->Text = L"Ville :";
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label27->Location = System::Drawing::Point(670, 519);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(120, 24);
+			this->label27->TabIndex = 75;
+			this->label27->Text = L"Code postal :";
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label28->Location = System::Drawing::Point(679, 460);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(112, 24);
+			this->label28->TabIndex = 74;
+			this->label28->Text = L"ID Adresse :";
+			// 
+			// Personnel_Retirer
+			// 
+			this->Personnel_Retirer->Location = System::Drawing::Point(437, 553);
+			this->Personnel_Retirer->Name = L"Personnel_Retirer";
+			this->Personnel_Retirer->Size = System::Drawing::Size(99, 26);
+			this->Personnel_Retirer->TabIndex = 73;
+			this->Personnel_Retirer->Text = L"Retirer";
+			this->Personnel_Retirer->UseVisualStyleBackColor = true;
+			// 
+			// Personnel_Ajouter
+			// 
+			this->Personnel_Ajouter->Location = System::Drawing::Point(436, 458);
+			this->Personnel_Ajouter->Name = L"Personnel_Ajouter";
+			this->Personnel_Ajouter->Size = System::Drawing::Size(99, 26);
+			this->Personnel_Ajouter->TabIndex = 72;
+			this->Personnel_Ajouter->Text = L"Ajouter";
+			this->Personnel_Ajouter->UseVisualStyleBackColor = true;
+			// 
+			// Personnel_Modifier
+			// 
+			this->Personnel_Modifier->Location = System::Drawing::Point(437, 505);
+			this->Personnel_Modifier->Name = L"Personnel_Modifier";
+			this->Personnel_Modifier->Size = System::Drawing::Size(99, 26);
+			this->Personnel_Modifier->TabIndex = 71;
+			this->Personnel_Modifier->Text = L"Modifier";
+			this->Personnel_Modifier->UseVisualStyleBackColor = true;
+			// 
+			// Personnel_DateNaissance
+			// 
+			this->Personnel_DateNaissance->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_DateNaissance->Location = System::Drawing::Point(257, 541);
+			this->Personnel_DateNaissance->Name = L"Personnel_DateNaissance";
+			this->Personnel_DateNaissance->Size = System::Drawing::Size(149, 24);
+			this->Personnel_DateNaissance->TabIndex = 70;
+			// 
+			// Personnel_IDSup
+			// 
+			this->Personnel_IDSup->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_IDSup->Location = System::Drawing::Point(257, 571);
+			this->Personnel_IDSup->Name = L"Personnel_IDSup";
+			this->Personnel_IDSup->Size = System::Drawing::Size(149, 24);
+			this->Personnel_IDSup->TabIndex = 69;
+			// 
+			// Personnel_Prenom
+			// 
+			this->Personnel_Prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Prenom->Location = System::Drawing::Point(257, 511);
+			this->Personnel_Prenom->Name = L"Personnel_Prenom";
+			this->Personnel_Prenom->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Prenom->TabIndex = 68;
+			// 
+			// Personnel_Nom
+			// 
+			this->Personnel_Nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Personnel_Nom->Location = System::Drawing::Point(257, 481);
+			this->Personnel_Nom->Name = L"Personnel_Nom";
+			this->Personnel_Nom->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Nom->TabIndex = 67;
+			// 
+			// Personnel_Numero
+			// 
+			this->Personnel_Numero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->Personnel_Numero->Location = System::Drawing::Point(257, 451);
+			this->Personnel_Numero->Name = L"Personnel_Numero";
+			this->Personnel_Numero->Size = System::Drawing::Size(149, 24);
+			this->Personnel_Numero->TabIndex = 66;
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label29->Location = System::Drawing::Point(126, 571);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(125, 24);
+			this->label29->TabIndex = 65;
+			this->label29->Text = L"ID Supérieur :";
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label30->Location = System::Drawing::Point(76, 541);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(175, 24);
+			this->label30->TabIndex = 64;
+			this->label30->Text = L"Date de naissance :";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label31->Location = System::Drawing::Point(164, 511);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(87, 24);
+			this->label31->TabIndex = 63;
+			this->label31->Text = L"Prénom :";
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label32->Location = System::Drawing::Point(193, 481);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(61, 24);
+			this->label32->TabIndex = 62;
+			this->label32->Text = L"Nom :";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label33->Location = System::Drawing::Point(48, 451);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(206, 24);
+			this->label33->TabIndex = 61;
+			this->label33->Text = L"Numéro de personnel :";
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label35->Location = System::Drawing::Point(430, 39);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(324, 37);
+			this->label35->TabIndex = 94;
+			this->label35->Text = L"Gestion du Personnel";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->Panel_Client);
-			this->Controls->Add(this->Panel_Bienvenue);
-			this->Controls->Add(this->Panel_Stock);
+			this->Controls->Add(this->Panel_Personnel);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -916,6 +1372,9 @@ namespace FinalePOO {
 			this->Panel_Client->ResumeLayout(false);
 			this->Panel_Client->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			this->Panel_Personnel->ResumeLayout(false);
+			this->Panel_Personnel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Personnel_DataGridView))->EndInit();
 			this->ResumeLayout(false);
 
 		}
