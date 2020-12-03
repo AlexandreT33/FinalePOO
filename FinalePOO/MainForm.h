@@ -1002,5 +1002,4 @@ namespace FinalePOO {
 		dataGridView1->DataMember = "Stock";
 	}
 };
-};
 }
