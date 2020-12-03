@@ -157,5 +157,8 @@
     <None Include="ProduitSousReapro.sql">
       <Filter>Fichiers de ressources\Statistique</Filter>
     </None>
+    <None Include="ModifierCommande.sql">
+      <Filter>Fichiers de ressources\Commande</Filter>
+    </None>
   </ItemGroup>
 </Project>

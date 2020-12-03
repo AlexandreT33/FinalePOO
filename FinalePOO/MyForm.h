@@ -2190,11 +2190,13 @@ namespace FinalePOO {
 		//Apparition
 		this->Panel_Client->Visible = true;
 		//Crée GridView Adresse
-		DataSet^ objdata = gcnew DataSet();
-		Client^ client = gcnew Client();
-		client->afficherAdresse(this->client_numero->Text, objdata);
-		dataGridView3->DataSource = objdata;
+		DataSet^ objdata3000 = gcnew DataSet();
+		Client^ client3000 = gcnew Client();
+		client3000->afficherAdresse(this->client_numero->Text, objdata30000);
+		dataGridView3->DataSource = objdata3000;
 		dataGridView3->DataMember = "Adresse";
+		delete objdata3000;
+		delete client3000;
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Disparition
@@ -2216,11 +2218,13 @@ namespace FinalePOO {
 		//Apparition
 		this->Panel_Stock->Visible = true;
 		//Crée gridview
-		DataSet^ objdata = gcnew DataSet();
-		Stock^ article = gcnew Stock();
-		article->afficher(objdata);
-		dataGridView1->DataSource = objdata;
+		DataSet^ objdata4000 = gcnew DataSet();
+		Stock^ article4000 = gcnew Stock();
+		article4000->afficher(objdata4000);
+		dataGridView1->DataSource = objdata4000;
 		dataGridView1->DataMember = "Stock";
+		delete objdata4000;
+		delete article4000;
 
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2252,6 +2256,8 @@ namespace FinalePOO {
 		client2->afficherAdresse(this->client_numero->Text, objdata2);
 		dataGridView3->DataSource = objdata2;
 		dataGridView3->DataMember = "Adresse";
+		delete objdata2;
+		delete client2;
 	}
 	private: System::Void button15_Click_1(System::Object^ sender, System::EventArgs^ e) { // modifier adresse
 		Client^ client = gcnew Client();
@@ -2270,6 +2276,8 @@ namespace FinalePOO {
 		client3->afficherAdresse(this->client_numero->Text, objdata3);
 		dataGridView3->DataSource = objdata3;
 		dataGridView3->DataMember = "Adresse";
+		delete objdata3;
+		delete client3;
 	}
 	private: System::Void button13_Click_1(System::Object^ sender, System::EventArgs^ e) { // supprimer adresse
 		Client^ client = gcnew Client();
@@ -2282,6 +2290,8 @@ namespace FinalePOO {
 		client4->afficherAdresse(this->client_numero->Text, objdata4);
 		dataGridView3->DataSource = objdata4;
 		dataGridView3->DataMember = "Adresse";
+		delete objdata4;
+		delete client4;
 	}
 
 		   //##############PANEL CLIENT################
@@ -2302,6 +2312,8 @@ namespace FinalePOO {
 		client5->afficherAdresse(this->client_numero->Text, objdata5);
 		dataGridView3->DataSource = objdata5;
 		dataGridView3->DataMember = "Adresse";
+		delete objdata5;
+		delete client5;
 	}
 	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) { // modifier client
 		Client^ client = gcnew Client();
@@ -2317,6 +2329,8 @@ namespace FinalePOO {
 		client6->afficherAdresse(this->client_numero->Text, objdata6);
 		dataGridView3->DataSource = objdata6;
 		dataGridView3->DataMember = "Adresse";
+		delete objdata6;
+		delete client6;
 	}
 	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer client
 		Client^ client = gcnew Client();
@@ -2329,6 +2343,8 @@ namespace FinalePOO {
 		client7->afficherAdresse(this->client_numero->Text, objdata7);
 		dataGridView3->DataSource = objdata7;
 		dataGridView3->DataMember = "Adresse";
+		delete objdata7;
+		delete client7;
 	}
 		   //##############PANEL STOCK################
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) { //quitter stock
@@ -2341,6 +2357,8 @@ namespace FinalePOO {
 		StockObj->afficher(StockObjdata);
 		dataGridView1->DataSource = StockObjdata;
 		dataGridView1->DataMember = "Stock";
+		delete StockObjdata;
+		delete StockObj;
 	}
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter stock
 		Stock^ article = gcnew Stock();
@@ -2356,6 +2374,8 @@ namespace FinalePOO {
 		StockObj1->afficher(StockObjdata1);
 		dataGridView1->DataSource = StockObjdata1;
 		dataGridView1->DataMember = "Stock";
+		delete StockObjdata1;
+		delete StockObj1;
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) { // modifier stock
 		Stock^ article = gcnew Stock();
@@ -2372,6 +2392,8 @@ namespace FinalePOO {
 		StockObj2->afficher(StockObjdata2);
 		dataGridView1->DataSource = StockObjdata2;
 		dataGridView1->DataMember = "Stock";
+		delete StockObjdata2;
+		delete StockObj2;
 	}
 	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer stock
 		Stock^ article = gcnew Stock();
@@ -2383,6 +2405,8 @@ namespace FinalePOO {
 		StockObj3->afficher(StockObjdata3);
 		dataGridView1->DataSource = StockObjdata3;
 		dataGridView1->DataMember = "Stock";
+		delete StockObjdata3;
+		delete StockObj3;
 	}
 		   //##############PANEL PERSONNEL################
 	private: System::Void Personnel_Retour_Click(System::Object^ sender, System::EventArgs^ e) {

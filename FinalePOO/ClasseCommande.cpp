@@ -151,36 +151,30 @@ void Commande::afficherCommande(System::Data::DataSet^ objdata)
 
 }
 
-void Commande::afficherPanier(System::String^ ID_Client, System::String^ ID_Commande, System::Data::DataSet^ objdata)
+void Commande::modifierCommande(System::String^ dateE, System::String^ dateL, System::String^ NDC)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AfficherPanier.sql");
+    System::String^ requete = System::IO::File::ReadAllText("ModifierCommande.sql");
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
-    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+    System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
 
+    commande->Parameters->AddWithValue("@dateE", dateE);
+    commande->Parameters->AddWithValue("@dateL", dateL);
+    commande->Parameters->AddWithValue("@NDC", NDC);
     //essai de la requete plus gestion de l'Exception.
     try
     {
         connexion->Open();
-        commande->Fill(objdata, "Stock");
+        commande->ExecuteNonQuery();
         connexion->Close();
     }
     catch (System::Exception^ ex)
     {
         System::Windows::Forms::MessageBox::Show(ex->Message);
     }
-
-}
-
-
-
-
-void Commande::modifier()
-{
-    throw gcnew System::NotImplementedException();
 }
 
 void Commande::afficherPaiement(System::String^ ID_Commande, System::Data::DataSet^ objdata)
