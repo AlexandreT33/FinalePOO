@@ -80,7 +80,7 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Button^ button12;
 
 	private: System::Windows::Forms::TextBox^ client_date_naissance;
-	private: System::Windows::Forms::TextBox^ client_nombre_achat;
+
 
 
 
@@ -95,7 +95,7 @@ namespace FinalePOO {
 
 
 
-	private: System::Windows::Forms::Label^ label10;
+
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label13;
@@ -130,7 +130,7 @@ namespace FinalePOO {
 
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Button^ button16;
-	private: System::Windows::Forms::Button^ button17;
+
 private: System::Windows::Forms::Panel^ Panel_Personnel;
 private: System::Windows::Forms::Button^ Personnel_Retour;
 
@@ -335,7 +335,6 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Stock = (gcnew System::Windows::Forms::Panel());
-			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Client = (gcnew System::Windows::Forms::Panel());
 			this->button16 = (gcnew System::Windows::Forms::Button());
@@ -361,11 +360,9 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			this->client_date_naissance = (gcnew System::Windows::Forms::TextBox());
-			this->client_nombre_achat = (gcnew System::Windows::Forms::TextBox());
 			this->client_prenom = (gcnew System::Windows::Forms::TextBox());
 			this->client_nom = (gcnew System::Windows::Forms::TextBox());
 			this->client_numero = (gcnew System::Windows::Forms::TextBox());
-			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
@@ -583,9 +580,9 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(748, 208);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(144, 24);
+			this->label3->Size = System::Drawing::Size(142, 24);
 			this->label3->TabIndex = 8;
-			this->label3->Text = L"R�f�rence (ID) :";
+			this->label3->Text = L"Référence (ID) :";
 			// 
 			// label4
 			// 
@@ -743,7 +740,6 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			// 
 			this->Panel_Stock->BackColor = System::Drawing::Color::Orange;
 			this->Panel_Stock->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Stock.BackgroundImage")));
-			this->Panel_Stock->Controls->Add(this->button17);
 			this->Panel_Stock->Controls->Add(this->button9);
 			this->Panel_Stock->Controls->Add(this->button8);
 			this->Panel_Stock->Controls->Add(this->button7);
@@ -767,16 +763,6 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->Panel_Stock->Name = L"Panel_Stock";
 			this->Panel_Stock->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Stock->TabIndex = 24;
-			// 
-			// button17
-			// 
-			this->button17->Location = System::Drawing::Point(594, 576);
-			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(138, 36);
-			this->button17->TabIndex = 25;
-			this->button17->Text = L"Actualiser";
-			this->button17->UseVisualStyleBackColor = true;
-			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
 			// 
 			// button9
 			// 
@@ -815,11 +801,9 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->Panel_Client->Controls->Add(this->button11);
 			this->Panel_Client->Controls->Add(this->button12);
 			this->Panel_Client->Controls->Add(this->client_date_naissance);
-			this->Panel_Client->Controls->Add(this->client_nombre_achat);
 			this->Panel_Client->Controls->Add(this->client_prenom);
 			this->Panel_Client->Controls->Add(this->client_nom);
 			this->Panel_Client->Controls->Add(this->client_numero);
-			this->Panel_Client->Controls->Add(this->label10);
 			this->Panel_Client->Controls->Add(this->label11);
 			this->Panel_Client->Controls->Add(this->label12);
 			this->Panel_Client->Controls->Add(this->label13);
@@ -1021,7 +1005,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			// 
 			// button10
 			// 
-			this->button10->Location = System::Drawing::Point(422, 531);
+			this->button10->Location = System::Drawing::Point(345, 558);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(99, 26);
 			this->button10->TabIndex = 40;
@@ -1031,7 +1015,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			// 
 			// button11
 			// 
-			this->button11->Location = System::Drawing::Point(421, 436);
+			this->button11->Location = System::Drawing::Point(94, 558);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(99, 26);
 			this->button11->TabIndex = 39;
@@ -1041,7 +1025,7 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			// 
 			// button12
 			// 
-			this->button12->Location = System::Drawing::Point(422, 483);
+			this->button12->Location = System::Drawing::Point(223, 558);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(99, 26);
 			this->button12->TabIndex = 38;
@@ -1057,15 +1041,6 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->client_date_naissance->Name = L"client_date_naissance";
 			this->client_date_naissance->Size = System::Drawing::Size(149, 24);
 			this->client_date_naissance->TabIndex = 35;
-			// 
-			// client_nombre_achat
-			// 
-			this->client_nombre_achat->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->client_nombre_achat->Location = System::Drawing::Point(242, 549);
-			this->client_nombre_achat->Name = L"client_nombre_achat";
-			this->client_nombre_achat->Size = System::Drawing::Size(149, 24);
-			this->client_nombre_achat->TabIndex = 34;
 			// 
 			// client_prenom
 			// 
@@ -1093,17 +1068,6 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->client_numero->Name = L"client_numero";
 			this->client_numero->Size = System::Drawing::Size(149, 24);
 			this->client_numero->TabIndex = 31;
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(82, 549);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(154, 24);
-			this->label10->TabIndex = 29;
-			this->label10->Text = L"Nombre d\'achat :";
 			// 
 			// label11
 			// 
@@ -2103,9 +2067,9 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
+			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Bienvenue);
 			this->Controls->Add(this->Panel_Client);
-			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Personnel);
 			this->Controls->Add(this->Panel_Commandes);
 			this->Controls->Add(this->Commandes_Panel_Panier);
@@ -2269,11 +2233,10 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	}
 	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter client
 		Client^ client = gcnew Client();
-		client->ajouter(this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
+		client->ajouter(this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text);
 		this->client_nom->Clear();
 		this->client_prenom->Clear();
 		this->client_date_naissance->Clear();
-		this->client_nombre_achat->Clear();
 
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata5 = gcnew DataSet();
@@ -2284,12 +2247,11 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	}
 	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) { // modifier client
 		Client^ client = gcnew Client();
-		client->modifier(this->client_numero->Text, this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text, this->client_nombre_achat->Text);
+		client->modifier(this->client_numero->Text, this->client_nom->Text, this->client_prenom->Text, this->client_date_naissance->Text);
 		this->client_numero->Clear();
 		this->client_nom->Clear();
 		this->client_prenom->Clear();
 		this->client_date_naissance->Clear();
-		this->client_nombre_achat->Clear();
 
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata6 = gcnew DataSet();
@@ -2316,10 +2278,10 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		this->Panel_Bienvenue->Visible = true;
 	}
 	private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) { //afficher stock
-		DataSet^ objdata = gcnew DataSet();
-		Stock^ article = gcnew Stock();
-		article->afficher(objdata);
-		dataGridView1->DataSource = objdata;
+		DataSet^ StockObjdata = gcnew DataSet();
+		Stock^ StockObj = gcnew Stock();
+		StockObj->afficher(StockObjdata);
+		dataGridView1->DataSource = StockObjdata;
 		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) { // ajouter stock
@@ -2330,6 +2292,12 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
+
+		DataSet^ StockObjdata1 = gcnew DataSet();
+		Stock^ StockObj1 = gcnew Stock();
+		StockObj1->afficher(StockObjdata1);
+		dataGridView1->DataSource = StockObjdata1;
+		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) { // modifier stock
 		Stock^ article = gcnew Stock();
@@ -2340,11 +2308,23 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 		this->seuil->Clear();
 		this->prix->Clear();
 		this->TVA->Clear();
+
+		DataSet^ StockObjdata2 = gcnew DataSet();
+		Stock^ StockObj2 = gcnew Stock();
+		StockObj2->afficher(StockObjdata2);
+		dataGridView1->DataSource = StockObjdata2;
+		dataGridView1->DataMember = "Stock";
 	}
 	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) { // supprimer stock
 		Stock^ article = gcnew Stock();
 		article->supprimer(this->Ref->Text);
 		this->Ref->Clear();
+
+		DataSet^ StockObjdata3 = gcnew DataSet();
+		Stock^ StockObj3 = gcnew Stock();
+		StockObj3->afficher(StockObjdata3);
+		dataGridView1->DataSource = StockObjdata3;
+		dataGridView1->DataMember = "Stock";
 	}
 			//##############PANEL PERSONNEL################
 	private: System::Void Personnel_Retour_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2516,5 +2496,6 @@ private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 
 
 
+private: System::Void client_nombre_achat_TextChanged(System::Object^ sender, System::EventArgs^ e) {}
 };
 }
