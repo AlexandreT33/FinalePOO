@@ -2579,8 +2579,6 @@ namespace FinalePOO {
 		stat1->afficher(System::IO::File::ReadAllText("ProduitSousReapro.sql"), statdata1);
 		dataGridView_Statistique->DataSource = statdata1;
 		dataGridView_Statistique->DataMember = "Stats";
-		delete statdata1;
-		delete stat1;
 	}
 
 	private: System::Void button_retour_statitique_Click(System::Object^ sender, System::EventArgs^ e) {
