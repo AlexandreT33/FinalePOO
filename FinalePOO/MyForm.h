@@ -149,6 +149,7 @@ namespace FinalePOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -174,6 +175,7 @@ namespace FinalePOO {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Stock = (gcnew System::Windows::Forms::Panel());
+			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Client = (gcnew System::Windows::Forms::Panel());
 			this->button16 = (gcnew System::Windows::Forms::Button());
@@ -209,7 +211,6 @@ namespace FinalePOO {
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -232,7 +233,7 @@ namespace FinalePOO {
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::LemonChiffon;
+			this->button1->BackColor = System::Drawing::Color::Transparent;
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button1->Location = System::Drawing::Point(474, 163);
 			this->button1->Name = L"button1";
@@ -255,7 +256,7 @@ namespace FinalePOO {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::Orange;
+			this->button3->BackColor = System::Drawing::Color::Transparent;
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button3->Location = System::Drawing::Point(474, 339);
 			this->button3->Name = L"button3";
@@ -290,6 +291,7 @@ namespace FinalePOO {
 			// Panel_Bienvenue
 			// 
 			this->Panel_Bienvenue->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->Panel_Bienvenue->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Bienvenue.BackgroundImage")));
 			this->Panel_Bienvenue->Controls->Add(this->button5);
 			this->Panel_Bienvenue->Controls->Add(this->button4);
 			this->Panel_Bienvenue->Controls->Add(this->button3);
@@ -305,6 +307,7 @@ namespace FinalePOO {
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(448, 55);
@@ -316,6 +319,7 @@ namespace FinalePOO {
 			// label3
 			// 
 			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(748, 208);
@@ -327,6 +331,7 @@ namespace FinalePOO {
 			// label4
 			// 
 			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->Location = System::Drawing::Point(815, 248);
@@ -338,6 +343,7 @@ namespace FinalePOO {
 			// label5
 			// 
 			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(800, 290);
@@ -349,6 +355,7 @@ namespace FinalePOO {
 			// label6
 			// 
 			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->Location = System::Drawing::Point(618, 333);
@@ -360,6 +367,7 @@ namespace FinalePOO {
 			// label7
 			// 
 			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->Location = System::Drawing::Point(795, 374);
@@ -371,6 +379,7 @@ namespace FinalePOO {
 			// label8
 			// 
 			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->Location = System::Drawing::Point(832, 417);
@@ -474,6 +483,7 @@ namespace FinalePOO {
 			// Panel_Stock
 			// 
 			this->Panel_Stock->BackColor = System::Drawing::Color::Orange;
+			this->Panel_Stock->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Stock.BackgroundImage")));
 			this->Panel_Stock->Controls->Add(this->button17);
 			this->Panel_Stock->Controls->Add(this->button9);
 			this->Panel_Stock->Controls->Add(this->button8);
@@ -499,6 +509,16 @@ namespace FinalePOO {
 			this->Panel_Stock->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Stock->TabIndex = 24;
 			// 
+			// button17
+			// 
+			this->button17->Location = System::Drawing::Point(594, 576);
+			this->button17->Name = L"button17";
+			this->button17->Size = System::Drawing::Size(138, 36);
+			this->button17->TabIndex = 25;
+			this->button17->Text = L"Actualiser";
+			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
+			// 
 			// button9
 			// 
 			this->button9->Location = System::Drawing::Point(3, 3);
@@ -511,7 +531,8 @@ namespace FinalePOO {
 			// 
 			// Panel_Client
 			// 
-			this->Panel_Client->BackColor = System::Drawing::Color::LemonChiffon;
+			this->Panel_Client->BackColor = System::Drawing::Color::Transparent;
+			this->Panel_Client->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Client.BackgroundImage")));
 			this->Panel_Client->Controls->Add(this->button16);
 			this->Panel_Client->Controls->Add(this->adresse_numero_de_client);
 			this->Panel_Client->Controls->Add(this->label21);
@@ -869,23 +890,20 @@ namespace FinalePOO {
 			this->label14->TabIndex = 25;
 			this->label14->Text = L"Num�ro de client :";
 			// 
-			// button17
+			// label15
 			// 
-			this->button17->Location = System::Drawing::Point(594, 576);
-			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(138, 36);
-			this->button17->TabIndex = 25;
-			this->button17->Text = L"Actualiser";
-			this->button17->UseVisualStyleBackColor = true;
-			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
+			this->label15->Location = System::Drawing::Point(0, 0);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(100, 23);
+			this->label15->TabIndex = 60;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1189, 686);
-			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Bienvenue);
+			this->Controls->Add(this->Panel_Stock);
 			this->Controls->Add(this->Panel_Client);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
