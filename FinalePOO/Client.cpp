@@ -4,7 +4,7 @@ void Client::ajouter(System::String^ Nom, System::String^ Prenom, System::String
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AjouterStock.sql");
+    System::String^ requete = System::IO::File::ReadAllText("AjouterClient.sql");
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
@@ -31,7 +31,27 @@ void Client::ajouter(System::String^ Nom, System::String^ Prenom, System::String
 
 void Client::supprimer(System::String^ ID)
 {
-    throw gcnew System::NotImplementedException();
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("RetirerClient.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
+
+    commande->Parameters->AddWithValue("@NDC", ID);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->ExecuteNonQuery();
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
 }
 
 void Client::afficher()
@@ -41,7 +61,32 @@ void Client::afficher()
 
 void Client::modifier(System::String^ ID, System::String^ Nom, System::String^ Prenom, System::String^ DateN, System::String^ NbAchat)
 {
-    throw gcnew System::NotImplementedException();
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("ModifierClient.sql");
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlCommand^ commande = gcnew System::Data::SqlClient::SqlCommand(requete, connexion);
+
+    commande->Parameters->AddWithValue("@NDC", ID);
+    commande->Parameters->AddWithValue("@Nom", Nom);
+    commande->Parameters->AddWithValue("@Prenom", Prenom);
+    commande->Parameters->AddWithValue("@Date", System::Convert::ToDateTime(DateN));
+    commande->Parameters->AddWithValue("@Nombre_d_achat", System::Convert::ToInt32(NbAchat));
+
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->ExecuteNonQuery();
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
 }
 
 void Client::ajouterAdresse()
