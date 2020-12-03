@@ -28,6 +28,9 @@
     <Filter Include="Fichiers de ressources\Commande">
       <UniqueIdentifier>{3c4dfef0-7408-4cce-ac14-22d0736491fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Statistique">
+      <UniqueIdentifier>{b791cb48-e5de-4472-a483-789e643733a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClasseStock.cpp">
@@ -40,6 +43,15 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MyForm.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ClasseCommande.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Statistique.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Affichage.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -57,6 +69,12 @@
       <Filter>Fichiers sources</Filter>
     </ClInclude>
     <ClInclude Include="ClasseCommande.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Statistique.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Affichage.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -135,6 +153,9 @@
     </None>
     <None Include="AfficherAdresse.sql">
       <Filter>Fichiers de ressources\Commande</Filter>
+    </None>
+    <None Include="ProduitSousReapro.sql">
+      <Filter>Fichiers de ressources\Statistique</Filter>
     </None>
   </ItemGroup>
 </Project>

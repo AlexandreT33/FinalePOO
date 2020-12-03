@@ -119,12 +119,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Affichage.cpp" />
+    <ClCompile Include="ClasseCommande.cpp" />
     <ClCompile Include="ClasseStock.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="Statistique.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Affichage.h" />
     <ClInclude Include="ClasseCommande.h" />
     <ClInclude Include="ClasseStock.h" />
     <ClInclude Include="Client.h" />
@@ -132,6 +136,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Personnel.h" />
+    <ClInclude Include="Statistique.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
@@ -163,6 +168,7 @@
     <None Include="AfficherArticle.sql" />
     <None Include="AfficherPaiement.sql" />
     <None Include="AfficherAdresse.sql" />
+    <None Include="ProduitSousReapro.sql" />
     <None Include="UpdateNBAchat.sql" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
