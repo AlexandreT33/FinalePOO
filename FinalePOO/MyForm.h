@@ -2638,7 +2638,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		this->Commandes_Panier_buttonPaniers->BackColor = System::Drawing::SystemColors::ActiveCaption;
 		DataSet^ panierobj2 = gcnew DataSet();
 		Commande^ panier2 = gcnew Commande();
-		panier2->panierdynamiqueRafraichir(panierobj2);
+		panier2->panierdynamiqueRafraichir(this->Commandes_IdCommande->Text,panierobj2);
 		Commandes_DataGridView->DataSource = panierobj2;
 		Commandes_DataGridView->DataMember = "Panier";
 		delete panierobj2;
