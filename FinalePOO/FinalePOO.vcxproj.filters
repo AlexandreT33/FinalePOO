@@ -145,9 +145,6 @@
     <None Include="AfficherPaiement.sql">
       <Filter>Fichiers de ressources\Commande\Paiement</Filter>
     </None>
-    <None Include="AfficherPanier.sql">
-      <Filter>Fichiers de ressources\Commande\Panier</Filter>
-    </None>
     <None Include="AjouterCommande.sql">
       <Filter>Fichiers de ressources\Commande\Commande</Filter>
     </None>
@@ -155,9 +152,6 @@
       <Filter>Fichiers de ressources\Commande\Commande</Filter>
     </None>
     <None Include="PanierAjout.sql">
-      <Filter>Fichiers de ressources\Commande\Panier</Filter>
-    </None>
-    <None Include="PanierDynamiqueRefresh.sql">
       <Filter>Fichiers de ressources\Commande\Panier</Filter>
     </None>
     <None Include="PanierRetirer.sql">

@@ -5,7 +5,7 @@ public :
 	//Panier
 	void panierdynamiqueAjout(System::String^ ID, System::String^ Reference, System::String^);
 	void panierdynamiqueRetirer(System::String^, System::String^);
-	void panierdynamiqueRafraichir(System::Data::DataSet^);
+	void panierdynamiqueRafraichir(System::String^, System::Data::DataSet^);
 	//Commande
 	void ajouterCommande(System::String^ dateE, System::String^ dateL, System::String^ NDC);
 	void retirerCommande(System::String^ ID);
