@@ -2231,7 +2231,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Crée gridview
 		DataSet^ objdata4000 = gcnew DataSet();
 		Stock^ article4000 = gcnew Stock();
-		article4000->afficher(objdata4000);
+		article4000->afficherArticle(objdata4000);
 		dataGridView1->DataSource = objdata4000;
 		dataGridView1->DataMember = "Stock";
 		delete objdata4000;
@@ -2407,7 +2407,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 	private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) { //afficher stock
 		DataSet^ StockObjdata = gcnew DataSet();
 		Stock^ StockObj = gcnew Stock();
-		StockObj->afficher(StockObjdata);
+		StockObj->afficherArticle(StockObjdata);
 		dataGridView1->DataSource = StockObjdata;
 		dataGridView1->DataMember = "Stock";
 		delete StockObjdata;
@@ -2424,7 +2424,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 
 		DataSet^ StockObjdata1 = gcnew DataSet();
 		Stock^ StockObj1 = gcnew Stock();
-		StockObj1->afficher(StockObjdata1);
+		StockObj1->afficherArticle(StockObjdata1);
 		dataGridView1->DataSource = StockObjdata1;
 		dataGridView1->DataMember = "Stock";
 		delete StockObjdata1;
@@ -2442,7 +2442,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 
 		DataSet^ StockObjdata2 = gcnew DataSet();
 		Stock^ StockObj2 = gcnew Stock();
-		StockObj2->afficher(StockObjdata2);
+		StockObj2->afficherArticle(StockObjdata2);
 		dataGridView1->DataSource = StockObjdata2;
 		dataGridView1->DataMember = "Stock";
 		delete StockObjdata2;
@@ -2455,7 +2455,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 
 		DataSet^ StockObjdata3 = gcnew DataSet();
 		Stock^ StockObj3 = gcnew Stock();
-		StockObj3->afficher(StockObjdata3);
+		StockObj3->afficherArticle(StockObjdata3);
 		dataGridView1->DataSource = StockObjdata3;
 		dataGridView1->DataMember = "Stock";
 		delete StockObjdata3;
