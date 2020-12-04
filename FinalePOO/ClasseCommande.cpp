@@ -59,7 +59,7 @@ void Commande::panierdynamiqueRafraichir(System::String^ ID, System::Data::DataS
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("SELECT Reference as `Reference Objet`, Libelle as `Nom`, Quantite, Prix_UHT*TVA/100 as `Prix` FROM Comprend INNER JOIN Article ON Article.Reference = Comprend.Reference WHERE Comprend.ID =" + ID);
+    System::String^ requete = "SELECT Article.Reference, Article.Libelle, Article.Quantite, Article.Prix_UHT, Article.TVA FROM Comprend INNER JOIN Article ON Article.Reference = Comprend.Reference WHERE Comprend.ID =" + ID + ";";
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
@@ -159,7 +159,7 @@ void Commande::afficherCommande(System::String^ ID, System::Data::DataSet^ objda
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("SELECT * FROM POO.dbo.Commande WHERE ID = " + ID);
+    System::String^ requete = "SELECT * FROM POO.dbo.Commande WHERE ID = " + ID + ";";
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
