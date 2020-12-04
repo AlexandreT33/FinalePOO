@@ -2583,7 +2583,7 @@ namespace FinalePOO {
 		Stock^ panier3= gcnew Stock();
 		panier3->afficherArticle(panierobj3);
 		dataGridView1->DataSource = panierobj3;
-		dataGridView1->DataMember = "Articles";
+		dataGridView1->DataMember = "Stock";
 		delete panierobj3;
 		delete panier3;
 	}
