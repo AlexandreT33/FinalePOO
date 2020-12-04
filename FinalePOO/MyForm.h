@@ -292,7 +292,7 @@ namespace FinalePOO {
 
 	private: System::Windows::Forms::Button^ button_ProduitSousReapro;
 	private: System::Windows::Forms::Button^ button_retour_statitique;
-private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
+	private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 
 
 
@@ -2195,14 +2195,8 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Crée GridView Adresse
 		DataSet^ objdata3000 = gcnew DataSet();
 		Client^ client3000 = gcnew Client();
-		try
-		{
-			client3000->afficherAdresse(this->client_numero->Text, objdata3000);
-		}
-		catch (System::Exception^ ex)
-		{
-			client3000->afficherAdresse(objdata3000);
-		}
+		client3000->afficherAdresse(objdata3000);
+
 
 		dataGridView3->DataSource = objdata3000;
 		dataGridView3->DataMember = "Adresse";
@@ -2264,14 +2258,8 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata2 = gcnew DataSet();
 		Client^ client2 = gcnew Client();
-		try
-		{
-			client2->afficherAdresse(this->client_numero->Text, objdata2);
-		}
-		catch (System::Exception^ ex)
-		{
-			client2->afficherAdresse(objdata2);
-		}
+		client2->afficherAdresse(objdata2);
+
 		dataGridView3->DataSource = objdata2;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata2;
@@ -2291,14 +2279,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata3 = gcnew DataSet();
 		Client^ client3 = gcnew Client();
-		try
-		{
-			client3->afficherAdresse(this->client_numero->Text, objdata3);
-		}
-		catch (System::Exception^ ex)
-		{
-			client3->afficherAdresse(objdata3);
-		}
+		client3->afficherAdresse(objdata3);
 		dataGridView3->DataSource = objdata3;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata3;
@@ -2312,14 +2293,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata4 = gcnew DataSet();
 		Client^ client4 = gcnew Client();
-		try
-		{
-			client4->afficherAdresse(this->client_numero->Text, objdata4);
-		}
-		catch (System::Exception^ ex)
-		{
-			client4->afficherAdresse(objdata4);
-		}
+		client4->afficherAdresse(objdata4);
 		dataGridView3->DataSource = objdata4;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata4;
@@ -2604,7 +2578,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		delete clientn4;
 	}
 	private: System::Void Commandes_button_Retirer_Click(System::Object^ sender, System::EventArgs^ e) {
-		Commande^ commande3= gcnew Commande();
+		Commande^ commande3 = gcnew Commande();
 		commande3->retirerCommande(this->Commandes_IdCommande->Text);
 		this->Commandes_IdCommande->Clear();
 		DataSet^ objdatan5 = gcnew DataSet();
