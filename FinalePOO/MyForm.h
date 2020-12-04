@@ -2625,16 +2625,37 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 	private: System::Void Commandes_Panier_buttonArticles_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_Panier_buttonPaniers->BackColor = System::Drawing::Color::Transparent;
 		this->Commandes_Panier_buttonArticles->BackColor = System::Drawing::SystemColors::ActiveCaption;
+		DataSet^ panierobj3 = gcnew DataSet();
+		Stock^ panier3= gcnew Stock();
+		panier3->afficherArticle(panierobj3);
+		dataGridView1->DataSource = panierobj3;
+		dataGridView1->DataMember = "Articles";
+		delete panierobj3;
+		delete panier3;
 	}
 	private: System::Void Commandes_Panier_buttonPaniers_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_Panier_buttonArticles->BackColor = System::Drawing::Color::Transparent;
 		this->Commandes_Panier_buttonPaniers->BackColor = System::Drawing::SystemColors::ActiveCaption;
+		DataSet^ panierobj2 = gcnew DataSet();
+		Commande^ panier2 = gcnew Commande();
+		panier2->panierdynamiqueRafraichir(panierobj2);
+		Commandes_DataGridView->DataSource = panierobj2;
+		Commandes_DataGridView->DataMember = "Panier";
+		delete panierobj2;
+		delete panier2;
 	}
 	private: System::Void Commandes_Panier_buttonActualiser_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void Commandes_Panier_buttonAjouter_Click(System::Object^ sender, System::EventArgs^ e) {
+		Commande^ panier1 = gcnew Commande();
+		panier1->panierdynamiqueAjout(this->Commandes_IdCommande->Text,this->Commandes_Panier_RefObj->Text, this->Commandes_Panier_Quantite->Text);
+		this->Commandes_Panier_RefObj->Clear();
+		this->Commandes_Panier_Quantite->Clear();
 	}
 	private: System::Void Commandes_Panier_buttonRetirer_Click(System::Object^ sender, System::EventArgs^ e) {
+		Commande^ panierdu16 = gcnew Commande();
+		panierdu16->panierdynamiqueRetirer(this->Commandes_IdCommande->Text, this->Commandes_Panier_RefObj->Text);
+		this->Commandes_Panier_RefObj->Clear();
 	}
 		   //PANEL LIVRAISON##############
 	private: System::Void Commande_Livraison_buttonRetour_Click(System::Object^ sender, System::EventArgs^ e) {
