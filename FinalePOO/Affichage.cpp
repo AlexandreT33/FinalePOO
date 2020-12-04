@@ -1,7 +1,7 @@
 ﻿#include "Affichage.h"
 
 
-void Affichage::afficher(System::String^ requete, System::Data::DataSet^ objdata)
+void Affichage::afficher(System::String^ requete, System::Data::DataSet^ statdata1)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -14,7 +14,7 @@ void Affichage::afficher(System::String^ requete, System::Data::DataSet^ objdata
     try
     {
         connexion->Open();
-        commande->Fill(objdata);
+        commande->Fill(statdata1, "Affichage");
         connexion->Close();
     }
     catch (System::Exception^ ex)
