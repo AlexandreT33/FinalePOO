@@ -155,7 +155,7 @@ void Commande::afficherCommande(System::Data::DataSet^ objdata)
 
 }
 
-void Commande::afficherCommandeDynamique(System::String^ ID, System::Data::DataSet^ objdata)
+void Commande::afficherCommande(System::String^ ID, System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -260,7 +260,7 @@ void Commande::afficherPaiement(System::String^ ID_Commande, System::Data::DataS
 
 //Adresse-----------------------------------------------------------------------------------
 
-void Commande::afficherAdresse(System::String^ NDC, System::Data::DataSet^ objdata)
+void Commande::afficherAdresseLivraison(System::String^ NDC, System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -284,7 +284,7 @@ void Commande::afficherAdresse(System::String^ NDC, System::Data::DataSet^ objda
     }
 }
 
-void Commande::ajouterAdresse(System::String^ NDC, System::String^ ID, System::String^ ID_Adresse)
+void Commande::ajouterAdresseLivraison(System::String^ NDC, System::String^ ID, System::String^ ID_Adresse)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";

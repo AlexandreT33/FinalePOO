@@ -16,7 +16,7 @@ public :
 	void ajouterPaiement(System::String^ DatePE, System::String^ DatePR, System::String^ Moyen, System::String^ Montant, System::String^ ID, System::String^ ID_Adresse);
 	void afficherPaiement(System::String^ ID_Commande, System::Data::DataSet^ objdata);
 	//Adresse
-	void afficherAdresse(System::String^, System::Data::DataSet^);
-	void ajouterAdresse(System::String^, System::String^,System::String^);
+	void afficherAdresseLivraison(System::String^, System::Data::DataSet^);
+	void ajouterAdresseLivraison(System::String^, System::String^,System::String^);
 };
 

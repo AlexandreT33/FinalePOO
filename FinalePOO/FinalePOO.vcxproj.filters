@@ -136,9 +136,6 @@
     <None Include="AfficherPersonnel.sql">
       <Filter>Fichiers de ressources\Personnel</Filter>
     </None>
-    <None Include="AfficherArticle.sql">
-      <Filter>Fichiers de ressources\Stock</Filter>
-    </None>
     <None Include="ProduitSousReapro.sql">
       <Filter>Fichiers de ressources\Statistique</Filter>
     </None>

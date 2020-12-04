@@ -59,7 +59,7 @@ void Stock::supprimer(System::String^ IDproduit)
     }
 }
 
-void Stock::afficher(System::Data::DataSet^ objdata)
+void Stock::afficherArticle(System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -118,7 +118,7 @@ void Stock::afficherArticle(System::String^ Reference, System::Data::DataSet^ ob
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("AfficherArticle.sql");
+    System::String^ requete = System::IO::File::ReadAllText("SELECT * FROM [POO].[dbo].[Article] WHERE Reference = " + Reference);
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);

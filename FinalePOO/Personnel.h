@@ -9,5 +9,6 @@ public :
 	void supprimer(System::String^);
 	void modifier(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 	void afficher(System::Data::DataSet^);
+	void afficher(System::String^, System::Data::DataSet^);
 };
 

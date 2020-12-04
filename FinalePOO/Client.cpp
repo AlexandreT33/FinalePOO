@@ -203,7 +203,7 @@ void Client::afficherClient(System::String^ Numero_de_Client, System::Data::Data
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = "SELECT * FROM [POO].[dbo].[Client] WHERE Numero_de_Client = " + Numero_de_Client;
+    System::String^ requete = "SELECT Client.Numero_de_Client, Nom, Prenom, Date_de_Naissance, Nombre_d_achat, ID AS ID_Adresse, Numero, Type_de_Voie, Libelle_de_Voie, Ville, Code_Postal FROM [POO].[dbo].[Client] LEFT JOIN [POO].[dbo].[Adresse] ON(Client.Numero_de_Client=Adresse.Numero_de_Client)" + Numero_de_Client;
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);

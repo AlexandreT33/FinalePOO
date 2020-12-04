@@ -168,7 +168,6 @@
     <None Include="ModifierStock.sql" />
     <None Include="AfficherCommande.sql" />
     <None Include="AfficherPanier.sql" />
-    <None Include="AfficherArticle.sql" />
     <None Include="AfficherPaiement.sql" />
     <None Include="ProduitSousReapro.sql" />
     <None Include="UpdateNBAchat.sql" />
