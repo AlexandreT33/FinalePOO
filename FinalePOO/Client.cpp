@@ -175,7 +175,7 @@ void Client::ajouterNombreAchat(System::String^ IDClient)
     
 }
 
-void Client::afficherClient(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
+void Client::afficherClient(System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -199,7 +199,31 @@ void Client::afficherClient(System::String^ Numero_de_Client, System::Data::Data
 
 }
 
-void Client::afficherAdresse(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
+void Client::afficherClient(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = "SELECT * FROM [POO].[dbo].[Client] WHERE Numero_de_Client = " + Numero_de_Client;
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Client");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+
+}
+
+void Client::afficherAdresse(System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
@@ -221,4 +245,27 @@ void Client::afficherAdresse(System::String^ Numero_de_Client, System::Data::Dat
         System::Windows::Forms::MessageBox::Show(ex->Message);
     }
 
+}
+
+void Client::afficherAdresse(System::String^ Numero_de_Client, System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = "SELECT * FROM [POO].[dbo].[Adresse] WHERE Numero_de_Client = "+ Numero_de_Client;
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    //essai de la requete plus gestion de l'Exception.
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Client");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
 }

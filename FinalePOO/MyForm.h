@@ -2195,7 +2195,15 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Crée GridView Adresse
 		DataSet^ objdata3000 = gcnew DataSet();
 		Client^ client3000 = gcnew Client();
-		client3000->afficherAdresse(this->client_numero->Text, objdata3000);
+		try
+		{
+			client3000->afficherAdresse(this->client_numero->Text, objdata3000);
+		}
+		catch (System::Exception^ ex)
+		{
+			client3000->afficherAdresse(objdata3000);
+		}
+
 		dataGridView3->DataSource = objdata3000;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata3000;
@@ -2256,7 +2264,14 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata2 = gcnew DataSet();
 		Client^ client2 = gcnew Client();
-		client2->afficherAdresse(this->client_numero->Text, objdata2);
+		try
+		{
+			client2->afficherAdresse(this->client_numero->Text, objdata2);
+		}
+		catch (System::Exception^ ex)
+		{
+			client2->afficherAdresse(objdata2);
+		}
 		dataGridView3->DataSource = objdata2;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata2;
@@ -2276,7 +2291,14 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata3 = gcnew DataSet();
 		Client^ client3 = gcnew Client();
-		client3->afficherAdresse(this->client_numero->Text, objdata3);
+		try
+		{
+			client3->afficherAdresse(this->client_numero->Text, objdata3);
+		}
+		catch (System::Exception^ ex)
+		{
+			client3->afficherAdresse(objdata3);
+		}
 		dataGridView3->DataSource = objdata3;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata3;
@@ -2290,7 +2312,14 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata4 = gcnew DataSet();
 		Client^ client4 = gcnew Client();
-		client4->afficherAdresse(this->client_numero->Text, objdata4);
+		try
+		{
+			client4->afficherAdresse(this->client_numero->Text, objdata4);
+		}
+		catch (System::Exception^ ex)
+		{
+			client4->afficherAdresse(objdata4);
+		}
 		dataGridView3->DataSource = objdata4;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata4;
@@ -2312,7 +2341,14 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata5 = gcnew DataSet();
 		Client^ client5 = gcnew Client();
-		client5->afficherAdresse(this->client_numero->Text, objdata5);
+		try
+		{
+			client5->afficherAdresse(this->client_numero->Text, objdata5);
+		}
+		catch (System::Exception^ ex)
+		{
+			client5->afficherAdresse(objdata5);
+		}
 		dataGridView3->DataSource = objdata5;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata5;
@@ -2329,7 +2365,14 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata6 = gcnew DataSet();
 		Client^ client6 = gcnew Client();
-		client6->afficherAdresse(this->client_numero->Text, objdata6);
+		try
+		{
+			client6->afficherAdresse(this->client_numero->Text, objdata6);
+		}
+		catch (System::Exception^ ex)
+		{
+			client6->afficherAdresse(objdata6);
+		}
 		dataGridView3->DataSource = objdata6;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata6;
@@ -2343,7 +2386,14 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata7 = gcnew DataSet();
 		Client^ client7 = gcnew Client();
-		client7->afficherAdresse(this->client_numero->Text, objdata7);
+		try
+		{
+			client7->afficherAdresse(this->client_numero->Text, objdata7);
+		}
+		catch (System::Exception^ ex)
+		{
+			client7->afficherAdresse(objdata7);
+		}
 		dataGridView3->DataSource = objdata7;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata7;

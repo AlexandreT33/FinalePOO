@@ -155,6 +155,28 @@ void Commande::afficherCommande(System::Data::DataSet^ objdata)
 
 }
 
+void Commande::afficherCommandeDynamique(System::String^ ID, System::Data::DataSet^ objdata)
+{
+    //Source de la bdd, puis instanciation de la requete
+    System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
+    System::String^ requete = System::IO::File::ReadAllText("SELECT * FROM POO.dbo.Commande WHERE ID = " + ID);
+
+    //Assignation de la requete et la Source à la commande de Connexion
+    System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
+    System::Data::SqlClient::SqlDataAdapter^ commande = gcnew System::Data::SqlClient::SqlDataAdapter(requete, connexion);
+
+    try
+    {
+        connexion->Open();
+        commande->Fill(objdata, "Commande");
+        connexion->Close();
+    }
+    catch (System::Exception^ ex)
+    {
+        System::Windows::Forms::MessageBox::Show(ex->Message);
+    }
+}
+
 void Commande::modifierCommande(System::String^ ID, System::String^ dateE, System::String^ dateL, System::String^ NDC)
 {
     //Source de la bdd, puis instanciation de la requete
