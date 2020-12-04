@@ -271,7 +271,8 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Label^ label44;
 	private: System::Windows::Forms::Label^ label45;
 	private: System::Windows::Forms::TextBox^ Commandes_Paiments_AdresseFactu;
-	private: System::Windows::Forms::TextBox^ Commandes_Paiments_Recu;
+private: System::Windows::Forms::TextBox^ Commandes_Paiments_Mont;
+
 	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonRetirer;
 	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonModifier;
 	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonAjouter;
@@ -449,7 +450,7 @@ namespace FinalePOO {
 			this->label44 = (gcnew System::Windows::Forms::Label());
 			this->label45 = (gcnew System::Windows::Forms::Label());
 			this->Commandes_Paiments_AdresseFactu = (gcnew System::Windows::Forms::TextBox());
-			this->Commandes_Paiments_Recu = (gcnew System::Windows::Forms::TextBox());
+			this->Commandes_Paiments_Mont = (gcnew System::Windows::Forms::TextBox());
 			this->Commandes_Paiments_buttonRetirer = (gcnew System::Windows::Forms::Button());
 			this->Commandes_Paiments_buttonModifier = (gcnew System::Windows::Forms::Button());
 			this->Commandes_Paiments_buttonAjouter = (gcnew System::Windows::Forms::Button());
@@ -467,9 +468,9 @@ namespace FinalePOO {
 			this->Commandes_Paiments_buttonAdresseClient = (gcnew System::Windows::Forms::Button());
 			this->Commandes_Paiments_buttonPaiments = (gcnew System::Windows::Forms::Button());
 			this->Panel_Statistique = (gcnew System::Windows::Forms::Panel());
+			this->dataGridView_Statistique = (gcnew System::Windows::Forms::DataGridView());
 			this->button_retour_statitique = (gcnew System::Windows::Forms::Button());
 			this->button_ProduitSousReapro = (gcnew System::Windows::Forms::Button());
-			this->dataGridView_Statistique = (gcnew System::Windows::Forms::DataGridView());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -1866,7 +1867,7 @@ namespace FinalePOO {
 			this->Commandes_Panel_Paiments->Controls->Add(this->label44);
 			this->Commandes_Panel_Paiments->Controls->Add(this->label45);
 			this->Commandes_Panel_Paiments->Controls->Add(this->Commandes_Paiments_AdresseFactu);
-			this->Commandes_Panel_Paiments->Controls->Add(this->Commandes_Paiments_Recu);
+			this->Commandes_Panel_Paiments->Controls->Add(this->Commandes_Paiments_Mont);
 			this->Commandes_Panel_Paiments->Controls->Add(this->Commandes_Paiments_buttonRetirer);
 			this->Commandes_Panel_Paiments->Controls->Add(this->Commandes_Paiments_buttonModifier);
 			this->Commandes_Panel_Paiments->Controls->Add(this->Commandes_Paiments_buttonAjouter);
@@ -1918,12 +1919,12 @@ namespace FinalePOO {
 			this->Commandes_Paiments_AdresseFactu->Size = System::Drawing::Size(100, 20);
 			this->Commandes_Paiments_AdresseFactu->TabIndex = 39;
 			// 
-			// Commandes_Paiments_Recu
+			// Commandes_Paiments_Mont
 			// 
-			this->Commandes_Paiments_Recu->Location = System::Drawing::Point(450, 491);
-			this->Commandes_Paiments_Recu->Name = L"Commandes_Paiments_Recu";
-			this->Commandes_Paiments_Recu->Size = System::Drawing::Size(100, 20);
-			this->Commandes_Paiments_Recu->TabIndex = 38;
+			this->Commandes_Paiments_Mont->Location = System::Drawing::Point(450, 491);
+			this->Commandes_Paiments_Mont->Name = L"Commandes_Paiments_Mont";
+			this->Commandes_Paiments_Mont->Size = System::Drawing::Size(100, 20);
+			this->Commandes_Paiments_Mont->TabIndex = 38;
 			// 
 			// Commandes_Paiments_buttonRetirer
 			// 
@@ -2089,6 +2090,14 @@ namespace FinalePOO {
 			this->Panel_Statistique->Size = System::Drawing::Size(1189, 686);
 			this->Panel_Statistique->TabIndex = 0;
 			// 
+			// dataGridView_Statistique
+			// 
+			this->dataGridView_Statistique->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_Statistique->Location = System::Drawing::Point(248, 151);
+			this->dataGridView_Statistique->Name = L"dataGridView_Statistique";
+			this->dataGridView_Statistique->Size = System::Drawing::Size(685, 292);
+			this->dataGridView_Statistique->TabIndex = 3;
+			// 
 			// button_retour_statitique
 			// 
 			this->button_retour_statitique->Location = System::Drawing::Point(3, 3);
@@ -2108,14 +2117,6 @@ namespace FinalePOO {
 			this->button_ProduitSousReapro->Text = L"Produits sous le seuil de réaprovisionement";
 			this->button_ProduitSousReapro->UseVisualStyleBackColor = true;
 			this->button_ProduitSousReapro->Click += gcnew System::EventHandler(this, &MyForm::button_ProduitSousReapro_Click);
-			// 
-			// dataGridView_Statistique
-			// 
-			this->dataGridView_Statistique->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView_Statistique->Location = System::Drawing::Point(248, 151);
-			this->dataGridView_Statistique->Name = L"dataGridView_Statistique";
-			this->dataGridView_Statistique->Size = System::Drawing::Size(685, 292);
-			this->dataGridView_Statistique->TabIndex = 3;
 			// 
 			// MyForm
 			// 
@@ -2636,6 +2637,13 @@ namespace FinalePOO {
 	private: System::Void Commandes_Paiments_buttonPaiments_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_Paiments_buttonPaiments->BackColor = System::Drawing::SystemColors::ActiveCaption;
 		this->Commandes_Paiments_buttonAdresseClient->BackColor = System::Drawing::Color::Transparent;
+		DataSet^ paimentaff2 = gcnew DataSet();
+		Commande^ paiment2 = gcnew Commande();
+		paiment2->afficherCommande(this->Commandes_IdCommande->Text, paimentaff2);
+		Commandes_Panier_DataGridView->DataSource = paimentaff2;
+		Commandes_Panier_DataGridView->DataMember = "Panier";
+		delete paimentaff2;
+		delete paiment2;
 	}
 	private: System::Void Commandes_Paiments_buttonAdresseClient_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Commandes_Paiments_buttonAdresseClient->BackColor = System::Drawing::SystemColors::ActiveCaption;
@@ -2644,6 +2652,22 @@ namespace FinalePOO {
 	private: System::Void Commandes_Paiments_buttonActualiser_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void Commandes_Paiments_buttonAjouter_Click(System::Object^ sender, System::EventArgs^ e) {
+		Commande^ paiment1 = gcnew Commande();
+		paiment1->ajouterPaiement(this->Commandes_Paiments_DateEffectue->Text, this->Commandes_Paiments_DateRecu->Text, this->Commandes_Paiments_MoyenPaiment->Text, this->Commandes_Paiments_Mont->Text, this->Commandes_IdCommande->Text, this->Commandes_Paiments_AdresseFactu->Text);
+		this->Commandes_Paiments_DateEffectue->Clear();
+		this->Commandes_Paiments_DateRecu->Clear();
+		this->Commandes_Paiments_MoyenPaiment->Clear();
+		this->Commandes_Paiments_Mont->Clear();
+		this->Commandes_IdCommande->Clear();
+		this->Commandes_Paiments_Mont->Clear();
+		this->Commandes_Paiments_AdresseFactu->Clear();
+		DataSet^ paimentaff1 = gcnew DataSet();
+		Commande^ paiment1 = gcnew Commande();
+		paiment1->afficherCommande(this->Commandes_IdCommande->Text, paimentaff1);
+		Commandes_Panier_DataGridView->DataSource = paimentaff1;
+		Commandes_Panier_DataGridView->DataMember = "Panier";
+		delete paimentaff1;
+		delete paiment1;
 
 	}
 	private: System::Void Commandes_Paiments_buttonModifier_Click(System::Object^ sender, System::EventArgs^ e) {
