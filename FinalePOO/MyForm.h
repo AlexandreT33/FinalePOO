@@ -2582,8 +2582,8 @@ namespace FinalePOO {
 		DataSet^ panierobj3 = gcnew DataSet();
 		Stock^ panier3= gcnew Stock();
 		panier3->afficherArticle(panierobj3);
-		dataGridView1->DataSource = panierobj3;
-		dataGridView1->DataMember = "Stock";
+		Commandes_Panier_DataGridView->DataSource = panierobj3;
+		Commandes_Panier_DataGridView->DataMember = "Stock";
 		delete panierobj3;
 		delete panier3;
 	}
@@ -2593,8 +2593,8 @@ namespace FinalePOO {
 		DataSet^ panierobj2 = gcnew DataSet();
 		Commande^ panier2 = gcnew Commande();
 		panier2->panierdynamiqueRafraichir(this->Commandes_IdCommande->Text,panierobj2);
-		Commandes_DataGridView->DataSource = panierobj2;
-		Commandes_DataGridView->DataMember = "Panier";
+		Commandes_Panier_DataGridView->DataSource = panierobj2;
+		Commandes_Panier_DataGridView->DataMember = "Panier";
 		delete panierobj2;
 		delete panier2;
 	}
