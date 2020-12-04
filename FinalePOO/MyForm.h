@@ -2604,6 +2604,16 @@ private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
 		delete clientn4;
 	}
 	private: System::Void Commandes_button_Retirer_Click(System::Object^ sender, System::EventArgs^ e) {
+		Commande^ commande3= gcnew Commande();
+		commande3->retirerCommande(this->Commandes_IdCommande->Text);
+		this->Commandes_IdCommande->Clear();
+		DataSet^ objdatan5 = gcnew DataSet();
+		Commande^ clientn5 = gcnew Commande();
+		clientn5->afficherCommande(objdatan5);
+		Commandes_DataGridView->DataSource = objdatan5;
+		Commandes_DataGridView->DataMember = "Commande";
+		delete objdatan5;
+		delete clientn5;
 	}
 		   //PANEL PANIER##############
 	private: System::Void Commandes_Panier_buttonRetour_Click(System::Object^ sender, System::EventArgs^ e) {
