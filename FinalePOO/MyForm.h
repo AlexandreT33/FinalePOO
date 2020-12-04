@@ -2315,14 +2315,7 @@ namespace FinalePOO {
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata5 = gcnew DataSet();
 		Client^ client5 = gcnew Client();
-		try
-		{
-			client5->afficherAdresse(this->client_numero->Text, objdata5);
-		}
-		catch (System::Exception^ ex)
-		{
-			client5->afficherAdresse(objdata5);
-		}
+		client5->afficherAdresse(objdata5);
 		dataGridView3->DataSource = objdata5;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata5;
@@ -2339,14 +2332,7 @@ namespace FinalePOO {
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata6 = gcnew DataSet();
 		Client^ client6 = gcnew Client();
-		try
-		{
-			client6->afficherAdresse(this->client_numero->Text, objdata6);
-		}
-		catch (System::Exception^ ex)
-		{
-			client6->afficherAdresse(objdata6);
-		}
+		client6->afficherAdresse(objdata6);
 		dataGridView3->DataSource = objdata6;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata6;
@@ -2360,14 +2346,8 @@ namespace FinalePOO {
 		//Actualiser GridView Client & Adresse
 		DataSet^ objdata7 = gcnew DataSet();
 		Client^ client7 = gcnew Client();
-		try
-		{
-			client7->afficherAdresse(this->client_numero->Text, objdata7);
-		}
-		catch (System::Exception^ ex)
-		{
-			client7->afficherAdresse(objdata7);
-		}
+		client7->afficherAdresse(objdata7);
+
 		dataGridView3->DataSource = objdata7;
 		dataGridView3->DataMember = "Adresse";
 		delete objdata7;
