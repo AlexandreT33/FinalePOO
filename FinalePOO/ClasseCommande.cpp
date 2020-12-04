@@ -55,11 +55,11 @@ void Commande::panierdynamiqueRetirer(System::String^ ID, System::String^ Refere
     }
 }
 
-void Commande::panierdynamiqueRafraichir(System::Data::DataSet^ objdata)
+void Commande::panierdynamiqueRafraichir(System::String^ ID, System::Data::DataSet^ objdata)
 {
     //Source de la bdd, puis instanciation de la requete
     System::String^ connexionSource = "Data Source=.;Initial Catalog=POO;Integrated Security=True";
-    System::String^ requete = System::IO::File::ReadAllText("PanierDynamiqueRefresh.sql");
+    System::String^ requete = System::IO::File::ReadAllText("SELECT Reference as `Reference Objet`, Libelle as `Nom`, Quantite, Prix_UHT*TVA/100 as `Prix` FROM Comprend INNER JOIN Article ON Article.Reference = Comprend.Reference WHERE Comprend.ID =" + ID);
 
     //Assignation de la requete et la Source à la commande de Connexion
     System::Data::SqlClient::SqlConnection^ connexion = gcnew System::Data::SqlClient::SqlConnection(connexionSource);
