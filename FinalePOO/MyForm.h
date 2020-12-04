@@ -289,9 +289,11 @@ namespace FinalePOO {
 	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonAdresseClient;
 	private: System::Windows::Forms::Button^ Commandes_Paiments_buttonPaiments;
 	private: System::Windows::Forms::Panel^ Panel_Statistique;
-	private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
+
 	private: System::Windows::Forms::Button^ button_ProduitSousReapro;
 	private: System::Windows::Forms::Button^ button_retour_statitique;
+private: System::Windows::Forms::DataGridView^ dataGridView_Statistique;
+
 
 
 
@@ -466,8 +468,8 @@ namespace FinalePOO {
 			this->Commandes_Paiments_buttonPaiments = (gcnew System::Windows::Forms::Button());
 			this->Panel_Statistique = (gcnew System::Windows::Forms::Panel());
 			this->button_retour_statitique = (gcnew System::Windows::Forms::Button());
-			this->dataGridView_Statistique = (gcnew System::Windows::Forms::DataGridView());
 			this->button_ProduitSousReapro = (gcnew System::Windows::Forms::Button());
+			this->dataGridView_Statistique = (gcnew System::Windows::Forms::DataGridView());
 			this->Panel_Bienvenue->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->Panel_Stock->SuspendLayout();
@@ -2078,8 +2080,8 @@ namespace FinalePOO {
 			// Panel_Statistique
 			// 
 			this->Panel_Statistique->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Panel_Statistique.BackgroundImage")));
-			this->Panel_Statistique->Controls->Add(this->button_retour_statitique);
 			this->Panel_Statistique->Controls->Add(this->dataGridView_Statistique);
+			this->Panel_Statistique->Controls->Add(this->button_retour_statitique);
 			this->Panel_Statistique->Controls->Add(this->button_ProduitSousReapro);
 			this->Panel_Statistique->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->Panel_Statistique->Location = System::Drawing::Point(0, 0);
@@ -2097,23 +2099,23 @@ namespace FinalePOO {
 			this->button_retour_statitique->UseVisualStyleBackColor = true;
 			this->button_retour_statitique->Click += gcnew System::EventHandler(this, &MyForm::button_retour_statitique_Click);
 			// 
-			// dataGridView_Statistique
-			// 
-			this->dataGridView_Statistique->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView_Statistique->Location = System::Drawing::Point(345, 153);
-			this->dataGridView_Statistique->Name = L"dataGridView_Statistique";
-			this->dataGridView_Statistique->Size = System::Drawing::Size(377, 276);
-			this->dataGridView_Statistique->TabIndex = 1;
-			// 
 			// button_ProduitSousReapro
 			// 
-			this->button_ProduitSousReapro->Location = System::Drawing::Point(457, 485);
+			this->button_ProduitSousReapro->Location = System::Drawing::Point(524, 489);
 			this->button_ProduitSousReapro->Name = L"button_ProduitSousReapro";
 			this->button_ProduitSousReapro->Size = System::Drawing::Size(158, 42);
 			this->button_ProduitSousReapro->TabIndex = 0;
 			this->button_ProduitSousReapro->Text = L"Produits sous le seuil de réaprovisionement";
 			this->button_ProduitSousReapro->UseVisualStyleBackColor = true;
 			this->button_ProduitSousReapro->Click += gcnew System::EventHandler(this, &MyForm::button_ProduitSousReapro_Click);
+			// 
+			// dataGridView_Statistique
+			// 
+			this->dataGridView_Statistique->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView_Statistique->Location = System::Drawing::Point(248, 151);
+			this->dataGridView_Statistique->Name = L"dataGridView_Statistique";
+			this->dataGridView_Statistique->Size = System::Drawing::Size(685, 292);
+			this->dataGridView_Statistique->TabIndex = 3;
 			// 
 			// MyForm
 			// 
@@ -2619,7 +2621,7 @@ namespace FinalePOO {
 		Affichage^ stat1 = gcnew Affichage();
 		stat1->afficher(System::IO::File::ReadAllText("ProduitSousReapro.sql"), statdata1);
 		dataGridView_Statistique->DataSource = statdata1;
-		dataGridView_Statistique->DataMember = "Stats";
+		dataGridView_Statistique->DataMember = "Affichage";
 	}
 
 	private: System::Void button_retour_statitique_Click(System::Object^ sender, System::EventArgs^ e) {
